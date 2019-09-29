@@ -1,0 +1,316 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="15396f75-4e06-402f-8e73-7074f17a3c9a" name="Default Changelist" comment="" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/BinarySearch/Tree.go">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="482">
+              <caret line="216" column="1" lean-forward="true" selection-start-line="181" selection-end-line="216" selection-end-column="1" />
+              <folding>
+                <element signature="n#!!block;n#IsEmpty#0" />
+                <element signature="n#!!block;n#InitNode#0" />
+                <element signature="n#!!block;n#AddE#0" />
+                <element signature="n#!!block;n#add#0" />
+                <element signature="n#!!block;n#Contains#0" />
+                <element signature="n#!!block;n#contains#0" />
+                <element signature="n#!!block;n#PreOrder#0" />
+                <element signature="n#!!block;n#PreOrder#1" />
+                <element signature="n#!!block;n#PreOrderNR#0" />
+                <element signature="n#!!block;n#MidOrder#0" />
+                <element signature="n#!!block;n#MidOrder#1" />
+                <element signature="n#!!block;n#BackOrder#0" />
+                <element signature="n#!!block;n#BackOrder#1" />
+                <element signature="n#!!block;n#LevelOrder#0" />
+                <element signature="n#!!block;n#DelMin#0" />
+                <element signature="e#2659#2664#0" />
+                <element signature="n#!!block;n#FindMin#1" />
+                <element signature="n#!!block;n#minimum#1" />
+                <element signature="n#!!block;n#DelMin#0" />
+                <element signature="n#!!block;n#rmMin#0" />
+                <element signature="e#3171#3178#0" />
+                <element signature="e#3432#3512#0" />
+                <element signature="e#3600#3755#0" />
+                <element signature="e#3820#3822#0" />
+                <element signature="e#3879#3884#0" />
+                <element signature="n#!!block;n#String#0" />
+                <element signature="n#!!block;n#generateBSTString#0" />
+                <element signature="n#!!block;n#generateDepthString#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/BinarySearch/Tree_test.go">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="813">
+              <caret line="25" lean-forward="true" selection-start-line="25" selection-end-line="25" />
+              <folding>
+                <element signature="e#22#50#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://C:/Go/src/testing/testing.go">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="187">
+              <caret line="864" selection-start-line="864" selection-end-line="864" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://C:/Go/src/reflect/value.go">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="81288">
+              <caret line="2262" column="25" selection-start-line="2262" selection-start-column="25" selection-end-line="2262" selection-end-column="25" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Go File" />
+      </list>
+    </option>
+  </component>
+  <component name="GOROOT" path="C:\Go" />
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/BinarySearchTree/Tree.go" />
+        <option value="$PROJECT_DIR$/BinarySearch/Tree_test.go" />
+        <option value="$PROJECT_DIR$/BinarySearch/Tree.go" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="7">
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+    <option name="width" value="974" />
+    <option name="height" value="1087" />
+  </component>
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="algo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="algo" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="algo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="algo" type="462c0819:PsiDirectoryNode" />
+              <item name="BinarySearch" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DefaultGoTemplateProperty" value="Go File" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="go.gopath.indexing.explicitly.defined" value="true" />
+    <property name="go.import.settings.migrated" value="true" />
+    <property name="last_opened_file_path" value="$USER_HOME$" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="Go Test.TestTree in algo/BinarySearch">
+    <configuration name="TestTree in algo/BinarySearch" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+      <module name="algo" />
+      <working_directory value="$PROJECT_DIR$/BinarySearch" />
+      <framework value="gotest" />
+      <kind value="PACKAGE" />
+      <package value="algo/BinarySearch" />
+      <directory value="$PROJECT_DIR$/" />
+      <filePath value="$PROJECT_DIR$/" />
+      <pattern value="^TestTree$" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Tree_test.go" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+      <module name="algo" />
+      <working_directory value="$PROJECT_DIR$/BinarySearch" />
+      <framework value="gotest" />
+      <kind value="FILE" />
+      <package value="algo" />
+      <directory value="$PROJECT_DIR$/" />
+      <filePath value="$PROJECT_DIR$/BinarySearch/Tree_test.go" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Go Test.TestTree in algo/BinarySearch" />
+        <item itemvalue="Go Test.Tree_test.go" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="TestHistory">
+    <history-entry file="TestTree_in_algo_BinarySearch - 2019.09.29 at 17h 18m 30s.xml">
+      <configuration name="TestTree in algo/BinarySearch" configurationId="GoTestRunConfiguration" />
+    </history-entry>
+    <history-entry file="TestTree_in_algo_BinarySearch - 2019.09.29 at 17h 18m 43s.xml">
+      <configuration name="TestTree in algo/BinarySearch" configurationId="GoTestRunConfiguration" />
+    </history-entry>
+    <history-entry file="TestTree_in_algo_BinarySearch - 2019.09.29 at 17h 36m 17s.xml">
+      <configuration name="TestTree in algo/BinarySearch" configurationId="GoTestRunConfiguration" />
+    </history-entry>
+    <history-entry file="TestTree_in_algo_BinarySearch - 2019.09.29 at 17h 37m 41s.xml">
+      <configuration name="TestTree in algo/BinarySearch" configurationId="GoTestRunConfiguration" />
+    </history-entry>
+    <history-entry file="TestTree_in_algo_BinarySearch - 2019.09.29 at 17h 38m 45s.xml">
+      <configuration name="TestTree in algo/BinarySearch" configurationId="GoTestRunConfiguration" />
+    </history-entry>
+    <history-entry file="TestTree_in_algo_BinarySearch - 2019.09.29 at 17h 39m 28s.xml">
+      <configuration name="TestTree in algo/BinarySearch" configurationId="GoTestRunConfiguration" />
+    </history-entry>
+    <history-entry file="TestTree_in_algo_BinarySearch - 2019.09.29 at 17h 40m 38s.xml">
+      <configuration name="TestTree in algo/BinarySearch" configurationId="GoTestRunConfiguration" />
+    </history-entry>
+    <history-entry file="TestTree_in_algo_BinarySearch - 2019.09.29 at 17h 57m 24s.xml">
+      <configuration name="TestTree in algo/BinarySearch" configurationId="GoTestRunConfiguration" />
+    </history-entry>
+    <history-entry file="TestTree_in_algo_BinarySearch - 2019.09.29 at 17h 59m 03s.xml">
+      <configuration name="TestTree in algo/BinarySearch" configurationId="GoTestRunConfiguration" />
+    </history-entry>
+    <history-entry file="TestTree_in_algo_BinarySearch - 2019.09.29 at 17h 59m 32s.xml">
+      <configuration name="TestTree in algo/BinarySearch" configurationId="GoTestRunConfiguration" />
+    </history-entry>
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-8" y="-8" width="1936" height="1096" extended-state="7" />
+    <editor active="true" />
+    <layout>
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.12929185" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.32905984" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.39957264" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Database Changes" order="8" />
+      <window_info anchor="bottom" id="Version Control" order="9" />
+      <window_info anchor="bottom" id="Terminal" order="10" />
+      <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Database" order="3" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
+          <url>file://$PROJECT_DIR$/BinarySearch/Tree_test.go</url>
+          <line>15</line>
+          <properties />
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://C:/Go/src/reflect/value.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="81288">
+          <caret line="2262" column="25" selection-start-line="2262" selection-start-column="25" selection-end-line="2262" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/Go/src/testing/testing.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="864" selection-start-line="864" selection-end-line="864" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BinarySearch/Tree_test.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="813">
+          <caret line="25" lean-forward="true" selection-start-line="25" selection-end-line="25" />
+          <folding>
+            <element signature="e#22#50#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BinarySearch/Tree.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="482">
+          <caret line="216" column="1" lean-forward="true" selection-start-line="181" selection-end-line="216" selection-end-column="1" />
+          <folding>
+            <element signature="n#!!block;n#IsEmpty#0" />
+            <element signature="n#!!block;n#InitNode#0" />
+            <element signature="n#!!block;n#AddE#0" />
+            <element signature="n#!!block;n#add#0" />
+            <element signature="n#!!block;n#Contains#0" />
+            <element signature="n#!!block;n#contains#0" />
+            <element signature="n#!!block;n#PreOrder#0" />
+            <element signature="n#!!block;n#PreOrder#1" />
+            <element signature="n#!!block;n#PreOrderNR#0" />
+            <element signature="n#!!block;n#MidOrder#0" />
+            <element signature="n#!!block;n#MidOrder#1" />
+            <element signature="n#!!block;n#BackOrder#0" />
+            <element signature="n#!!block;n#BackOrder#1" />
+            <element signature="n#!!block;n#LevelOrder#0" />
+            <element signature="n#!!block;n#DelMin#0" />
+            <element signature="e#2659#2664#0" />
+            <element signature="n#!!block;n#FindMin#1" />
+            <element signature="n#!!block;n#minimum#1" />
+            <element signature="n#!!block;n#DelMin#0" />
+            <element signature="n#!!block;n#rmMin#0" />
+            <element signature="e#3171#3178#0" />
+            <element signature="e#3432#3512#0" />
+            <element signature="e#3600#3755#0" />
+            <element signature="e#3820#3822#0" />
+            <element signature="e#3879#3884#0" />
+            <element signature="n#!!block;n#String#0" />
+            <element signature="n#!!block;n#generateBSTString#0" />
+            <element signature="n#!!block;n#generateDepthString#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>
