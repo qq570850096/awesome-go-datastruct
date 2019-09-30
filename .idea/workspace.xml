@@ -1,7 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BookmarkManager">
+    <bookmark url="file://$PROJECT_DIR$/Linked/List.go" line="138" />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="15396f75-4e06-402f-8e73-7074f17a3c9a" name="Default Changelist" comment="" />
+    <list default="true" id="15396f75-4e06-402f-8e73-7074f17a3c9a" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/Linked/List.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Linked/List_test.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Linked/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Set/BST.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Set/List.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BinarySearch/Tree_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/BinarySearch/Tree_test.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/BinarySearch/README.md" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -10,40 +22,55 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/BinarySearch/Tree.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="472">
-              <caret line="255" column="1" selection-start-line="221" selection-end-line="255" selection-end-column="1" />
+            <state relative-caret-position="2412">
+              <caret line="272" column="1" selection-start-line="272" selection-start-column="1" selection-end-line="272" selection-end-column="1" />
               <folding>
-                <element signature="n#!!block;n#IsEmpty#0" />
-                <element signature="n#!!block;n#InitNode#0" />
-                <element signature="n#!!block;n#AddE#0" />
-                <element signature="n#!!block;n#add#0" />
-                <element signature="n#!!block;n#Contains#0" />
-                <element signature="n#!!block;n#contains#0" />
-                <element signature="n#!!block;n#PreOrder#0" />
-                <element signature="n#!!block;n#PreOrder#1" />
-                <element signature="n#!!block;n#PreOrderNR#0" />
-                <element signature="n#!!block;n#MidOrder#0" />
-                <element signature="n#!!block;n#MidOrder#1" />
-                <element signature="n#!!block;n#BackOrder#0" />
-                <element signature="n#!!block;n#BackOrder#1" />
-                <element signature="n#!!block;n#LevelOrder#0" />
-                <element signature="n#!!block;n#DelMin#0" />
-                <element signature="e#2659#2664#0" />
-                <element signature="n#!!block;n#FindMin#1" />
-                <element signature="n#!!block;n#minimum#1" />
-                <element signature="n#!!block;n#DelMin#0" />
-                <element signature="n#!!block;n#rmMin#0" />
-                <element signature="e#3171#3178#0" />
-                <element signature="e#3432#3512#0" />
-                <element signature="e#3600#3755#0" />
-                <element signature="e#3820#3822#0" />
-                <element signature="n#!!block;n#String#0" />
-                <element signature="n#!!block;n#generateBSTString#0" />
-                <element signature="n#!!block;n#generateDepthString#0" />
+                <element signature="e#62#104#0" />
+                <element signature="e#193#225#0" />
+                <element signature="e#364#419#0" />
+                <element signature="e#448#501#0" />
+                <element signature="e#533#571#0" />
+                <element signature="e#646#875#0" />
+                <element signature="e#933#972#0" />
+                <element signature="e#1041#1230#0" />
+                <element signature="e#1276#1315#0" />
+                <element signature="e#1343#1445#0" />
+                <element signature="e#1489#1829#0" />
+                <element signature="e#1866#1890#0" />
+                <element signature="e#1918#2021#0" />
+                <element signature="e#2061#2086#0" />
+                <element signature="e#2115#2219#0" />
+                <element signature="e#2263#2563#0" />
+                <element signature="e#2610#2692#0" />
+                <element signature="e#3075#3155#0" />
+                <element signature="e#3243#3398#0" />
+                <element signature="e#3911#4588#0" />
+                <element signature="e#4636#4741#0" />
+                <element signature="e#4811#5054#0" />
+                <element signature="e#5097#5210#0" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/README.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor />
+              <second_editor />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://C:/Go/src/testing/testing.go">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="210">
+              <caret line="868" selection-start-line="868" selection-end-line="868" />
             </state>
           </provider>
         </entry>
@@ -51,8 +78,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/BinarySearch/Tree_test.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="813">
-              <caret line="25" selection-start-line="25" selection-end-line="25" />
+            <state relative-caret-position="544">
+              <caret line="23" column="18" selection-start-line="23" selection-start-column="18" selection-end-line="23" selection-end-column="18" />
               <folding>
                 <element signature="e#22#50#0" expanded="true" />
               </folding>
@@ -61,10 +88,76 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://C:/Go/src/testing/testing.go">
+        <entry file="file://$PROJECT_DIR$/Set/BST.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="864" selection-start-line="864" selection-end-line="864" />
+            <state relative-caret-position="288">
+              <caret line="8" column="11" selection-start-line="8" selection-start-column="4" selection-end-line="8" selection-end-column="11" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Set/List.go">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="540">
+              <caret line="33" lean-forward="true" selection-start-line="33" selection-end-line="33" />
+              <folding>
+                <element signature="e#48#71#0" />
+                <element signature="n#!!block;n#InitListSet#0" />
+                <element signature="n#!!block;n#Add#0" />
+                <element signature="e#153#158#0" />
+                <element signature="n#!!block;n#Contains#0" />
+                <element signature="n#!!block;n#GetSize#0" />
+                <element signature="e#364#369#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Linked/List.go">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="345">
+              <caret line="128" column="9" lean-forward="true" selection-start-line="122" selection-end-line="128" selection-end-column="9" />
+              <folding>
+                <element signature="e#16#44#0" expanded="true" />
+                <element signature="n#!!block;n#AddIndex#0" />
+                <element signature="n#!!block;n#AddFirst#0" />
+                <element signature="n#!!block;n#AddLast#0" />
+                <element signature="n#!!block;n#Get#0" />
+                <element signature="n#!!block;n#Get#1" />
+                <element signature="n#!!block;n#Get#2" />
+                <element signature="n#!!block;n#Set#0" />
+                <element signature="n#!!block;n#Contains#0" />
+                <element signature="n#!!block;n#Remove#0" />
+                <element signature="n#!!block;n#RemoveFirst#0" />
+                <element signature="n#!!block;n#RemoveLast#0" />
+                <element signature="e#1507#1512#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Linked/README.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="-881">
+                <caret line="131" column="2" selection-start-line="131" selection-start-column="2" selection-end-line="131" selection-end-column="2" />
+              </first_editor>
+              <second_editor />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Linked/List_test.go">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="381">
+              <caret line="17" column="21" selection-start-line="17" selection-start-column="21" selection-end-line="17" selection-end-column="21" />
+              <folding>
+                <element signature="e#16#44#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -72,7 +165,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://C:/Go/src/reflect/value.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="81288">
+            <state relative-caret-position="57">
               <caret line="2262" column="25" selection-start-line="2262" selection-start-column="25" selection-end-line="2262" selection-end-column="25" />
             </state>
           </provider>
@@ -95,8 +188,14 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/BinarySearchTree/Tree.go" />
-        <option value="$PROJECT_DIR$/BinarySearch/Tree_test.go" />
         <option value="$PROJECT_DIR$/BinarySearch/Tree.go" />
+        <option value="$PROJECT_DIR$/BinarySearch/Tree_test.go" />
+        <option value="$PROJECT_DIR$/Set/Set.go" />
+        <option value="$PROJECT_DIR$/Linked/Test_List.go" />
+        <option value="$PROJECT_DIR$/Linked/List_test.go" />
+        <option value="$PROJECT_DIR$/Linked/List.go" />
+        <option value="$PROJECT_DIR$/Set/List.go" />
+        <option value="$PROJECT_DIR$/Linked/README.md" />
       </list>
     </option>
   </component>
@@ -124,6 +223,16 @@
               <item name="algo" type="462c0819:PsiDirectoryNode" />
               <item name="BinarySearch" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="algo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="algo" type="462c0819:PsiDirectoryNode" />
+              <item name="Linked" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="algo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="algo" type="462c0819:PsiDirectoryNode" />
+              <item name="Set" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -137,9 +246,14 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="go.gopath.indexing.explicitly.defined" value="true" />
     <property name="go.import.settings.migrated" value="true" />
-    <property name="last_opened_file_path" value="$USER_HOME$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/Linked" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\exia\go\src\algo\Linked" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -153,7 +267,18 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Go Test.TestTree in algo/BinarySearch">
+  <component name="RunManager" selected="Go Test.TestList in algo/Linked">
+    <configuration name="TestList in algo/Linked" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+      <module name="algo" />
+      <working_directory value="$PROJECT_DIR$/Linked" />
+      <framework value="gotest" />
+      <kind value="PACKAGE" />
+      <package value="algo/Linked" />
+      <directory value="$PROJECT_DIR$/" />
+      <filePath value="$PROJECT_DIR$/" />
+      <pattern value="^TestList$" />
+      <method v="2" />
+    </configuration>
     <configuration name="TestTree in algo/BinarySearch" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
       <module name="algo" />
       <working_directory value="$PROJECT_DIR$/BinarySearch" />
@@ -177,54 +302,55 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Go Test.TestList in algo/Linked" />
         <item itemvalue="Go Test.TestTree in algo/BinarySearch" />
         <item itemvalue="Go Test.Tree_test.go" />
       </list>
     </recent_temporary>
   </component>
   <component name="TestHistory">
-    <history-entry file="TestTree_in_algo_BinarySearch - 2019.09.29 at 17h 18m 30s.xml">
-      <configuration name="TestTree in algo/BinarySearch" configurationId="GoTestRunConfiguration" />
-    </history-entry>
-    <history-entry file="TestTree_in_algo_BinarySearch - 2019.09.29 at 17h 18m 43s.xml">
-      <configuration name="TestTree in algo/BinarySearch" configurationId="GoTestRunConfiguration" />
-    </history-entry>
-    <history-entry file="TestTree_in_algo_BinarySearch - 2019.09.29 at 17h 36m 17s.xml">
-      <configuration name="TestTree in algo/BinarySearch" configurationId="GoTestRunConfiguration" />
-    </history-entry>
-    <history-entry file="TestTree_in_algo_BinarySearch - 2019.09.29 at 17h 37m 41s.xml">
-      <configuration name="TestTree in algo/BinarySearch" configurationId="GoTestRunConfiguration" />
-    </history-entry>
-    <history-entry file="TestTree_in_algo_BinarySearch - 2019.09.29 at 17h 38m 45s.xml">
-      <configuration name="TestTree in algo/BinarySearch" configurationId="GoTestRunConfiguration" />
-    </history-entry>
-    <history-entry file="TestTree_in_algo_BinarySearch - 2019.09.29 at 17h 39m 28s.xml">
-      <configuration name="TestTree in algo/BinarySearch" configurationId="GoTestRunConfiguration" />
-    </history-entry>
-    <history-entry file="TestTree_in_algo_BinarySearch - 2019.09.29 at 17h 40m 38s.xml">
-      <configuration name="TestTree in algo/BinarySearch" configurationId="GoTestRunConfiguration" />
-    </history-entry>
-    <history-entry file="TestTree_in_algo_BinarySearch - 2019.09.29 at 17h 57m 24s.xml">
-      <configuration name="TestTree in algo/BinarySearch" configurationId="GoTestRunConfiguration" />
-    </history-entry>
-    <history-entry file="TestTree_in_algo_BinarySearch - 2019.09.29 at 17h 59m 03s.xml">
-      <configuration name="TestTree in algo/BinarySearch" configurationId="GoTestRunConfiguration" />
-    </history-entry>
     <history-entry file="TestTree_in_algo_BinarySearch - 2019.09.29 at 17h 59m 32s.xml">
       <configuration name="TestTree in algo/BinarySearch" configurationId="GoTestRunConfiguration" />
+    </history-entry>
+    <history-entry file="TestTree_in_algo_BinarySearch - 2019.09.30 at 11h 25m 18s.xml">
+      <configuration name="TestTree in algo/BinarySearch" configurationId="GoTestRunConfiguration" />
+    </history-entry>
+    <history-entry file="TestList_in_algo_Linked - 2019.09.30 at 16h 12m 31s.xml">
+      <configuration name="TestList in algo/Linked" configurationId="GoTestRunConfiguration" />
+    </history-entry>
+    <history-entry file="TestList_in_algo_Linked - 2019.09.30 at 16h 13m 17s.xml">
+      <configuration name="TestList in algo/Linked" configurationId="GoTestRunConfiguration" />
+    </history-entry>
+    <history-entry file="TestList_in_algo_Linked - 2019.09.30 at 16h 15m 18s.xml">
+      <configuration name="TestList in algo/Linked" configurationId="GoTestRunConfiguration" />
+    </history-entry>
+    <history-entry file="TestList_in_algo_Linked - 2019.09.30 at 16h 17m 15s.xml">
+      <configuration name="TestList in algo/Linked" configurationId="GoTestRunConfiguration" />
+    </history-entry>
+    <history-entry file="TestList_in_algo_Linked - 2019.09.30 at 16h 20m 03s.xml">
+      <configuration name="TestList in algo/Linked" configurationId="GoTestRunConfiguration" />
+    </history-entry>
+    <history-entry file="TestList_in_algo_Linked - 2019.09.30 at 16h 20m 47s.xml">
+      <configuration name="TestList in algo/Linked" configurationId="GoTestRunConfiguration" />
+    </history-entry>
+    <history-entry file="TestList_in_algo_Linked - 2019.09.30 at 16h 26m 35s.xml">
+      <configuration name="TestList in algo/Linked" configurationId="GoTestRunConfiguration" />
+    </history-entry>
+    <history-entry file="TestList_in_algo_Linked - 2019.09.30 at 16h 29m 24s.xml">
+      <configuration name="TestList in algo/Linked" configurationId="GoTestRunConfiguration" />
     </history-entry>
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1096" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.12929185" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.13090129" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.32905984" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.39957264" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.32834226" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.3989305" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -248,69 +374,159 @@
         <line-breakpoint enabled="true" type="DlvLineBreakpoint">
           <url>file://$PROJECT_DIR$/BinarySearch/Tree_test.go</url>
           <line>15</line>
-          <properties />
           <option name="timeStamp" value="1" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://C:/Go/src/reflect/value.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="81288">
-          <caret line="2262" column="25" selection-start-line="2262" selection-start-column="25" selection-end-line="2262" selection-end-column="25" />
+    <entry file="file://$PROJECT_DIR$/BinarySearch/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor />
+          <second_editor />
         </state>
       </provider>
     </entry>
-    <entry file="file://C:/Go/src/testing/testing.go">
+    <entry file="file://C:/Go/src/runtime/panic.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="864" selection-start-line="864" selection-end-line="864" />
+        <state relative-caret-position="282">
+          <caret line="692" selection-start-line="692" selection-end-line="692" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor />
+          <second_editor />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/BinarySearch/Tree_test.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="813">
-          <caret line="25" selection-start-line="25" selection-end-line="25" />
+        <state relative-caret-position="544">
+          <caret line="23" column="18" selection-start-line="23" selection-start-column="18" selection-end-line="23" selection-end-column="18" />
           <folding>
             <element signature="e#22#50#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://C:/Go/src/runtime/asm_amd64.s">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="174">
+          <caret line="1337" selection-start-line="1337" selection-end-line="1337" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/Go/src/testing/testing.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="868" selection-start-line="868" selection-end-line="868" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/BinarySearch/Tree.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="472">
-          <caret line="255" column="1" selection-start-line="221" selection-end-line="255" selection-end-column="1" />
+        <state relative-caret-position="2412">
+          <caret line="272" column="1" selection-start-line="272" selection-start-column="1" selection-end-line="272" selection-end-column="1" />
           <folding>
-            <element signature="n#!!block;n#IsEmpty#0" />
-            <element signature="n#!!block;n#InitNode#0" />
-            <element signature="n#!!block;n#AddE#0" />
-            <element signature="n#!!block;n#add#0" />
+            <element signature="e#62#104#0" />
+            <element signature="e#193#225#0" />
+            <element signature="e#364#419#0" />
+            <element signature="e#448#501#0" />
+            <element signature="e#533#571#0" />
+            <element signature="e#646#875#0" />
+            <element signature="e#933#972#0" />
+            <element signature="e#1041#1230#0" />
+            <element signature="e#1276#1315#0" />
+            <element signature="e#1343#1445#0" />
+            <element signature="e#1489#1829#0" />
+            <element signature="e#1866#1890#0" />
+            <element signature="e#1918#2021#0" />
+            <element signature="e#2061#2086#0" />
+            <element signature="e#2115#2219#0" />
+            <element signature="e#2263#2563#0" />
+            <element signature="e#2610#2692#0" />
+            <element signature="e#3075#3155#0" />
+            <element signature="e#3243#3398#0" />
+            <element signature="e#3911#4588#0" />
+            <element signature="e#4636#4741#0" />
+            <element signature="e#4811#5054#0" />
+            <element signature="e#5097#5210#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/Go/src/reflect/value.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="57">
+          <caret line="2262" column="25" selection-start-line="2262" selection-start-column="25" selection-end-line="2262" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Linked/List_test.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="381">
+          <caret line="17" column="21" selection-start-line="17" selection-start-column="21" selection-end-line="17" selection-end-column="21" />
+          <folding>
+            <element signature="e#16#44#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Linked/List.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="128" column="9" lean-forward="true" selection-start-line="122" selection-end-line="128" selection-end-column="9" />
+          <folding>
+            <element signature="e#16#44#0" expanded="true" />
+            <element signature="n#!!block;n#AddIndex#0" />
+            <element signature="n#!!block;n#AddFirst#0" />
+            <element signature="n#!!block;n#AddLast#0" />
+            <element signature="n#!!block;n#Get#0" />
+            <element signature="n#!!block;n#Get#1" />
+            <element signature="n#!!block;n#Get#2" />
+            <element signature="n#!!block;n#Set#0" />
             <element signature="n#!!block;n#Contains#0" />
-            <element signature="n#!!block;n#contains#0" />
-            <element signature="n#!!block;n#PreOrder#0" />
-            <element signature="n#!!block;n#PreOrder#1" />
-            <element signature="n#!!block;n#PreOrderNR#0" />
-            <element signature="n#!!block;n#MidOrder#0" />
-            <element signature="n#!!block;n#MidOrder#1" />
-            <element signature="n#!!block;n#BackOrder#0" />
-            <element signature="n#!!block;n#BackOrder#1" />
-            <element signature="n#!!block;n#LevelOrder#0" />
-            <element signature="n#!!block;n#DelMin#0" />
-            <element signature="e#2659#2664#0" />
-            <element signature="n#!!block;n#FindMin#1" />
-            <element signature="n#!!block;n#minimum#1" />
-            <element signature="n#!!block;n#DelMin#0" />
-            <element signature="n#!!block;n#rmMin#0" />
-            <element signature="e#3171#3178#0" />
-            <element signature="e#3432#3512#0" />
-            <element signature="e#3600#3755#0" />
-            <element signature="e#3820#3822#0" />
-            <element signature="n#!!block;n#String#0" />
-            <element signature="n#!!block;n#generateBSTString#0" />
-            <element signature="n#!!block;n#generateDepthString#0" />
+            <element signature="n#!!block;n#Remove#0" />
+            <element signature="n#!!block;n#RemoveFirst#0" />
+            <element signature="n#!!block;n#RemoveLast#0" />
+            <element signature="e#1507#1512#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Linked/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="-881">
+            <caret line="131" column="2" selection-start-line="131" selection-start-column="2" selection-end-line="131" selection-end-column="2" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Set/BST.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="288">
+          <caret line="8" column="11" selection-start-line="8" selection-start-column="4" selection-end-line="8" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Set/List.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="540">
+          <caret line="33" lean-forward="true" selection-start-line="33" selection-end-line="33" />
+          <folding>
+            <element signature="e#48#71#0" />
+            <element signature="n#!!block;n#InitListSet#0" />
+            <element signature="n#!!block;n#Add#0" />
+            <element signature="e#153#158#0" />
+            <element signature="n#!!block;n#Contains#0" />
+            <element signature="n#!!block;n#GetSize#0" />
+            <element signature="e#364#369#0" />
           </folding>
         </state>
       </provider>

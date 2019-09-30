@@ -16,6 +16,7 @@ func TestTree(t *testing.T) {
 	tree.PreOrderNR()
 	fmt.Println(tree.FindMax())
 	fmt.Println(tree.FindMin())
+	fmt.Println("能否找到5：",tree.Contains(5))
 	fmt.Println(tree.DelMax())
 	fmt.Println(tree.DelMin())
 	fmt.Println(tree.size)
