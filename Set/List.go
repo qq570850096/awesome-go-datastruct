@@ -1,7 +1,7 @@
 package Set
 
 import "algo/Linked"
-
+// 集合，基于链表实现
 type ListSet struct {
 	list *Linked.List
 }

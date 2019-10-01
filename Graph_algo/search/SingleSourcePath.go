@@ -1,6 +1,6 @@
 package search
 
-import "Graph_algo/Adj"
+import "algo/Graph_algo/Adj"
 
 type SingleSource struct {
 	graph   *Adj.Hash

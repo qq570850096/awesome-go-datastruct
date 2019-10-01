@@ -1,9 +1,9 @@
 package main
 
 import (
-	"Graph_algo/Adj"
-	"Graph_algo/BFS"
-	"Graph_algo/search"
+	"algo/Graph_algo/Adj"
+	"algo/Graph_algo/BFS"
+	"algo/Graph_algo/search"
 	"fmt"
 	"io"
 )

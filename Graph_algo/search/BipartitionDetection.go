@@ -1,7 +1,7 @@
 package search
 
-import "Graph_algo/Adj"
-
+import "algo/Graph_algo/Adj"
+// 验证一个图是否是二分图
 type BipartitionDetection struct {
 	graph     *Adj.Hash
 	visited   []bool

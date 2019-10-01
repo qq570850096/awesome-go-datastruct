@@ -1,9 +1,9 @@
 package search
 
 import (
-	"Graph_algo/Adj"
+	"algo/Graph_algo/Adj"
 )
-
+// 验证一个图中是否存在一个环
 type Cycle struct {
 	graph    *Adj.Hash
 	visited  []bool

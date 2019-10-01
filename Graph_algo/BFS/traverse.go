@@ -1,7 +1,7 @@
 package BFS
 
 import (
-	"Graph_algo/Adj"
+	"algo/Graph_algo/Adj"
 	"fmt"
 )
 
