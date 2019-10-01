@@ -194,6 +194,7 @@ func (this *Tree) add(node *Node,e int) *Node{
 
 	// 不管是递归还是回溯，首先我们都应该先写出递归的结束条件是什么
 	if node == nil {
+		this.size++
 		return InitNode(e)
 	}
 

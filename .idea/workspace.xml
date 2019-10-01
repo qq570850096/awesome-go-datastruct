@@ -6,16 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="15396f75-4e06-402f-8e73-7074f17a3c9a" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Graph_algo/BFS/traverse.go" beforeDir="false" afterPath="$PROJECT_DIR$/Graph_algo/BFS/traverse.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Graph_algo/DFS/CC.go" beforeDir="false" afterPath="$PROJECT_DIR$/Graph_algo/DFS/CC.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Graph_algo/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/Graph_algo/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Graph_algo/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/Graph_algo/main.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Graph_algo/product/aa.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Graph_algo/search/BipartitionDetection.go" beforeDir="false" afterPath="$PROJECT_DIR$/Graph_algo/search/BipartitionDetection.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Graph_algo/search/Cycle.go" beforeDir="false" afterPath="$PROJECT_DIR$/Graph_algo/search/Cycle.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Graph_algo/search/SingleSourcePath.go" beforeDir="false" afterPath="$PROJECT_DIR$/Graph_algo/search/SingleSourcePath.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Set/BST.go" beforeDir="false" afterPath="$PROJECT_DIR$/Set/BST.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Set/List.go" beforeDir="false" afterPath="$PROJECT_DIR$/Set/List.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BinarySearch/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/BinarySearch/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -30,6 +22,18 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="-43">
               <caret line="105" column="30" selection-start-line="105" selection-start-column="18" selection-end-line="105" selection-end-column="30" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/README.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="324">
+                <caret line="196" column="19" selection-start-line="196" selection-start-column="19" selection-end-line="196" selection-end-column="19" />
+              </first_editor>
+              <second_editor />
             </state>
           </provider>
         </entry>
@@ -65,37 +69,29 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Graph_algo/search/BipartitionDetection.go">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="108">
-              <caret line="3" column="14" selection-start-line="3" selection-start-column="14" selection-end-line="3" selection-end-column="14" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Set/List.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-76">
+            <state relative-caret-position="252">
               <caret line="11" column="1" lean-forward="true" selection-start-line="11" selection-start-column="1" selection-end-line="11" selection-end-column="1" />
               <folding>
                 <element signature="n#!!block;n#InitListSet#0" />
                 <element signature="n#!!block;n#Add#0" />
                 <element signature="n#!!block;n#Contains#0" />
                 <element signature="n#!!block;n#GetSize#0" />
+                <element signature="n#!!block;n#Remove#0" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Graph_algo/search/Cycle.go">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="324">
-              <caret line="9" column="17" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="17" />
-              <folding>
-                <element signature="e#16#44#0" expanded="true" />
-              </folding>
+        <entry file="file://$PROJECT_DIR$/Linked/README.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="487">
+                <caret line="131" column="2" selection-start-line="131" selection-start-column="2" selection-end-line="131" selection-end-column="2" />
+              </first_editor>
+              <second_editor />
             </state>
           </provider>
         </entry>
@@ -113,7 +109,7 @@
         <entry file="file://$PROJECT_DIR$/Graph_algo/README.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="325">
+              <first_editor relative-caret-position="757">
                 <caret line="28" selection-start-line="28" selection-end-line="28" />
               </first_editor>
               <second_editor />
@@ -122,10 +118,13 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Graph_algo/search/SingleSourcePath.go">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-936">
-              <caret line="10" selection-start-line="10" selection-end-line="10" />
+        <entry file="file://$PROJECT_DIR$/BinarySearch/README.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="216">
+                <caret line="196" column="19" lean-forward="true" selection-start-line="196" selection-start-column="8" selection-end-line="196" selection-end-column="19" />
+              </first_editor>
+              <second_editor />
             </state>
           </provider>
         </entry>
@@ -171,6 +170,8 @@
         <option value="$PROJECT_DIR$/Graph_algo/DFS/CC.go" />
         <option value="$PROJECT_DIR$/Set/BST.go" />
         <option value="$PROJECT_DIR$/Set/List.go" />
+        <option value="$PROJECT_DIR$/BinarySearch/README.md" />
+        <option value="$PROJECT_DIR$/README.md" />
       </list>
     </option>
   </component>
@@ -202,41 +203,7 @@
             <path>
               <item name="algo" type="b2602c69:ProjectViewProjectNode" />
               <item name="algo" type="462c0819:PsiDirectoryNode" />
-              <item name="Graph_algo" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="algo" type="b2602c69:ProjectViewProjectNode" />
-              <item name="algo" type="462c0819:PsiDirectoryNode" />
-              <item name="Graph_algo" type="462c0819:PsiDirectoryNode" />
-              <item name="Adj" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="algo" type="b2602c69:ProjectViewProjectNode" />
-              <item name="algo" type="462c0819:PsiDirectoryNode" />
-              <item name="Graph_algo" type="462c0819:PsiDirectoryNode" />
-              <item name="BFS" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="algo" type="b2602c69:ProjectViewProjectNode" />
-              <item name="algo" type="462c0819:PsiDirectoryNode" />
-              <item name="Graph_algo" type="462c0819:PsiDirectoryNode" />
-              <item name="DFS" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="algo" type="b2602c69:ProjectViewProjectNode" />
-              <item name="algo" type="462c0819:PsiDirectoryNode" />
-              <item name="Graph_algo" type="462c0819:PsiDirectoryNode" />
-              <item name="search" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="algo" type="b2602c69:ProjectViewProjectNode" />
-              <item name="algo" type="462c0819:PsiDirectoryNode" />
               <item name="Linked" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="algo" type="b2602c69:ProjectViewProjectNode" />
-              <item name="algo" type="462c0819:PsiDirectoryNode" />
-              <item name="Set" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -411,14 +378,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/BinarySearch/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor />
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://C:/Go/src/runtime/panic.go">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="282">
@@ -430,14 +389,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="174">
           <caret line="1337" selection-start-line="1337" selection-end-line="1337" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor />
-          <second_editor />
         </state>
       </provider>
     </entry>
@@ -474,16 +425,6 @@
             <element signature="n#!!block;n#RemoveFirst#0" />
             <element signature="n#!!block;n#RemoveLast#0" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Linked/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="4716">
-            <caret line="131" column="2" selection-start-line="131" selection-start-column="2" selection-end-line="131" selection-end-column="2" />
-          </first_editor>
-          <second_editor />
         </state>
       </provider>
     </entry>
@@ -586,16 +527,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Graph_algo/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="325">
-            <caret line="28" selection-start-line="28" selection-end-line="28" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Graph_algo/Adj/Hash.go">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-43">
@@ -629,14 +560,55 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Set/List.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-76">
+        <state relative-caret-position="252">
           <caret line="11" column="1" lean-forward="true" selection-start-line="11" selection-start-column="1" selection-end-line="11" selection-end-column="1" />
           <folding>
             <element signature="n#!!block;n#InitListSet#0" />
             <element signature="n#!!block;n#Add#0" />
             <element signature="n#!!block;n#Contains#0" />
             <element signature="n#!!block;n#GetSize#0" />
+            <element signature="n#!!block;n#Remove#0" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Linked/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="487">
+            <caret line="131" column="2" selection-start-line="131" selection-start-column="2" selection-end-line="131" selection-end-column="2" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Graph_algo/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="757">
+            <caret line="28" selection-start-line="28" selection-end-line="28" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BinarySearch/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="216">
+            <caret line="196" column="19" lean-forward="true" selection-start-line="196" selection-start-column="8" selection-end-line="196" selection-end-column="19" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="324">
+            <caret line="196" column="19" selection-start-line="196" selection-start-column="19" selection-end-line="196" selection-end-column="19" />
+          </first_editor>
+          <second_editor />
         </state>
       </provider>
     </entry>
