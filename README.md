@@ -10,10 +10,12 @@
 4. 有向图
 5. 二分搜索树（BinarySearchTree）
 6. 优先队列（PriorityQueue）
-7. 线段树（SegmentTree）
-8. AVL树
-9. 字典树（Trie）
-10. 红黑树（Red-Black-Tree）
-11. 哈希表（HashMap）
+7. 哈希表（HashMap）
+8. 并查集 (Union Find)
+9. 线段树（SegmentTree）
+10. AVL树
+11. 字典树（Trie）
+12. 红黑树（Red-Black-Tree）
+
 
 动态数组，栈，队列还有字典类型因为go语言本身就可以用slice和map这种内建类型非常方便的实现，这里就不做了。
