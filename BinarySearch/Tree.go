@@ -68,17 +68,16 @@ func (this *Tree)Contains(e int) bool {
 }
 // 递归的方式查找元素是否存在
 func (this *Tree)contains (node *Node, e int) bool {
-	if this.root == nil {
+	if node == nil {
 		return false
 	}
 	if e == node.E {
 		return true
 	} else if e > node.E {
-		this.contains(node.Right,e)
+		return this.contains(node.Right,e)
 	} else {
-		this.contains(node.Left, e)
+		return this.contains(node.Left, e)
 	}
-	panic("运行出错！")
 }
 
 // 遍历算法
