@@ -1,17 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="BookmarkManager">
-    <bookmark url="file://$PROJECT_DIR$/Linked/List.go" line="138" />
-  </component>
   <component name="ChangeListManager">
     <list default="true" id="15396f75-4e06-402f-8e73-7074f17a3c9a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Red-Black/Tree.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Red-Black/Tree_test.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Union/Find.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Union/Find_test.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DoubleLinked/FIFO.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DoubleLinked/FIFO_test.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DoubleLinked/LFU.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DoubleLinked/LFU_test.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DoubleLinked/LRU.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DoubleLinked/LRU_test.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DoubleLinked/test.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Utils/Interfaces/Interfaces.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/com_test.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/combine.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BinarySearch/Tree.go" beforeDir="false" afterPath="$PROJECT_DIR$/BinarySearch/Tree.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Trie/Trie_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/Trie/Trie_test.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DoubleLinked/List.go" beforeDir="false" afterPath="$PROJECT_DIR$/DoubleLinked/List.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Segment/SegmentTree_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/Segment/SegmentTree_test.go" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -22,27 +26,70 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Union/Find_test.go">
+        <entry file="file://$PROJECT_DIR$/DoubleLinked/List.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="580">
-              <caret line="39" column="63" selection-start-line="39" selection-start-column="63" selection-end-line="39" selection-end-column="63" />
+            <state relative-caret-position="-4388">
+              <caret line="9" column="21" lean-forward="true" selection-start-line="9" selection-start-column="21" selection-end-line="9" selection-end-column="21" />
+              <folding>
+                <element signature="e#22#50#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Red-Black/Tree.go">
+        <entry file="file://$PROJECT_DIR$/DoubleLinked/LFU.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="5" column="18" selection-start-line="5" selection-start-column="18" selection-end-line="5" selection-end-column="18" />
+            <state relative-caret-position="1689">
+              <caret line="66" column="39" selection-start-line="66" selection-start-column="39" selection-end-line="66" selection-end-column="39" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/DoubleLinked/LFU_test.go">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="972">
+              <caret line="32" selection-start-line="32" selection-end-line="32" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/DoubleLinked/LRU_test.go">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1152">
+              <caret line="32" column="26" selection-start-line="32" selection-start-column="26" selection-end-line="32" selection-end-column="26" />
               <folding>
-                <element signature="n#!!block;n#isRed#0" />
-                <element signature="n#!!block;n#Push#0" />
-                <element signature="n#!!block;n#push#0" />
-                <element signature="n#!!block;n#leftRotate#0" />
-                <element signature="n#!!block;n#flipColors#0" />
-                <element signature="n#!!block;n#leftRotate#1" />
+                <element signature="e#22#69#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/DoubleLinked/FIFO_test.go">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="252">
+              <caret line="12" column="21" lean-forward="true" selection-start-line="12" selection-start-column="21" selection-end-line="12" selection-end-column="21" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/DoubleLinked/FIFO.go">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1548">
+              <caret line="43" column="5" selection-start-line="43" selection-start-column="5" selection-end-line="43" selection-end-column="5" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/OSExam/FCFS_test.go">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="36">
+              <caret line="1" selection-start-line="1" selection-end-line="1" />
             </state>
           </provider>
         </entry>
@@ -50,20 +97,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Red-Black/Tree_test.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="276">
+            <state relative-caret-position="936">
               <caret line="33" column="16" selection-start-line="33" selection-start-column="16" selection-end-line="33" selection-end-column="16" />
-              <folding>
-                <element signature="e#19#53#0" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/BinarySearch/Tree.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="420">
-              <caret line="78" column="15" selection-start-line="78" selection-start-column="15" selection-end-line="78" selection-end-column="15" />
+            <state relative-caret-position="1440">
+              <caret line="78" column="42" selection-start-line="78" selection-start-column="42" selection-end-line="78" selection-end-column="42" />
               <folding>
                 <element signature="e#62#104#0" />
                 <element signature="e#252#270#0" />
@@ -72,24 +116,6 @@
                 <element signature="e#448#501#0" />
                 <element signature="e#533#571#0" />
                 <element signature="e#646#875#0" />
-                <element signature="e#1276#1315#0" />
-                <element signature="e#1343#1445#0" />
-                <element signature="e#1489#1829#0" />
-                <element signature="e#1866#1890#0" />
-                <element signature="e#1918#2021#0" />
-                <element signature="e#2061#2086#0" />
-                <element signature="e#2115#2219#0" />
-                <element signature="e#2263#2563#0" />
-                <element signature="e#2724#2794#0" />
-                <element signature="e#2841#2923#0" />
-                <element signature="e#2955#3027#0" />
-                <element signature="e#3243#3398#0" />
-                <element signature="e#3446#3526#0" />
-                <element signature="e#3614#3768#0" />
-                <element signature="e#3911#4588#0" />
-                <element signature="e#4636#4741#0" />
-                <element signature="e#4811#5054#0" />
-                <element signature="e#5097#5210#0" />
               </folding>
             </state>
           </provider>
@@ -116,7 +142,12 @@
   <component name="FindInProjectRecents">
     <findStrings>
       <find>link</find>
+      <find>LRU</find>
     </findStrings>
+    <replaceStrings>
+      <replace />
+      <replace>LFU</replace>
+    </replaceStrings>
   </component>
   <component name="GOROOT" path="C:\Go" />
   <component name="Git.Settings">
@@ -126,7 +157,6 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/BinarySearchTree/Tree.go" />
-        <option value="$PROJECT_DIR$/BinarySearch/Tree_test.go" />
         <option value="$PROJECT_DIR$/Set/Set.go" />
         <option value="$PROJECT_DIR$/Linked/Test_List.go" />
         <option value="$PROJECT_DIR$/Linked/List_test.go" />
@@ -150,23 +180,33 @@
         <option value="$PROJECT_DIR$/Heap/Arrar_test.go" />
         <option value="$PROJECT_DIR$/Heap/PriorityQueue.go" />
         <option value="$PROJECT_DIR$/README.md" />
-        <option value="$PROJECT_DIR$/Segment/SegmentTree_test.go" />
         <option value="$PROJECT_DIR$/Segment/Tree.go" />
-        <option value="$PROJECT_DIR$/Trie/Trie_test.go" />
         <option value="$PROJECT_DIR$/Trie/Trie.go" />
         <option value="$PROJECT_DIR$/Union/Find.go" />
         <option value="$PROJECT_DIR$/Union/Find_test.go" />
         <option value="$PROJECT_DIR$/Red-Black/2-3Tree.go" />
-        <option value="$PROJECT_DIR$/Red-Black/Tree_test.go" />
         <option value="$PROJECT_DIR$/BinarySearch/Tree.go" />
+        <option value="$PROJECT_DIR$/BinarySearch/Tree_test.go" />
+        <option value="$PROJECT_DIR$/Trie/Trie_test.go" />
+        <option value="$PROJECT_DIR$/Red-Black/Tree_test.go" />
+        <option value="$PROJECT_DIR$/DoubleLinked/test.txt" />
+        <option value="$PROJECT_DIR$/DoubleLinked/FIFO.go" />
+        <option value="$PROJECT_DIR$/DoubleLinked/FIFO_test.go" />
+        <option value="$PROJECT_DIR$/Segment/SegmentTree_test.go" />
+        <option value="$PROJECT_DIR$/DoubleLinked/LRU.go" />
+        <option value="$PROJECT_DIR$/Utils/Interfaces/Interfaces.go" />
+        <option value="$PROJECT_DIR$/DoubleLinked/LRU_test.go" />
+        <option value="$PROJECT_DIR$/DoubleLinked/LFU_test.go" />
+        <option value="$PROJECT_DIR$/DoubleLinked/LFU.go" />
+        <option value="$PROJECT_DIR$/DoubleLinked/List.go" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="7">
-    <option name="x" value="-8" />
-    <option name="y" value="-8" />
-    <option name="width" value="974" />
-    <option name="height" value="1087" />
+    <option name="x" value="960" />
+    <option name="y" value="89" />
+    <option name="width" value="950" />
+    <option name="height" value="810" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -174,6 +214,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -189,13 +230,27 @@
             <path>
               <item name="algo" type="b2602c69:ProjectViewProjectNode" />
               <item name="algo" type="462c0819:PsiDirectoryNode" />
+              <item name="DoubleLinked" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="algo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="algo" type="462c0819:PsiDirectoryNode" />
+              <item name="OSExam" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="algo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="algo" type="462c0819:PsiDirectoryNode" />
               <item name="Red-Black" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="algo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="algo" type="462c0819:PsiDirectoryNode" />
+              <item name="Utils" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -204,7 +259,8 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="go.gopath.indexing.explicitly.defined" value="true" />
     <property name="go.import.settings.migrated" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/Trie" />
+    <property name="go.sdk.automatically.set" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
   </component>
@@ -228,38 +284,49 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Go Test.TestRBTree in algo/Red-Black">
-    <configuration name="TestFind in algo/Union" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Go Test.TestLRUCache in algo/DoubleLinked">
+    <configuration name="TestFIFO in algo/DoubleLinked" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
       <module name="algo" />
-      <working_directory value="$PROJECT_DIR$/Union" />
+      <working_directory value="$PROJECT_DIR$/DoubleLinked" />
       <framework value="gotest" />
       <kind value="PACKAGE" />
-      <package value="algo/Union" />
+      <package value="algo/DoubleLinked" />
       <directory value="$PROJECT_DIR$/" />
       <filePath value="$PROJECT_DIR$/" />
-      <pattern value="^TestFind$" />
+      <pattern value="^TestFIFO$" />
       <method v="2" />
     </configuration>
-    <configuration name="TestMaxHeap in algo/Heap" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+    <configuration name="TestInitLFUCahe in algo/DoubleLinked (1)" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
       <module name="algo" />
-      <working_directory value="$PROJECT_DIR$/Heap" />
+      <working_directory value="$PROJECT_DIR$/DoubleLinked" />
       <framework value="gotest" />
       <kind value="PACKAGE" />
-      <package value="algo/Heap" />
+      <package value="algo/DoubleLinked" />
       <directory value="$PROJECT_DIR$/" />
       <filePath value="$PROJECT_DIR$/" />
-      <pattern value="^TestMaxHeap$" />
+      <pattern value="^TestInitLFUCahe$" />
       <method v="2" />
     </configuration>
-    <configuration name="TestRBTree in algo/Red-Black" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+    <configuration name="TestInitLFUCahe in algo/DoubleLinked" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
       <module name="algo" />
-      <working_directory value="$PROJECT_DIR$/Red-Black" />
+      <working_directory value="C:\Users\exia\go\src\algo" />
       <framework value="gotest" />
       <kind value="PACKAGE" />
-      <package value="algo/Red-Black" />
+      <package value="algo/DoubleLinked" />
       <directory value="$PROJECT_DIR$/" />
       <filePath value="$PROJECT_DIR$/" />
-      <pattern value="^TestRBTree$" />
+      <pattern value="^TestInitLFUCahe$" />
+      <method v="2" />
+    </configuration>
+    <configuration name="TestLRUCache in algo/DoubleLinked" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+      <module name="algo" />
+      <working_directory value="$PROJECT_DIR$/DoubleLinked" />
+      <framework value="gotest" />
+      <kind value="PACKAGE" />
+      <package value="algo/DoubleLinked" />
+      <directory value="$PROJECT_DIR$/" />
+      <filePath value="$PROJECT_DIR$/" />
+      <pattern value="^TestLRUCache$" />
       <method v="2" />
     </configuration>
     <configuration name="TestTree in algo/Segment" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
@@ -273,77 +340,66 @@
       <pattern value="^TestTree$" />
       <method v="2" />
     </configuration>
-    <configuration name="TestTrie in algo/Trie" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
-      <module name="algo" />
-      <working_directory value="$PROJECT_DIR$/Trie" />
-      <framework value="gotest" />
-      <kind value="PACKAGE" />
-      <package value="algo/Trie" />
-      <directory value="$PROJECT_DIR$/" />
-      <filePath value="$PROJECT_DIR$/" />
-      <pattern value="^TestTrie$" />
-      <method v="2" />
-    </configuration>
     <list>
-      <item itemvalue="Go Test.TestMaxHeap in algo/Heap" />
+      <item itemvalue="Go Test.TestFIFO in algo/DoubleLinked" />
       <item itemvalue="Go Test.TestTree in algo/Segment" />
-      <item itemvalue="Go Test.TestTrie in algo/Trie" />
-      <item itemvalue="Go Test.TestFind in algo/Union" />
-      <item itemvalue="Go Test.TestRBTree in algo/Red-Black" />
+      <item itemvalue="Go Test.TestLRUCache in algo/DoubleLinked" />
+      <item itemvalue="Go Test.TestInitLFUCahe in algo/DoubleLinked" />
+      <item itemvalue="Go Test.TestInitLFUCahe in algo/DoubleLinked (1)" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Go Test.TestRBTree in algo/Red-Black" />
-        <item itemvalue="Go Test.TestFind in algo/Union" />
-        <item itemvalue="Go Test.TestTrie in algo/Trie" />
+        <item itemvalue="Go Test.TestLRUCache in algo/DoubleLinked" />
+        <item itemvalue="Go Test.TestInitLFUCahe in algo/DoubleLinked (1)" />
+        <item itemvalue="Go Test.TestFIFO in algo/DoubleLinked" />
+        <item itemvalue="Go Test.TestInitLFUCahe in algo/DoubleLinked" />
         <item itemvalue="Go Test.TestTree in algo/Segment" />
-        <item itemvalue="Go Test.TestMaxHeap in algo/Heap" />
       </list>
     </recent_temporary>
   </component>
   <component name="TestHistory">
-    <history-entry file="TestTrie_in_algo_Trie - 2019.10.05 at 13h 56m 26s.xml">
-      <configuration name="TestTrie in algo/Trie" configurationId="GoTestRunConfiguration" />
+    <history-entry file="TestInitLFUCahe_in_algo_DoubleLinked - 2019.10.22 at 11h 29m 27s.xml">
+      <configuration name="TestInitLFUCahe in algo/DoubleLinked" configurationId="GoTestRunConfiguration" />
     </history-entry>
-    <history-entry file="TestTrie_in_algo_Trie - 2019.10.05 at 17h 47m 33s.xml">
-      <configuration name="TestTrie in algo/Trie" configurationId="GoTestRunConfiguration" />
+    <history-entry file="TestInitLFUCahe_in_algo_DoubleLinked - 2019.10.22 at 11h 31m 04s.xml">
+      <configuration name="TestInitLFUCahe in algo/DoubleLinked" configurationId="GoTestRunConfiguration" />
     </history-entry>
-    <history-entry file="TestFind_in_algo_Union - 2019.10.06 at 10h 20m 51s.xml">
-      <configuration name="TestFind in algo/Union" configurationId="GoTestRunConfiguration" />
+    <history-entry file="TestInitLFUCahe_in_algo_DoubleLinked - 2019.10.22 at 11h 31m 51s.xml">
+      <configuration name="TestInitLFUCahe in algo/DoubleLinked" configurationId="GoTestRunConfiguration" />
     </history-entry>
-    <history-entry file="TestFind_in_algo_Union - 2019.10.06 at 10h 24m 17s.xml">
-      <configuration name="TestFind in algo/Union" configurationId="GoTestRunConfiguration" />
+    <history-entry file="TestInitLFUCahe_in_algo_DoubleLinked - 2019.10.22 at 14h 58m 43s.xml">
+      <configuration name="TestInitLFUCahe in algo/DoubleLinked" configurationId="GoTestRunConfiguration" />
     </history-entry>
-    <history-entry file="TestFind_in_algo_Union - 2019.10.06 at 10h 25m 43s.xml">
-      <configuration name="TestFind in algo/Union" configurationId="GoTestRunConfiguration" />
+    <history-entry file="TestInitLFUCahe_in_algo_DoubleLinked - 2019.10.22 at 15h 00m 45s.xml">
+      <configuration name="TestInitLFUCahe in algo/DoubleLinked" configurationId="GoTestRunConfiguration" />
     </history-entry>
-    <history-entry file="TestFind_in_algo_Union - 2019.10.06 at 10h 27m 58s.xml">
-      <configuration name="TestFind in algo/Union" configurationId="GoTestRunConfiguration" />
+    <history-entry file="TestInitLFUCahe_in_algo_DoubleLinked - 2019.10.22 at 15h 04m 32s.xml">
+      <configuration name="TestInitLFUCahe in algo/DoubleLinked" configurationId="GoTestRunConfiguration" />
     </history-entry>
-    <history-entry file="TestFind_in_algo_Union - 2019.10.06 at 18h 56m 12s.xml">
-      <configuration name="TestFind in algo/Union" configurationId="GoTestRunConfiguration" />
+    <history-entry file="TestInitLFUCahe_in_algo_DoubleLinked - 2019.10.22 at 15h 05m 09s.xml">
+      <configuration name="TestInitLFUCahe in algo/DoubleLinked" configurationId="GoTestRunConfiguration" />
     </history-entry>
-    <history-entry file="TestRBTree_in_algo_Red-Black - 2019.10.06 at 18h 56m 22s.xml">
-      <configuration name="TestRBTree in algo/Red-Black" configurationId="GoTestRunConfiguration" />
+    <history-entry file="TestFIFO_in_algo_DoubleLinked - 2019.10.22 at 15h 21m 09s.xml">
+      <configuration name="TestFIFO in algo/DoubleLinked" configurationId="GoTestRunConfiguration" />
     </history-entry>
-    <history-entry file="TestRBTree_in_algo_Red-Black - 2019.10.06 at 18h 59m 08s.xml">
-      <configuration name="TestRBTree in algo/Red-Black" configurationId="GoTestRunConfiguration" />
+    <history-entry file="TestInitLFUCahe_in_algo_DoubleLinked_(1) - 2019.10.22 at 15h 21m 26s.xml">
+      <configuration name="TestInitLFUCahe in algo/DoubleLinked (1)" configurationId="GoTestRunConfiguration" />
     </history-entry>
-    <history-entry file="TestRBTree_in_algo_Red-Black - 2019.10.06 at 19h 00m 43s.xml">
-      <configuration name="TestRBTree in algo/Red-Black" configurationId="GoTestRunConfiguration" />
+    <history-entry file="TestLRUCache_in_algo_DoubleLinked - 2019.10.22 at 15h 21m 34s.xml">
+      <configuration name="TestLRUCache in algo/DoubleLinked" configurationId="GoTestRunConfiguration" />
     </history-entry>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1096" extended-state="6" />
+    <frame x="-8" y="-8" width="1936" height="1096" extended-state="7" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.12929185" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.17918456" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32513368" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.3989305" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.4513369" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.39833158" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -365,19 +421,18 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="DlvLineBreakpoint">
-          <url>file://$PROJECT_DIR$/BinarySearch/Tree_test.go</url>
-          <line>15</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
           <url>file://$PROJECT_DIR$/Segment/SegmentTree_test.go</url>
-          <line>10</line>
+          <line>9</line>
           <option name="timeStamp" value="2" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DlvLineBreakpoint">
-          <url>file://$PROJECT_DIR$/Trie/Trie_test.go</url>
-          <line>21</line>
-          <option name="timeStamp" value="6" />
+          <url>file://$PROJECT_DIR$/BinarySearch/Tree.go</url>
+          <option name="timeStamp" value="8" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
+          <url>file://$PROJECT_DIR$/DoubleLinked/LFU_test.go</url>
+          <line>30</line>
+          <option name="timeStamp" value="11" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
@@ -389,128 +444,14 @@
     </watches-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Linked/List_test.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="504">
-          <caret line="17" column="21" selection-start-line="17" selection-start-column="21" selection-end-line="17" selection-end-column="21" />
-          <folding>
-            <element signature="e#16#44#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://C:/Go/src/reflect/value.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="81288">
-          <caret line="2262" column="25" selection-start-line="2262" selection-start-column="25" selection-end-line="2262" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Set/test.go" />
-    <entry file="file://$PROJECT_DIR$/Graph_algo/Adj/Matrix.go">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Graph_algo/Adj/Table.go">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Graph_algo/product/aa.go" />
-    <entry file="file://$PROJECT_DIR$/Graph_algo/main.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="22" selection-start-line="22" selection-end-line="22" />
-          <folding>
-            <element signature="e#14#94#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Graph_algo/search/SingleSourcePath.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-936">
-          <caret line="10" selection-start-line="10" selection-end-line="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Graph_algo/search/Cycle.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="324">
-          <caret line="9" column="17" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="17" />
-          <folding>
-            <element signature="e#16#44#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Graph_algo/search/BipartitionDetection.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="3" column="14" selection-start-line="3" selection-start-column="14" selection-end-line="3" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Graph_algo/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="757">
-            <caret line="28" selection-start-line="28" selection-end-line="28" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Graph_algo/DFS/CC.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1440">
-          <caret line="43" selection-start-line="43" selection-end-line="43" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Set/BST.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="3" column="15" selection-start-line="3" selection-start-column="15" selection-end-line="3" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Set/List.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="11" column="1" selection-start-line="11" selection-start-column="1" selection-end-line="11" selection-end-column="1" />
-          <folding>
-            <element signature="n#!!block;n#InitListSet#0" />
-            <element signature="n#!!block;n#Add#0" />
-            <element signature="n#!!block;n#Contains#0" />
-            <element signature="n#!!block;n#GetSize#0" />
-            <element signature="n#!!block;n#Remove#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Graph_algo/search/Find.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="5" column="9" selection-start-line="5" selection-start-column="9" selection-end-line="5" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://C:/Go/src/sort/sort.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-935">
-          <caret line="41" column="33" selection-start-line="41" selection-start-column="33" selection-end-line="41" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Graph_algo/Adj/Hash.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3600">
-          <caret line="105" column="30" selection-start-line="105" selection-start-column="18" selection-end-line="105" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/Set/BST.go" />
+    <entry file="file://$PROJECT_DIR$/Set/List.go" />
+    <entry file="file://$PROJECT_DIR$/Graph_algo/search/Find.go" />
+    <entry file="file://C:/Go/src/sort/sort.go" />
     <entry file="file://$PROJECT_DIR$/Heap/Array.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="5" column="21" selection-start-line="5" selection-start-column="21" selection-end-line="5" selection-end-column="21" />
+        <state relative-caret-position="504">
+          <caret line="14" column="1" selection-start-line="14" selection-start-column="1" selection-end-line="14" selection-end-column="1" />
           <folding>
             <element signature="n#!!block;n#siftUp#0" />
             <element signature="n#!!block;n#Replace#0" />
@@ -519,75 +460,124 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Heap/PriorityQueue.go">
+    <entry file="file://$PROJECT_DIR$/Heap/PriorityQueue.go" />
+    <entry file="file://$PROJECT_DIR$/Heap/Arrar_test.go" />
+    <entry file="file://$PROJECT_DIR$/Graph_algo/BFS/traverse.go" />
+    <entry file="file://$PROJECT_DIR$/Linked/README.md" />
+    <entry file="file://$PROJECT_DIR$/README.md" />
+    <entry file="file://$PROJECT_DIR$/Heap/README.md" />
+    <entry file="file://$PROJECT_DIR$/Union/Find.go" />
+    <entry file="file://$PROJECT_DIR$/Segment/README.md" />
+    <entry file="file://$PROJECT_DIR$/Trie/pride-and-prejudice.txt" />
+    <entry file="file://$PROJECT_DIR$/Trie/README.md" />
+    <entry file="file://C:/Go/src/runtime/panic.go" />
+    <entry file="file://C:/Go/src/testing/testing.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="828">
-          <caret line="23" column="24" selection-start-line="23" selection-start-column="24" selection-end-line="23" selection-end-column="24" />
+        <state relative-caret-position="30636">
+          <caret line="867" selection-start-line="867" selection-end-line="867" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Heap/Arrar_test.go">
+    <entry file="file://C:/Go/src/runtime/asm_amd64.s" />
+    <entry file="file://C:/Go/src/container/heap/heap.go" />
+    <entry file="file://$PROJECT_DIR$/Trie/Trie_test.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1188">
-          <caret line="39" column="19" selection-start-line="39" selection-start-column="19" selection-end-line="39" selection-end-column="19" />
+        <state relative-caret-position="198">
+          <caret line="9" column="10" selection-start-line="9" selection-start-column="10" selection-end-line="9" selection-end-column="10" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Graph_algo/BFS/traverse.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="4" column="9" selection-start-line="4" selection-start-column="9" selection-end-line="4" selection-end-column="9" />
-        </state>
-      </provider>
+    <entry file="file://$PROJECT_DIR$/Union/Find_test.go">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Segment/Tree.go">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/BinarySearch/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="216">
-            <caret line="196" column="19" selection-start-line="196" selection-start-column="8" selection-end-line="196" selection-end-column="19" />
-          </first_editor>
+          <first_editor />
           <second_editor />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Linked/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="1658">
-            <caret line="104" column="1" selection-start-line="104" selection-start-column="1" selection-end-line="104" selection-end-column="1" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="144">
-            <caret line="4" column="15" selection-start-line="4" selection-start-column="15" selection-end-line="4" selection-end-column="15" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Segment/Tree.go">
+    <entry file="file://$PROJECT_DIR$/Graph_algo/main.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="348">
-          <caret line="86" column="5" lean-forward="true" selection-start-line="86" selection-start-column="5" selection-end-line="86" selection-end-column="5" />
+        <state relative-caret-position="286">
+          <caret line="19" column="23" lean-forward="true" selection-start-line="19" selection-start-column="23" selection-end-line="19" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Graph_algo/Adj/Hash.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-388">
+          <caret line="39" column="4" selection-start-line="39" selection-start-column="4" selection-end-line="41" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BinarySearch/Tree_test.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="18" column="42" selection-start-line="18" selection-start-column="42" selection-end-line="18" selection-end-column="42" />
           <folding>
-            <element signature="n#!!block;n#QueryLR#0" />
-            <element signature="n#!!block;n#query#0" />
-            <element signature="n#!!block;n#Get#0" />
-            <element signature="n#!!block;n#leftChild#0" />
-            <element signature="n#!!block;n#rightChild#0" />
+            <element signature="e#22#50#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///usr/local/go/src/fmt/scan.go" />
+    <entry file="file://$PROJECT_DIR$/Segment/SegmentTree_test.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="242">
+          <caret line="11" column="28" selection-start-line="11" selection-start-column="28" selection-end-line="11" selection-end-column="28" />
+          <folding>
+            <element signature="e#17#45#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DoubleLinked/test.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="77" selection-start-column="77" selection-end-column="77" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Utils/Interfaces/Interfaces.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-326">
+          <caret line="4" column="5" selection-start-line="4" selection-start-column="5" selection-end-line="4" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///usr/local/go/src/strings/builder.go" />
+    <entry file="file://$PROJECT_DIR$/DoubleLinked/LRU.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="836">
+          <caret line="38" column="17" selection-start-line="38" selection-start-column="17" selection-end-line="38" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///usr/local/go/src/testing/testing.go" />
+    <entry file="file:///usr/local/go/src/fmt/print.go" />
+    <entry file="file:///usr/local/go/src/runtime/asm_amd64.s" />
+    <entry file="file:///usr/local/go/src/runtime/panic.go" />
+    <entry file="file:///usr/local/go/src/os/file_unix.go" />
+    <entry file="file://$PROJECT_DIR$/Red-Black/Tree.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="7" column="9" selection-start-line="7" selection-start-column="9" selection-end-line="7" selection-end-column="9" />
+          <folding>
+            <element signature="n#!!block;n#isRed#0" />
+            <element signature="n#!!block;n#flipColors#0" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Linked/List.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="521">
-          <caret line="128" column="9" selection-start-line="122" selection-end-line="128" selection-end-column="9" />
+        <state relative-caret-position="2268">
+          <caret line="124" column="26" selection-start-line="124" selection-start-column="26" selection-end-line="124" selection-end-column="26" />
           <folding>
             <element signature="e#16#44#0" expanded="true" />
             <element signature="n#!!block;n#AddIndex#0" />
@@ -603,57 +593,47 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Heap/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor />
-          <second_editor />
+    <entry file="file://$PROJECT_DIR$/OSExam/FCFS.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="36">
+          <caret line="1" selection-start-line="1" selection-end-line="1" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Segment/SegmentTree_test.go">
+    <entry file="file://$PROJECT_DIR$/OSExam/Process.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="13" column="23" selection-start-line="13" selection-start-column="23" selection-end-line="13" selection-end-column="23" />
+        <state relative-caret-position="36">
+          <caret line="1" selection-start-line="1" selection-end-line="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/OSExam/FCFS_test.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="36">
+          <caret line="1" selection-start-line="1" selection-end-line="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Red-Black/Tree_test.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="936">
+          <caret line="33" column="16" selection-start-line="33" selection-start-column="16" selection-end-line="33" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BinarySearch/Tree.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1440">
+          <caret line="78" column="42" selection-start-line="78" selection-start-column="42" selection-end-line="78" selection-end-column="42" />
           <folding>
-            <element signature="e#17#45#0" expanded="true" />
+            <element signature="e#62#104#0" />
+            <element signature="e#252#270#0" />
+            <element signature="e#299#317#0" />
+            <element signature="e#364#419#0" />
+            <element signature="e#448#501#0" />
+            <element signature="e#533#571#0" />
+            <element signature="e#646#875#0" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Trie/Trie_test.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="864">
-          <caret line="32" column="37" selection-start-line="32" selection-start-column="37" selection-end-line="32" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Union/Find.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1224">
-          <caret line="64" column="21" selection-start-line="64" selection-start-column="21" selection-end-line="64" selection-end-column="21" />
-          <folding>
-            <element signature="n#!!block;n#Find#0" />
-            <element signature="n#!!block;n#Union#1" />
-            <element signature="n#!!block;n#IsConnect#1" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Segment/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="6408">
-            <caret line="178" selection-end-line="250" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Trie/pride-and-prejudice.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3996">
-          <caret line="111" column="25" selection-start-line="111" selection-start-column="25" selection-end-line="111" selection-end-column="25" />
         </state>
       </provider>
     </entry>
@@ -664,116 +644,50 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Trie/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="216">
-            <caret line="6" column="13" selection-end-line="268" />
-          </first_editor>
-          <second_editor />
+    <entry file="file://$PROJECT_DIR$/DoubleLinked/FIFO.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1548">
+          <caret line="43" column="5" selection-start-line="43" selection-start-column="5" selection-end-line="43" selection-end-column="5" />
         </state>
       </provider>
     </entry>
-    <entry file="file://C:/Go/src/runtime/panic.go">
+    <entry file="file://$PROJECT_DIR$/DoubleLinked/List.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="25740">
-          <caret line="719" selection-start-line="719" selection-end-line="719" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://C:/Go/src/testing/testing.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30672">
-          <caret line="868" selection-start-line="868" selection-end-line="868" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://C:/Go/src/runtime/asm_amd64.s">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="48132">
-          <caret line="1337" selection-start-line="1337" selection-end-line="1337" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Union/Find_test.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="580">
-          <caret line="39" column="63" selection-start-line="39" selection-start-column="63" selection-end-line="39" selection-end-column="63" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://C:/Go/src/container/heap/heap.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2480">
-          <caret line="32" column="12" lean-forward="true" selection-start-line="32" selection-start-column="12" selection-end-line="32" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Red-Black/Tree.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="5" column="18" selection-start-line="5" selection-start-column="18" selection-end-line="5" selection-end-column="18" />
-          <folding>
-            <element signature="n#!!block;n#isRed#0" />
-            <element signature="n#!!block;n#Push#0" />
-            <element signature="n#!!block;n#push#0" />
-            <element signature="n#!!block;n#leftRotate#0" />
-            <element signature="n#!!block;n#flipColors#0" />
-            <element signature="n#!!block;n#leftRotate#1" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/BinarySearch/Tree_test.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="521">
-          <caret line="23" column="18" selection-start-line="23" selection-start-column="18" selection-end-line="23" selection-end-column="18" />
+        <state relative-caret-position="-4388">
+          <caret line="9" column="21" lean-forward="true" selection-start-line="9" selection-start-column="21" selection-end-line="9" selection-end-column="21" />
           <folding>
             <element signature="e#22#50#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Red-Black/Tree_test.go">
+    <entry file="file://$PROJECT_DIR$/DoubleLinked/FIFO_test.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="276">
-          <caret line="33" column="16" selection-start-line="33" selection-start-column="16" selection-end-line="33" selection-end-column="16" />
-          <folding>
-            <element signature="e#19#53#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="252">
+          <caret line="12" column="21" lean-forward="true" selection-start-line="12" selection-start-column="21" selection-end-line="12" selection-end-column="21" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/BinarySearch/Tree.go">
+    <entry file="file://$PROJECT_DIR$/DoubleLinked/LFU.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="78" column="15" selection-start-line="78" selection-start-column="15" selection-end-line="78" selection-end-column="15" />
+        <state relative-caret-position="1689">
+          <caret line="66" column="39" selection-start-line="66" selection-start-column="39" selection-end-line="66" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DoubleLinked/LFU_test.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="972">
+          <caret line="32" selection-start-line="32" selection-end-line="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DoubleLinked/LRU_test.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1152">
+          <caret line="32" column="26" selection-start-line="32" selection-start-column="26" selection-end-line="32" selection-end-column="26" />
           <folding>
-            <element signature="e#62#104#0" />
-            <element signature="e#252#270#0" />
-            <element signature="e#299#317#0" />
-            <element signature="e#364#419#0" />
-            <element signature="e#448#501#0" />
-            <element signature="e#533#571#0" />
-            <element signature="e#646#875#0" />
-            <element signature="e#1276#1315#0" />
-            <element signature="e#1343#1445#0" />
-            <element signature="e#1489#1829#0" />
-            <element signature="e#1866#1890#0" />
-            <element signature="e#1918#2021#0" />
-            <element signature="e#2061#2086#0" />
-            <element signature="e#2115#2219#0" />
-            <element signature="e#2263#2563#0" />
-            <element signature="e#2724#2794#0" />
-            <element signature="e#2841#2923#0" />
-            <element signature="e#2955#3027#0" />
-            <element signature="e#3243#3398#0" />
-            <element signature="e#3446#3526#0" />
-            <element signature="e#3614#3768#0" />
-            <element signature="e#3911#4588#0" />
-            <element signature="e#4636#4741#0" />
-            <element signature="e#4811#5054#0" />
-            <element signature="e#5097#5210#0" />
+            <element signature="e#22#69#0" expanded="true" />
           </folding>
         </state>
       </provider>
