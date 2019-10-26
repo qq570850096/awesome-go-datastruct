@@ -54,6 +54,7 @@ func (this *FIFOCache)Put(key,value interface{})  {
 		node.value = value
 		this.list.Append(node)
 	} else {
+
 		if this.size == this.capacity {
 			node := this.list.Pop()
 			delete(this.find,node.key)

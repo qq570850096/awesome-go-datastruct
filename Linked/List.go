@@ -19,6 +19,7 @@ func (l List) Head() *Node {
 	return l.dummyHead
 }
 
+
 func (l List) Size() int {
 	return l.size
 }
