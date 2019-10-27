@@ -176,8 +176,180 @@ func (this List)ReversePrint(node *Node)  {
 
 ### 1.2 从无序链表中移除重复项
 
+难度系数:★★★
+被考查系数:★★★★
+
+#### 题目描述:
+
+给定一个没有排序的链表,去掉其重复项,并保留原顺序,例如链表1->3->1->5->5->7,去掉重复项后变为1->3->5->7.
+分析与解答:
+
+#### 方法一:顺序删除
+
+主要思路为:通过双重循环直接在链表上进行删除操作。外层循环用一个指针从第-一个结点开始遍历整个链表,然后内层循环用另外一个指针遍历其余结点,将与外层循环遍历到的指针所指结点的数据域相同的结点删除。
+如下图所示:
+
+![](http://www.liuanqihappybirthday.top/uploads/big/7c3f40b9821ac4498f52e403f95bd1e1.png)
+
+假设外层循环从outerCur开始遍历，当内层循环指针innerCur遍历到上图实线所示的位置(outerCur.data= = innerCur.data)时，此时需要把
+innerCur指向的结点删除。具体步骤如下:
+
+1. 用tmp记录待删除的结点的地址。
+
+2. 为了能够在删除tmp结点后继续遍历链表中其余的结点，使
+   innerCur指向它的后继结点: innerCur= innerCur.next.
+
+3. 从链表中删除tmp结点。
 
 
+实现代码如下:
+
+```go
+func (this *List) RemoveDup () {
+
+	if this.Head() == nil || this.Head().Next == nil {
+		return
+	}
+	// 外层循环，指向链表的第一个节点
+	outerCur := this.Head().Next
+	// 内层循环innerPre 和 innerCur
+	var innerPre,innerCur *Node
+
+	for ;outerCur != nil ; outerCur = outerCur.Next {
+		for innerPre,innerCur = outerCur,outerCur.Next; innerCur != nil ; {
+			if innerPre.E == innerCur.E {
+				innerPre.Next = innerCur.Next
+				innerCur = innerCur.Next
+			} else {
+				innerPre = innerCur
+				innerCur = innerCur.Next
+			}
+		}
+	}
+}
+```
+
+测试代码和结果
+
+```go
+func TestList(t *testing.T) {
+	list := InitList()
+	for i:=0;i<5 ; i++  {
+		list.AddFirst(i)
+		list.AddFirst(i)
+	}
+	t.Log(list)
+	list.RemoveDup()
+	t.Log(list)	
+}
+
+// 测试结果
+
+=== RUN   TestList
+--- PASS: TestList (0.00s)
+    List_test.go:24: 4 -> 4 -> 3 -> 3 -> 2 -> 2 -> 1 -> 1 -> 0 -> 0 -> NULL
+    List_test.go:26: 4 -> 3 -> 2 -> 1 -> 0 -> NULL
+PASS
+```
+
+##### 性能分析:
+
+由于这种方法采用双重循环对链表进行遍历，因此,时间复杂度为O(n^2^),其中，N为链表的长度,在遍历链表的过程中,使用了常量个额外的
+指针变量来保存当前遍历的结点、前驱结点和被删除的结点，因此，空间复杂度为0(1)。
+
+#### 方法二:递归法
+
+主要思路为:对于结点cur,首先递归地删除以cur.next为首的子链表
+中重复的结点，接着从以cur.next为首的子链表中找出与cur有着相同数据域的结点并删除，实现代码如下:
+
+```go
+func (this *List) RemoveDupRecursion (){
+	if this.Head() == nil {
+		return
+	}
+	this.Head().Next = removeDupRecursionChild(this.Head().Next)
+}
+// 递归式删除重复节点
+func removeDupRecursionChild (node *Node) *Node {
+	if node == nil || node.Next == nil {
+		return node
+	}
+	var pointer *Node
+	cur := node
+	// 对以node.Next为首的子链表删除重复的节点
+	node.Next = removeDupRecursionChild(node.Next)
+	// 找出以node.Next为首的子链表中与node结点相同的结点并删除
+	pointer = node.Next
+	for pointer != nil {
+		if node.E == pointer.E {
+			cur.Next = pointer.Next
+			pointer = pointer.Next
+		} else {
+			pointer = pointer.Next
+			cur = cur.Next
+		}
+	}
+	return node
+}
+```
+
+##### 算法性能分析:
+
+这种方法与方法一类似, 从本质上而言,由于这种方法需要对链表进行
+双重遍历，因此，时间复杂度为O(n2),其中, N为链表的长度。由于递归法会增加许多额外的函数调用,因此,从理论上讲,该方法效率比方法一低。
+
+#### 方法三:空间换时间
+
+通常情况下，为了降低时间复杂度,往往在条件允许的情况下，通过使
+用辅助空间实现。具体而言,主要思路为:
+
+1. 建立一个HashSet, HashSet中的内容为已经遍历过的结点内容,
+   并将其初始化为空。
+2. 从头开始遍历链表中的所以结点,存在以下两种可能性:
+   1. 如果结点内容已经在HashSet中，则删除此结点,继续向后遍历。
+   2. 如果结点内容不在HashSet中，则保留此结点,将词结点内容添加
+      到HashSet中,继续向后遍历。
+
+代码实现如下:
+
+```go
+// 用空间换时间
+func (this *List) RemoveDupWithMap () {
+	if this.Head() == nil || this.Head().Next == nil {
+		return
+	}
+	searchMap := make(map[int]*Node)
+	pre := this.Head()
+	cur := this.Head().Next
+	for cur != nil {
+		// 如果在哈希表中找到了这个数值，那就删除掉cur
+		if _,ok := searchMap[cur.E]; ok {
+			pre.Next = cur.Next
+			cur = cur.Next
+		} else {
+			searchMap[cur.E] = cur
+			cur = cur.Next
+			pre = pre.Next
+		}
+	}
+}
+```
+
+##### 算法性能分析:
+
+在最坏的情况下，链表没有重复的元素，我们就要申请n个空间，也就是说空间复杂度为O(n),但是链表我们只需要扫描一次即可，时间复杂度是O(n)，比n^2^的性能要好。
+
+##### 引申:如何从有序链表中移除重复项。
+
+分析与解答:
+
+上述介绍的方法也适用于链表有序的情况，但是由于以上方法没有充分
+利用到链表有序这个条件，因此，算法的性能肯定不是最优的。本题中，由于链表具有有序性,因此,不需要对链表进行两次遍历。所以,有如下思路:用cur指向链表第一个结点，此时需要分为以下两种情况讨论:
+
+* 如果cur.data= =cur.next.data,那么删除cur.next 结点。
+* 如果cur.data! =cur.next.data,那么cur=cur.next,继续遍历其
+  余结点。
+  
 ### 1.3 计算两个单链表所代表的的代数之和
 
 
