@@ -352,9 +352,217 @@ func (this *List) RemoveDupWithMap () {
   
 ### 1.3 计算两个单链表所代表的的代数之和
 
+难度系数:★★★
+被考查系数:★★★★
+
+#### 题目描述:
+
+给定两个单链表,链表的每个结点代表-位数, 计算两个数的和。例如:输入链表(3->1->5)和链表(5->9->2),输出: 8->0->8,即513+ 295=808,注意个位数在链表头。
+
+分析与解答:
+
+#### 方法一:整数相加法
+
+主要思路:分别遍历两个链表,求出两个链表所代表的整数的值，然后
+把这两个整数进行相加，最后把它们的和用链表的形式表示出来。这种方法的优点是计算简单,但是有个非常大的缺点:当链表所代表的数很大的时候(超出了long int 的表示范围) ,就无法使用这种方法了。
+
+这种方法比较简单，只写代码就不做测试了
+
+```go
+func(this *List)GetNum() int64 {
+    cur := this.Head().Next
+    var sum int64
+    count := 0
+    for cur != nil {
+        sum += cur.E*math.Pow10(count)
+        count++
+        cur = cur.Next
+    }
+    return sum
+}
+```
+
+---
+
+#### 方法二:链表相加法
+
+主要思路:对链表中的结点直接进行相加操作,把相加的和存储到新的
+链表中对应的结点中，同时还要记录结点相后的进位。如下图所示:
+
+![](http://www.liuanqihappybirthday.top/uploads/big/e04692b9331fcb960951b778b6296cc2.png)
+
+实现代码：
+
+```go
+// 把两个用链表表示的整数相加
+func AddTwoList(head1,head2 *Node) *List {
+    // 初始化一个新链表
+	newHead := InitList()
+    // 因为有dummyHead，所以head的下一个节点才是真真正的头结点
+	p1 := head1.Next
+	p2 := head2.Next
+	carry := 0
+	for p1 != nil || p2 != nil {
+        // 如果p1到头就只需要添加p2，反之同理
+		if p1 == nil {
+			newHead.AddLast(p2.E+ + carry)
+			p2 = p2.Next
+		}
+		if p2 == nil {
+			newHead.AddLast(p1.E + carry)
+			p1 = p1.Next
+		}
+        // 计算本位的值
+		temp := (p1.E + p2.E + carry )%10
+		newHead.AddLast(temp)
+        // 记录进位
+		carry = (p1.E + p2.E + carry )/10
+		p1 = p1.Next
+		p2 = p2.Next
+	}
+	return newHead
+}
+
+// 测试代码和测试结果
+func TestList(t *testing.T) {
+	list := InitList()
+	list2 := InitList()
+	for i:=0;i<6 ; i++  {
+		list.AddFirst(i)
+	}
+	for i:=0;i<6 ; i++  {
+		list2.AddFirst(i+1)
+	}
+	t.Log(list)
+	t.Log(list2)
+	newlist := AddTwoList(list.Head(),list2.Head())
+	t.Log(newlist)
+}
+
+
+```
+
+```
+=== RUN   TestList
+--- PASS: TestList (0.00s)
+    List_test.go:16: 5 -> 4 -> 3 -> 2 -> 1 -> 0 -> NULL
+    List_test.go:17: 6 -> 5 -> 4 -> 3 -> 2 -> 1 -> NULL
+    List_test.go:19: 1 -> 0 -> 8 -> 5 -> 3 -> 1 -> NULL
+PASS
+```
+
 
 
 ### 1.4 对链表进行重新排序
+
+难度系数:★★★
+被考查系数:★★★★
+
+题目描述:
+
+给定链表L0->L1->2L..Ln-1->Ln,把链表重新排序为L0->Ln->L1->Ln-1->L2->Ln-2...要求:①在原来链表的基础上进行排序,即不能申请新的结点;②只能修改结点的next域，不能修改数据域。
+
+分析与解答:
+主要思路为:
+
+1. 首先找到链表的中间结点;
+2. 对链表的后半部分子链表进行逆序;
+3. 把链表的前半部分子链表与逆序后的后半部分子链表进行合并,合并的思路为:分别从两个链表各取一个结点进行合并。
+实现方法如下图所示:
+
+![](http://www.liuanqihappybirthday.top/uploads/big/9ee52a967314d660be58baea9f9fee70.png)
+
+#### 实现代码
+
+```go
+func (this *List)findMidNode() *Node {
+	if this.Head() == nil || this.Head().Next == nil {
+		return nil
+	}
+	slow := this.Head()
+	slowPre := this.Head()
+	fast := this.Head()
+
+	for fast != nil && fast.Next != nil {
+		slowPre = slow
+		slow = slow.Next
+		fast = fast.Next.Next
+	}
+	slowPre.Next = nil
+	return slow
+}
+
+func MidReverse(head *Node) *Node {
+	if head == nil || head.Next == nil {
+		return nil
+	}
+
+	var next *Node
+	var pre *Node
+	for head != nil {
+		next = head.Next
+		head.Next = pre
+		pre = head
+		head = next
+	}
+	return pre
+}
+
+func (this *List) Reorder ()  {
+	if this.Head() == nil || this.Head() == nil {
+		return
+	}
+	cur1 := this.Head().Next
+	mid := this.findMidNode()
+	cur2 := MidReverse(mid)
+	var temp *Node
+	// 合并链表
+	for cur1.Next != nil {
+		temp = cur1.Next
+		cur1.Next = cur2
+		cur1 = temp
+		temp = cur2.Next
+		cur2.Next = cur1
+		cur2 = temp
+	}
+	cur1.Next = cur2
+}
+```
+
+单元测试与测试结果
+
+```go
+func TestList(t *testing.T) {
+	list := InitList()
+	for i:=0;i<7 ; i++  {
+		list.AddLast(i+1)
+	}
+	t.Log(list)
+	list.Reorder()
+	t.Log(list)
+}
+```
+
+```
+=== RUN   TestList
+--- PASS: TestList (0.00s)
+    List_test.go:16: 1 -> 2 -> 3 -> 4 -> 5 -> 6 -> 7 -> NULL
+    List_test.go:18: 1 -> 7 -> 2 -> 6 -> 3 -> 5 -> 4 -> NULL
+PASS
+```
+
+#### 算法性能分析:
+
+查找链表中间结点的方法的时间复杂度为0 (n),逆序子链表的时间复
+杂度也为O (n),合并两个子链表的时间复杂度也为O (n),因此,整个方
+法的时间复杂度为O (n),其中, n表示的是链表的长度。由于这种方法只用
+了常数个额外指针变量,因此,空间复杂度为0(1)。
+
+##### 引申:如何查找链表的中间结点。
+
+分析与解答:
+
+主要思路:**用两个指针从链表的第一个结点开始同时遍历结点**, 一个快指针每次走2步,另外一个慢指针每次走1步;当快指针先到链表尾部时,慢指针则恰好到达链表中部。(快指针到链表尾部时,当链表长度为奇数时，慢指针指向的即是链表中间指针,当链表长度为偶数时,慢指针指向的结点和慢指针指向的结点的下一个结点都是链表的中间结点，上面的代码findMidNode就是用来求链表的中间结点的。
 
 
 

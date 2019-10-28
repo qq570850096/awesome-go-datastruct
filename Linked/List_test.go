@@ -6,12 +6,15 @@ import (
 
 func TestList(t *testing.T) {
 	list := InitList()
-	for i:=0;i<5 ; i++  {
-		list.AddFirst(i)
-		list.AddFirst(i)
+	list2 := InitList()
+	for i:=0;i<7 ; i++  {
+		list.AddLast(i+1)
+	}
+	for i:=0;i<6 ; i++  {
+		list2.AddFirst(i+1)
 	}
 	t.Log(list)
-	list.RemoveDupWithMap()
+	list.Reorder()
 	t.Log(list)
 	//t.Log(list.Contains(4))
 	//t.Log(list.Get(2))
