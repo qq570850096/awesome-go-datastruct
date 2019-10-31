@@ -568,6 +568,114 @@ PASS
 
 ### 1.5 找出单链表中倒数第k个元素
 
+分析与解答:
+
+#### 方法一:顺序遍历两遍法
+
+主要思路:
+
+首先遍历一遍单链表,求出整个单链表的长度n,然后把求倒数第k个元素转换为求顺数第n-k个元素,再去遍历- -次单链表就可以得结果。但是该方法需要对单链表进行两次遍历。
+
+#### 方法二:快慢指针法
+
+由于单链表只能从头到尾依次访问链表的各个结点，因此，如果要找链表的倒数第k个元素,也只能从头到尾进行遍历查找,在查找过程中，设置两个指针,让其中一个指针比另-一个指针先前移k步,然后两个指针同时往前移动。循环直到先行的指针值为null 时，另一个指针所指的位置就是所要找的位置。
+
+实现代码如下:
+
+```go
+func (this *List) FindLastK(k int) *Node {
+	if this.Head() == nil || this.Head().Next == nil {
+		return nil
+	}
+	fast,slow := this.Head().Next,this.Head().Next
+	var i int
+	for i=0;i<k && fast != nil;i++ {
+		// 这里让快指针先走
+		fast = fast.Next
+	}
+	// 说明k比链表长度长了，直接返回空节点
+	if i < k {
+		return nil
+	}
+	// 让快慢指针一起移动，当快指针到链表尾部的时候，慢指针就在链表的LastK位置
+	for fast != nil {
+		fast = fast.Next
+		slow = slow.Next
+	}
+	return slow
+}
+```
+
+测试用例：
+
+```go
+package Linked
+
+import (
+	"testing"
+)
+
+func TestList(t *testing.T) {
+	list := InitList()
+	list2 := InitList()
+	for i:=0;i<7 ; i++  {
+		list.AddLast(i+1)
+	}
+	for i:=0;i<6 ; i++  {
+		list2.AddFirst(i+1)
+	}
+	t.Log(list)
+	list.Reorder()
+	t.Log(list)
+	for i:=9;i>0;i--{
+		if list.FindLastK(i) == nil {
+			t.Error("超过链表可表示长度")
+		} else {
+			t.Log(list.FindLastK(i).E)
+		}
+	}
+}
+```
+
+```
+=== RUN   TestList
+--- FAIL: TestList (0.00s)
+    List_test.go:16: 1 -> 2 -> 3 -> 4 -> 5 -> 6 -> 7 -> NULL
+    List_test.go:18: 1 -> 7 -> 2 -> 6 -> 3 -> 5 -> 4 -> NULL
+    List_test.go:21: 超过链表可表示长度
+    List_test.go:21: 超过链表可表示长度
+    List_test.go:23: 1
+    List_test.go:23: 7
+    List_test.go:23: 2
+    List_test.go:23: 6
+    List_test.go:23: 3
+    List_test.go:23: 5
+    List_test.go:23: 4
+FAIL
+```
+
+#### 算法性能分析:
+
+这种方法只需要对链表进行一次遍历， 因此,时间复杂度为0 (n)。另外，由于只需要常量个指针变量来保存结点的地址信息，因此,空间复杂度为0(1)。
+
+#### 引申:如何将单链表向右旋转k个位置?
+
+题目描述:给定单链表1->2->3->4->5->6->7, k=3,那么旋转后的单链表变为5->6->7->1->2->3->4.
+主要思路:
+
+1. 首先找到链表倒数第k+1个结点slow和尾结点fast (如下图所示);
+
+2. 把链表断开为两个子链表,其中，后半部分子链表结点的个数
+   为k;
+
+3. 使原链表的尾结点指向链表的第一个结点;
+
+4. 使链表的头结点指向原链表倒数第k个结点。
+
+![](http://www.liuanqihappybirthday.top/uploads/big/f1281c9f173a28ef7c9cfa14c28ebdc2.png)
+
+#### 实现代码
+
 
 
 ### 1.6 检测一个较大的单链表是否有环

@@ -16,6 +16,14 @@ func TestList(t *testing.T) {
 	t.Log(list)
 	list.Reorder()
 	t.Log(list)
+	for i:=9;i>0;i--{
+		if list.FindLastK(i) == nil {
+			t.Error("超过链表可表示长度")
+		} else {
+			t.Log(list.FindLastK(i).E)
+		}
+	}
+
 	//t.Log(list.Contains(4))
 	//t.Log(list.Get(2))
 	//list.AddIndex(2,666)
