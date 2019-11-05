@@ -760,5 +760,3 @@ func (this *List)FindLoopEntryNode(meet *Node) *Node {
 ### 1.11 判断两个单链表（无环）是否交叉
 
 
-
-### 1.12 展开链表列表 
