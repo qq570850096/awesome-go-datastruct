@@ -13,8 +13,8 @@ type LFUNode struct {
 
 func InitLFUNode(key,value interface{}) *LFUNode {
 	return &LFUNode{
-		freq:0,
-		node:InitNode(key,value),
+		freq: 0,
+		node: InitNode(key,value),
 	}
 }
 

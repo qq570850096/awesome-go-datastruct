@@ -14,9 +14,9 @@ type FIFOCache struct {
 
 func InitFIFO(capacity int) *FIFOCache {
 	return &FIFOCache{
-		capacity:capacity,
-		find: map[interface{}]*Node{},
-		list:InitList(capacity),
+		capacity: capacity,
+		find:     map[interface{}]*Node{},
+		list:     InitList(capacity),
 	}
 }
 

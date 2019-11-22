@@ -36,7 +36,7 @@ func (this *List) InsertReverse ()  {
 	if this.Head() == nil || this.Head().Next == nil{
 		return
 	}
-	var cur *Node //当前节点
+	var cur *Node  //当前节点
 	var next *Node //后继节点
 	cur = this.Head().Next.Next
 	// 设置链表第一个节点为尾节点

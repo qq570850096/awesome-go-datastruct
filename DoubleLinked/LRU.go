@@ -12,9 +12,9 @@ type LRUCache struct {
 
 func InitLRU(capacity int) *LRUCache {
 	return &LRUCache{
-		capacity:capacity,
-		list:InitList(capacity),
-		find:make(map[interface{}]*Node),
+		capacity: capacity,
+		list:     InitList(capacity),
+		find:     make(map[interface{}]*Node),
 	}
 }
 
