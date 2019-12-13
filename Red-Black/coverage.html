@@ -1,0 +1,292 @@
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<style>
+			body {
+				background: black;
+				color: rgb(80, 80, 80);
+			}
+			body, pre, #legend span {
+				font-family: Menlo, monospace;
+				font-weight: bold;
+			}
+			#topbar {
+				background: black;
+				position: fixed;
+				top: 0; left: 0; right: 0;
+				height: 42px;
+				border-bottom: 1px solid rgb(80, 80, 80);
+			}
+			#content {
+				margin-top: 50px;
+			}
+			#nav, #legend {
+				float: left;
+				margin-left: 10px;
+			}
+			#legend {
+				margin-top: 12px;
+			}
+			#nav {
+				margin-top: 10px;
+			}
+			#legend span {
+				margin: 0 5px;
+			}
+			.cov0 { color: rgb(192, 0, 0) }
+.cov1 { color: rgb(128, 128, 128) }
+.cov2 { color: rgb(116, 140, 131) }
+.cov3 { color: rgb(104, 152, 134) }
+.cov4 { color: rgb(92, 164, 137) }
+.cov5 { color: rgb(80, 176, 140) }
+.cov6 { color: rgb(68, 188, 143) }
+.cov7 { color: rgb(56, 200, 146) }
+.cov8 { color: rgb(44, 212, 149) }
+.cov9 { color: rgb(32, 224, 152) }
+.cov10 { color: rgb(20, 236, 155) }
+
+		</style>
+	</head>
+	<body>
+		<div id="topbar">
+			<div id="nav">
+				<select id="files">
+				
+				<option value="file0">algo/Red-Black/Tree.go (37.6%)</option>
+				
+				</select>
+			</div>
+			<div id="legend">
+				<span>not tracked</span>
+			
+				<span class="cov0">not covered</span>
+				<span class="cov8">covered</span>
+			
+			</div>
+		</div>
+		<div id="content">
+		
+		<pre class="file" id="file0" style="display: none">package Red_Black
+
+const RED  = true
+const BLACK  = false
+
+type Node struct {
+        k int
+        v int
+        left *Node
+        right *Node
+        // 这里我们用true代表红，false代表黑
+        color bool
+}
+func InitNode(k,v int) *Node <span class="cov8" title="1">{
+        return &amp;Node{
+                v:v,
+                k:k,
+                left:nil,
+                right:nil,
+                color:RED,
+        }
+}</span>
+type Tree struct {
+        size int
+        root *Node
+}
+
+func (this *Tree) Size() int <span class="cov0" title="0">{
+        return this.size
+}</span>
+func (this *Tree) IsEmpty() bool <span class="cov0" title="0">{
+        return this.size == 0
+}</span>
+func isRed (node *Node) bool <span class="cov8" title="1">{
+        if node == nil </span><span class="cov8" title="1">{
+                return BLACK
+        }</span>
+        <span class="cov8" title="1">return node.color</span>
+}
+
+// 向红黑树中添加新元素
+// 回忆2-3树中我们添加节点，
+// 或者添加到一个2节点中，形成一个3节点，
+// 或者添加到一个三节点中，形成一个暂时的4节点
+// 所以我们永远先添加一个红节点，先融合再调整
+func (this *Tree) Push (k,v int) <span class="cov8" title="1">{
+        this.root = this.push(this.root,k,v)
+        // 我们还需要保持红黑树的根节点为黑节点
+        this.root.color = BLACK
+}</span>
+
+func (this *Tree) push (node *Node,k,v int) *Node <span class="cov8" title="1">{
+        // 因为红黑树的红节点都需要左倾，所以插入较大节点后需要进行一次左旋操作
+        if node == nil </span><span class="cov8" title="1">{
+                this.size++
+                return InitNode(k,v)
+        }</span>
+
+        <span class="cov8" title="1">if k &gt; node.k </span><span class="cov8" title="1">{
+                node.right = this.push(node.right,k,v)
+        }</span> else<span class="cov0" title="0"> if k &lt; node.k </span><span class="cov0" title="0">{
+                node.left = this.push(node.left,k,v)
+        }</span> else<span class="cov0" title="0"> {
+                node.v = v
+        }</span>
+
+        <span class="cov8" title="1">if isRed(node.right) &amp;&amp; !isRed(node.left) </span><span class="cov8" title="1">{
+                node = this.leftRotate(node)
+        }</span>
+        <span class="cov8" title="1">if isRed(node.left) &amp;&amp; isRed(node.left.left) </span><span class="cov0" title="0">{
+                node = this.rightRotate(node)
+        }</span>
+        <span class="cov8" title="1">if isRed(node.left) &amp;&amp; isRed(node.right) </span><span class="cov8" title="1">{
+                this.flipColors(node)
+        }</span>
+        <span class="cov8" title="1">return node</span>
+}
+//   node                     x
+//  /   \     左旋转         /  \
+// T1   x   ---------&gt;   node   T3
+//     / \              /   \
+//    T2 T3            T1   T2
+func (this *Tree) leftRotate (node *Node) *Node <span class="cov8" title="1">{
+        x := node.right
+        node.right = x.left
+        x.left = node
+        x.color = node.color
+        node.color = RED
+        return x
+}</span>
+
+// 红黑树颜色翻转
+func (this *Tree) flipColors (node *Node) <span class="cov8" title="1">{
+        node.color = RED
+        node.left.color,node.right.color = BLACK,BLACK
+}</span>
+
+// 红黑树的右旋转过程
+//     node                   x
+//    /   \     右旋转       /  \
+//   x    T2   -------&gt;   y   node
+//  / \                       /  \
+// y  T1                     T1  T2
+func (this *Tree) rightRotate (node *Node) *Node<span class="cov0" title="0">{
+        x := node.left
+        node.left = x.right
+        x.right = node
+        x.color = node.color
+        node.color = RED
+        return x
+}</span>
+
+func (this *Tree) getNode (node *Node,k int) *Node <span class="cov8" title="1">{
+        if node == nil </span><span class="cov0" title="0">{
+                return nil
+        }</span>
+        <span class="cov8" title="1">if k == node.k </span><span class="cov8" title="1">{
+                return node
+        }</span> else<span class="cov8" title="1"> if k &lt; node.k </span><span class="cov8" title="1">{
+                return this.getNode(node.left,k)
+        }</span> else<span class="cov8" title="1"> {
+                return this.getNode(node.right,k)
+        }</span>
+}
+func (this *Tree) Contains (key int) bool <span class="cov8" title="1">{
+        return this.getNode(this.root,key) != nil
+}</span>
+
+func (this *Tree) GetValue (key int) *int <span class="cov0" title="0">{
+        node := this.getNode(this.root,key)
+        if node == nil </span><span class="cov0" title="0">{
+                return nil
+        }</span> else<span class="cov0" title="0"> {
+                return &amp;node.v
+        }</span>
+}
+func (this *Tree) SetNewValue (key,value int) <span class="cov0" title="0">{
+        node := this.getNode(this.root,key)
+        if node == nil </span><span class="cov0" title="0">{
+                panic("没有这个key值")</span>
+        }
+        <span class="cov0" title="0">node.v = value</span>
+}
+
+func (this *Tree) minimum (node *Node) *Node <span class="cov0" title="0">{
+        if node.left == nil </span><span class="cov0" title="0">{
+                return node
+        }</span>
+        <span class="cov0" title="0">return this.minimum(node.left)</span>
+}
+
+func (this *Tree)removeMin(node *Node) *Node <span class="cov0" title="0">{
+        if node.left == nil </span><span class="cov0" title="0">{
+                rightNode := node.right
+                node.right = nil
+                this.size--
+                return rightNode
+        }</span>
+        <span class="cov0" title="0">node.left = this.removeMin(node.left)
+        return node</span>
+}
+
+func (this *Tree) Remove (node *Node,key int) *Node <span class="cov0" title="0">{
+        if node == nil </span><span class="cov0" title="0">{
+                return node
+        }</span>
+        <span class="cov0" title="0">if key &lt; node.k </span><span class="cov0" title="0">{
+                node.left = this.Remove(node.left,key)
+                return node
+        }</span> else<span class="cov0" title="0"> if key &gt; node.k </span><span class="cov0" title="0">{
+                node.right = this.Remove(node.right,key)
+                return node.right
+        }</span> else<span class="cov0" title="0"> {
+                if node.left == nil </span><span class="cov0" title="0">{
+                        rightNode := node.right
+                        node.right = nil
+                        this.size--
+                        return rightNode
+                }</span>
+                <span class="cov0" title="0">if node.right == nil </span><span class="cov0" title="0">{
+                        leftNode := node.left
+                        node.left = nil
+                        this.size--
+                        return leftNode
+                }</span>
+                <span class="cov0" title="0">successor := this.minimum(node.right)
+                successor.right = this.removeMin(node.right)
+                successor.left = node.left
+                return successor</span>
+        }
+}</pre>
+		
+		</div>
+	</body>
+	<script>
+	(function() {
+		var files = document.getElementById('files');
+		var visible;
+		files.addEventListener('change', onChange, false);
+		function select(part) {
+			if (visible)
+				visible.style.display = 'none';
+			visible = document.getElementById(part);
+			if (!visible)
+				return;
+			files.value = part;
+			visible.style.display = 'block';
+			location.hash = part;
+		}
+		function onChange() {
+			select(files.value);
+			window.scrollTo(0, 0);
+		}
+		if (location.hash != "") {
+			select(location.hash.substr(1));
+		}
+		if (!visible) {
+			select("file0");
+		}
+	})();
+	</script>
+</html>

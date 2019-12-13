@@ -1,6 +1,6 @@
 package Set
 
-import "github.com/algo/BinarySearch"
+import "algo/BinarySearch"
 // 集合，基于二分搜索树实现
 type Set interface {
 	Add (e int)

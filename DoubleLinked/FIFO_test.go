@@ -8,7 +8,7 @@ import (
 )
 
 func TestFIFO(t *testing.T)  {
-
+	all := 12.0
 	var (
 		file *os.File
 		err error
@@ -17,8 +17,8 @@ func TestFIFO(t *testing.T)  {
 		return
 	}
 	defer file.Close()
-	Fifo := InitFIFO(3)
-	for i:=0;i<3;i++ {
+	Fifo := InitFIFO(4)
+	for i:=0;i<4;i++ {
 		var key int
 		fmt.Fscanf(file,"%d",&key)
 		Fifo.Put(key,rand.Intn(100))
@@ -34,4 +34,5 @@ func TestFIFO(t *testing.T)  {
 		t.Log(Fifo)
 	}
 	t.Log("程序正常退出,一共发生",Fifo.count,"次缺页中断")
+	t.Logf("缺页中断率为%.2f次缺页中断",float64(Fifo.count)/all)
 }

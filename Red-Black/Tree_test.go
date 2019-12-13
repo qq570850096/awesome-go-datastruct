@@ -9,7 +9,7 @@ import (
 	"time"
 )
 
-func TestRBTree(t *testing.T)  {
+func BenchmarkRBTree(t *testing.B)  {
 	m := 10000000
 	rbtree := &Tree{
 		root:nil,
