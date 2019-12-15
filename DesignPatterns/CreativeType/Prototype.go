@@ -1,4 +1,4 @@
-package DesignPatterns
+package CreativeType
 
 
 //设计一个类的时候，我们通常会使用到构造函数，这里类和对象的关系好比模具和构件的关系，

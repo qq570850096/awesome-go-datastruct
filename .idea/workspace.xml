@@ -2,22 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="15396f75-4e06-402f-8e73-7074f17a3c9a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/DesignPatterns/AbstractFactory.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DesignPatterns/Builder.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DesignPatterns/Prototype.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DesignPatterns/Prototype_test.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DesignPatterns/SimpleFactory.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DesignPatterns/SimpleFactory_test.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DesignPatterns/abs_test.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DesignPatterns/builder_test.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/OSExam/fileSystem.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DesignPatterns/StructuralType/Wrapper.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DesignPatterns/StructuralType/Wrapper_test.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DoubleLinked/FIFO_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/DoubleLinked/FIFO_test.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DoubleLinked/test.txt" beforeDir="false" afterPath="$PROJECT_DIR$/DoubleLinked/test.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Red-Black/Tree_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/Red-Black/Tree_test.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Set/BST.go" beforeDir="false" afterPath="$PROJECT_DIR$/Set/BST.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Sorts/Bubble.go" beforeDir="false" afterPath="$PROJECT_DIR$/Sorts/Bubble.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Sorts/Sort_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/Sorts/Sort_test.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DesignPatterns/AbstractFactory.go" beforeDir="false" afterPath="$PROJECT_DIR$/DesignPatterns/CreativeType/AbstractFactory.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DesignPatterns/Builder.go" beforeDir="false" afterPath="$PROJECT_DIR$/DesignPatterns/CreativeType/Builder.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DesignPatterns/Prototype.go" beforeDir="false" afterPath="$PROJECT_DIR$/DesignPatterns/CreativeType/Prototype.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DesignPatterns/Prototype_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/DesignPatterns/CreativeType/Prototype_test.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DesignPatterns/SimpleFactory.go" beforeDir="false" afterPath="$PROJECT_DIR$/DesignPatterns/CreativeType/SimpleFactory.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DesignPatterns/SimpleFactory_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/DesignPatterns/CreativeType/SimpleFactory_test.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DesignPatterns/abs_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/DesignPatterns/CreativeType/abs_test.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DesignPatterns/builder_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/DesignPatterns/CreativeType/builder_test.go" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -60,6 +55,9 @@
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\go_workspace\src\algo\DesignPatterns\CreativeType" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\exia\go\src\algo\Trie" />
       <recent name="C:\Users\exia\go\src\algo\Segment" />
@@ -79,7 +77,18 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Go Test.TestRoleChinese_Clone in algo/DesignPatterns">
+  <component name="RunManager" selected="Go Test.TestAdapter_TargetMethod1 in algo/DesignPatterns/StructuralType">
+    <configuration name="TestAdapter_TargetMethod1 in algo/DesignPatterns/StructuralType" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+      <module name="algo" />
+      <working_directory value="$PROJECT_DIR$/DesignPatterns/StructuralType" />
+      <framework value="gotest" />
+      <kind value="PACKAGE" />
+      <package value="algo/DesignPatterns/StructuralType" />
+      <directory value="$PROJECT_DIR$/" />
+      <filePath value="$PROJECT_DIR$/" />
+      <pattern value="^TestAdapter_TargetMethod1$" />
+      <method v="2" />
+    </configuration>
     <configuration name="TestDirector in algo/DesignPatterns" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
       <module name="algo" />
       <working_directory value="$PROJECT_DIR$/DesignPatterns" />
@@ -91,28 +100,6 @@
       <pattern value="^TestDirector$" />
       <method v="2" />
     </configuration>
-    <configuration name="TestFIFO in algo/DoubleLinked" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
-      <module name="algo" />
-      <working_directory value="$PROJECT_DIR$/DoubleLinked" />
-      <framework value="gotest" />
-      <kind value="PACKAGE" />
-      <package value="algo/DoubleLinked" />
-      <directory value="$PROJECT_DIR$/" />
-      <filePath value="$PROJECT_DIR$/" />
-      <pattern value="^TestFIFO$" />
-      <method v="2" />
-    </configuration>
-    <configuration name="TestGirlFactory_CreateGirl in algo/DesignPatterns" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
-      <module name="algo" />
-      <working_directory value="$PROJECT_DIR$/DesignPatterns" />
-      <framework value="gotest" />
-      <kind value="PACKAGE" />
-      <package value="algo/DesignPatterns" />
-      <directory value="$PROJECT_DIR$/" />
-      <filePath value="$PROJECT_DIR$/" />
-      <pattern value="^TestGirlFactory_CreateGirl$" />
-      <method v="2" />
-    </configuration>
     <configuration name="TestRoleChinese_Clone in algo/DesignPatterns" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
       <module name="algo" />
       <working_directory value="$PROJECT_DIR$/DesignPatterns" />
@@ -122,6 +109,17 @@
       <directory value="$PROJECT_DIR$/" />
       <filePath value="$PROJECT_DIR$/" />
       <pattern value="^TestRoleChinese_Clone$" />
+      <method v="2" />
+    </configuration>
+    <configuration name="TestTCLFactory_NewTV in algo/DesignPatterns (1)" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+      <module name="algo" />
+      <working_directory value="$PROJECT_DIR$/DesignPatterns" />
+      <framework value="gotest" />
+      <kind value="PACKAGE" />
+      <package value="algo/DesignPatterns" />
+      <directory value="$PROJECT_DIR$/" />
+      <filePath value="$PROJECT_DIR$/" />
+      <pattern value="^TestTCLFactory_NewTV$" />
       <method v="2" />
     </configuration>
     <configuration name="TestTCLFactory_NewTV in algo/DesignPatterns" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
@@ -136,19 +134,19 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="Go Test.TestFIFO in algo/DoubleLinked" />
-      <item itemvalue="Go Test.TestGirlFactory_CreateGirl in algo/DesignPatterns" />
       <item itemvalue="Go Test.TestTCLFactory_NewTV in algo/DesignPatterns" />
       <item itemvalue="Go Test.TestDirector in algo/DesignPatterns" />
       <item itemvalue="Go Test.TestRoleChinese_Clone in algo/DesignPatterns" />
+      <item itemvalue="Go Test.TestTCLFactory_NewTV in algo/DesignPatterns (1)" />
+      <item itemvalue="Go Test.TestAdapter_TargetMethod1 in algo/DesignPatterns/StructuralType" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Go Test.TestAdapter_TargetMethod1 in algo/DesignPatterns/StructuralType" />
+        <item itemvalue="Go Test.TestTCLFactory_NewTV in algo/DesignPatterns (1)" />
         <item itemvalue="Go Test.TestRoleChinese_Clone in algo/DesignPatterns" />
         <item itemvalue="Go Test.TestDirector in algo/DesignPatterns" />
         <item itemvalue="Go Test.TestTCLFactory_NewTV in algo/DesignPatterns" />
-        <item itemvalue="Go Test.TestGirlFactory_CreateGirl in algo/DesignPatterns" />
-        <item itemvalue="Go Test.TestFIFO in algo/DoubleLinked" />
       </list>
     </recent_temporary>
   </component>
@@ -196,7 +194,7 @@
           <option name="timeStamp" value="16" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DlvLineBreakpoint">
-          <url>file://$PROJECT_DIR$/DesignPatterns/builder_test.go</url>
+          <url>file://$PROJECT_DIR$/DesignPatterns/CreativeType/builder_test.go</url>
           <line>7</line>
           <option name="timeStamp" value="17" />
         </line-breakpoint>
@@ -208,5 +206,8 @@
         <watch expression="*(*&quot;map[uint8]*algo/Trie.Node&quot;)(824634057960)" />
       </configuration>
     </watches-manager>
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/algo$TestAdapter_TargetMethod1_in_algo_DesignPatterns_StructuralType.out" NAME="TestAdapter_TargetMethod1 in algo/DesignPatterns/StructuralType Coverage Results" MODIFIED="1576378368801" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="GoCoverage" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
 </project>

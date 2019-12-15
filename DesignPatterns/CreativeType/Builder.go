@@ -1,4 +1,4 @@
-package DesignPatterns
+package CreativeType
 
 import "fmt"
 

@@ -1,17 +1,17 @@
-package DesignPatterns
+package CreativeType
 
 import "testing"
 // 抽象工厂的测试类
 func TestTCLFactory_NewTV(t *testing.T) {
 	TCLfactory := TCLFactory{}
 	ref := TCLfactory.NewRefrigerator()
-	ref.DoSomething()
+	DoSomething()
 	tv := TCLfactory.NewTV()
-	tv.DoSomething()
+	DoSomething()
 
 	MEdiaF := MediaFactory{}
 	ref = MEdiaF.NewRefrigerator()
-	ref.DoSomething()
+	DoSomething()
 	tv = MEdiaF.NewTV()
-	tv.DoSomething()
+	DoSomething()
 }
