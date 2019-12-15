@@ -2,17 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="15396f75-4e06-402f-8e73-7074f17a3c9a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/DesignPatterns/StructuralType/Wrapper.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DesignPatterns/StructuralType/Wrapper_test.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DesignPatterns/StructuralType/Bridge.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DesignPatterns/StructuralType/Bridge_test.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DesignPatterns/AbstractFactory.go" beforeDir="false" afterPath="$PROJECT_DIR$/DesignPatterns/CreativeType/AbstractFactory.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DesignPatterns/Builder.go" beforeDir="false" afterPath="$PROJECT_DIR$/DesignPatterns/CreativeType/Builder.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DesignPatterns/Prototype.go" beforeDir="false" afterPath="$PROJECT_DIR$/DesignPatterns/CreativeType/Prototype.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DesignPatterns/Prototype_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/DesignPatterns/CreativeType/Prototype_test.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DesignPatterns/SimpleFactory.go" beforeDir="false" afterPath="$PROJECT_DIR$/DesignPatterns/CreativeType/SimpleFactory.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DesignPatterns/SimpleFactory_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/DesignPatterns/CreativeType/SimpleFactory_test.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DesignPatterns/abs_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/DesignPatterns/CreativeType/abs_test.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DesignPatterns/builder_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/DesignPatterns/CreativeType/builder_test.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DesignPatterns/README.MD" beforeDir="false" afterPath="$PROJECT_DIR$/DesignPatterns/README.MD" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -77,7 +70,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Go Test.TestAdapter_TargetMethod1 in algo/DesignPatterns/StructuralType">
+  <component name="RunManager" selected="Go Test.TestMobilePhone_Run in algo/DesignPatterns/StructuralType">
     <configuration name="TestAdapter_TargetMethod1 in algo/DesignPatterns/StructuralType" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
       <module name="algo" />
       <working_directory value="$PROJECT_DIR$/DesignPatterns/StructuralType" />
@@ -98,6 +91,17 @@
       <directory value="$PROJECT_DIR$/" />
       <filePath value="$PROJECT_DIR$/" />
       <pattern value="^TestDirector$" />
+      <method v="2" />
+    </configuration>
+    <configuration name="TestMobilePhone_Run in algo/DesignPatterns/StructuralType" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+      <module name="algo" />
+      <working_directory value="$PROJECT_DIR$/DesignPatterns/StructuralType" />
+      <framework value="gotest" />
+      <kind value="PACKAGE" />
+      <package value="algo/DesignPatterns/StructuralType" />
+      <directory value="$PROJECT_DIR$/" />
+      <filePath value="$PROJECT_DIR$/" />
+      <pattern value="^TestMobilePhone_Run$" />
       <method v="2" />
     </configuration>
     <configuration name="TestRoleChinese_Clone in algo/DesignPatterns" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
@@ -122,31 +126,20 @@
       <pattern value="^TestTCLFactory_NewTV$" />
       <method v="2" />
     </configuration>
-    <configuration name="TestTCLFactory_NewTV in algo/DesignPatterns" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
-      <module name="algo" />
-      <working_directory value="$PROJECT_DIR$/DesignPatterns" />
-      <framework value="gotest" />
-      <kind value="PACKAGE" />
-      <package value="algo/DesignPatterns" />
-      <directory value="$PROJECT_DIR$/" />
-      <filePath value="$PROJECT_DIR$/" />
-      <pattern value="^TestTCLFactory_NewTV$" />
-      <method v="2" />
-    </configuration>
     <list>
-      <item itemvalue="Go Test.TestTCLFactory_NewTV in algo/DesignPatterns" />
       <item itemvalue="Go Test.TestDirector in algo/DesignPatterns" />
       <item itemvalue="Go Test.TestRoleChinese_Clone in algo/DesignPatterns" />
       <item itemvalue="Go Test.TestTCLFactory_NewTV in algo/DesignPatterns (1)" />
       <item itemvalue="Go Test.TestAdapter_TargetMethod1 in algo/DesignPatterns/StructuralType" />
+      <item itemvalue="Go Test.TestMobilePhone_Run in algo/DesignPatterns/StructuralType" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Go Test.TestMobilePhone_Run in algo/DesignPatterns/StructuralType" />
         <item itemvalue="Go Test.TestAdapter_TargetMethod1 in algo/DesignPatterns/StructuralType" />
         <item itemvalue="Go Test.TestTCLFactory_NewTV in algo/DesignPatterns (1)" />
         <item itemvalue="Go Test.TestRoleChinese_Clone in algo/DesignPatterns" />
         <item itemvalue="Go Test.TestDirector in algo/DesignPatterns" />
-        <item itemvalue="Go Test.TestTCLFactory_NewTV in algo/DesignPatterns" />
       </list>
     </recent_temporary>
   </component>
@@ -197,6 +190,11 @@
           <url>file://$PROJECT_DIR$/DesignPatterns/CreativeType/builder_test.go</url>
           <line>7</line>
           <option name="timeStamp" value="17" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
+          <url>file://$PROJECT_DIR$/DesignPatterns/StructuralType/Bridge_test.go</url>
+          <line>7</line>
+          <option name="timeStamp" value="18" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
