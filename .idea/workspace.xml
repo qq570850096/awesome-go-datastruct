@@ -2,12 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="15396f75-4e06-402f-8e73-7074f17a3c9a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/DesignPatterns/StructuralType/Barrage.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DesignPatterns/StructuralType/Barrage_test.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DesignPatterns/StructuralType/Facade.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DesignPatterns/StructuralType/Facade_test.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DesignPatterns/BehavioralType/Command.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DesignPatterns/BehavioralType/Command_test.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DesignPatterns/BehavioralType/State.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DesignPatterns/BehavioralType/State_test.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DesignPatterns/StructuralType/Bridge.go" beforeDir="false" afterPath="$PROJECT_DIR$/DesignPatterns/StructuralType/Bridge.go" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -72,18 +71,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Go Test.TestGunSystem_Fire in algo/DesignPatterns/StructuralType">
-    <configuration name="TestAdapter_TargetMethod1 in algo/DesignPatterns/StructuralType" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
-      <module name="algo" />
-      <working_directory value="$PROJECT_DIR$/DesignPatterns/StructuralType" />
-      <framework value="gotest" />
-      <kind value="PACKAGE" />
-      <package value="algo/DesignPatterns/StructuralType" />
-      <directory value="$PROJECT_DIR$/" />
-      <filePath value="$PROJECT_DIR$/" />
-      <pattern value="^TestAdapter_TargetMethod1$" />
-      <method v="2" />
-    </configuration>
+  <component name="RunManager" selected="Go Test.TestConcreteCommand_DoExec in algo/DesignPatterns/BehavioralType">
     <configuration name="TestBarrageRedVideoPlay_GetMediaContent in algo/DesignPatterns/StructuralType" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
       <module name="algo" />
       <working_directory value="$PROJECT_DIR$/DesignPatterns/StructuralType" />
@@ -93,6 +81,17 @@
       <directory value="$PROJECT_DIR$/" />
       <filePath value="$PROJECT_DIR$/" />
       <pattern value="^TestBarrageRedVideoPlay_GetMediaContent$" />
+      <method v="2" />
+    </configuration>
+    <configuration name="TestConcreteCommand_DoExec in algo/DesignPatterns/BehavioralType" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+      <module name="algo" />
+      <working_directory value="$PROJECT_DIR$/DesignPatterns/BehavioralType" />
+      <framework value="gotest" />
+      <kind value="PACKAGE" />
+      <package value="algo/DesignPatterns/BehavioralType" />
+      <directory value="$PROJECT_DIR$/" />
+      <filePath value="$PROJECT_DIR$/" />
+      <pattern value="^TestConcreteCommand_DoExec$" />
       <method v="2" />
     </configuration>
     <configuration name="TestGunSystem_Fire in algo/DesignPatterns/StructuralType" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
@@ -117,31 +116,31 @@
       <pattern value="^TestMobilePhone_Run$" />
       <method v="2" />
     </configuration>
-    <configuration name="TestTCLFactory_NewTV in algo/DesignPatterns (1)" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+    <configuration name="TestTelev_Play in algo/DesignPatterns/BehavioralType" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
       <module name="algo" />
-      <working_directory value="$PROJECT_DIR$/DesignPatterns" />
+      <working_directory value="$PROJECT_DIR$/DesignPatterns/BehavioralType" />
       <framework value="gotest" />
       <kind value="PACKAGE" />
-      <package value="algo/DesignPatterns" />
+      <package value="algo/DesignPatterns/BehavioralType" />
       <directory value="$PROJECT_DIR$/" />
       <filePath value="$PROJECT_DIR$/" />
-      <pattern value="^TestTCLFactory_NewTV$" />
+      <pattern value="^TestTelev_Play$" />
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="Go Test.TestTCLFactory_NewTV in algo/DesignPatterns (1)" />
-      <item itemvalue="Go Test.TestAdapter_TargetMethod1 in algo/DesignPatterns/StructuralType" />
       <item itemvalue="Go Test.TestMobilePhone_Run in algo/DesignPatterns/StructuralType" />
       <item itemvalue="Go Test.TestBarrageRedVideoPlay_GetMediaContent in algo/DesignPatterns/StructuralType" />
       <item itemvalue="Go Test.TestGunSystem_Fire in algo/DesignPatterns/StructuralType" />
+      <item itemvalue="Go Test.TestTelev_Play in algo/DesignPatterns/BehavioralType" />
+      <item itemvalue="Go Test.TestConcreteCommand_DoExec in algo/DesignPatterns/BehavioralType" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Go Test.TestConcreteCommand_DoExec in algo/DesignPatterns/BehavioralType" />
+        <item itemvalue="Go Test.TestTelev_Play in algo/DesignPatterns/BehavioralType" />
         <item itemvalue="Go Test.TestGunSystem_Fire in algo/DesignPatterns/StructuralType" />
         <item itemvalue="Go Test.TestBarrageRedVideoPlay_GetMediaContent in algo/DesignPatterns/StructuralType" />
         <item itemvalue="Go Test.TestMobilePhone_Run in algo/DesignPatterns/StructuralType" />
-        <item itemvalue="Go Test.TestAdapter_TargetMethod1 in algo/DesignPatterns/StructuralType" />
-        <item itemvalue="Go Test.TestTCLFactory_NewTV in algo/DesignPatterns (1)" />
       </list>
     </recent_temporary>
   </component>
@@ -202,6 +201,16 @@
           <url>file://$PROJECT_DIR$/DesignPatterns/StructuralType/Barrage_test.go</url>
           <line>13</line>
           <option name="timeStamp" value="21" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
+          <url>file://$PROJECT_DIR$/DesignPatterns/BehavioralType/State_test.go</url>
+          <line>10</line>
+          <option name="timeStamp" value="22" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
+          <url>file://$PROJECT_DIR$/DesignPatterns/BehavioralType/Command_test.go</url>
+          <line>20</line>
+          <option name="timeStamp" value="24" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
