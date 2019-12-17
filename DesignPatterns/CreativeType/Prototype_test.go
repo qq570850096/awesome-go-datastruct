@@ -10,8 +10,8 @@ func TestRoleChinese_Clone(t *testing.T) {
 	}
 	role.Show()
 	copyer := role.Clone()
-	Show()
-	SetEyesColor("bule")
+	copyer.Show()
+	copyer.SetEyesColor("bule")
 	role.Show()
-	Show()
+	copyer.Show()
 }

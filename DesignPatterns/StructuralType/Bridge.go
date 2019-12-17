@@ -37,6 +37,8 @@ func (h *HuaWei) Run()  {
 
 func (h *HuaWei) GPUTurbo()  {
 	fmt.Println("GPUTurbo started")
+	h.Run()
+	fmt.Println("GPUTurbo ended")
 }
 
 type XiaoMi struct {
