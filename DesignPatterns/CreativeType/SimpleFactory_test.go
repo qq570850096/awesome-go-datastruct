@@ -6,7 +6,7 @@ func TestGirlFactory_CreateGirl(t *testing.T) {
 	factor := &GirlFactory{}
 
 	Fat := factor.CreateGirl("fat")
-	weight()
+	Fat.weight()
 	Thin := factor.CreateGirl("thin")
-	weight()
+	Thin.weight()
 }

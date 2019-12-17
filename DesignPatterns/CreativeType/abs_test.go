@@ -5,13 +5,13 @@ import "testing"
 func TestTCLFactory_NewTV(t *testing.T) {
 	TCLfactory := TCLFactory{}
 	ref := TCLfactory.NewRefrigerator()
-	DoSomething()
+	ref.DoSomething()
 	tv := TCLfactory.NewTV()
-	DoSomething()
+	tv.DoSomething()
 
 	MEdiaF := MediaFactory{}
 	ref = MEdiaF.NewRefrigerator()
-	DoSomething()
+	ref.DoSomething()
 	tv = MEdiaF.NewTV()
-	DoSomething()
+	tv.DoSomething()
 }

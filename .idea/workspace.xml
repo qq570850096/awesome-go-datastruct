@@ -2,11 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="15396f75-4e06-402f-8e73-7074f17a3c9a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/DesignPatterns/BehavioralType/Command.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DesignPatterns/BehavioralType/Command_test.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DesignPatterns/BehavioralType/State.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DesignPatterns/BehavioralType/State_test.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DesignPatterns/CreativeType/Proxy.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DesignPatterns/CreativeType/Proxy_test.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DesignPatterns/CreativeType/Prototype_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/DesignPatterns/CreativeType/Prototype_test.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DesignPatterns/CreativeType/SimpleFactory_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/DesignPatterns/CreativeType/SimpleFactory_test.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DesignPatterns/CreativeType/abs_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/DesignPatterns/CreativeType/abs_test.go" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -71,16 +72,16 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Go Test.TestConcreteCommand_DoExec in algo/DesignPatterns/BehavioralType">
-    <configuration name="TestBarrageRedVideoPlay_GetMediaContent in algo/DesignPatterns/StructuralType" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Go Test.TestRoleChinese_Clone in algo/DesignPatterns/CreativeType">
+    <configuration name="TestBuyer_BuyTicket in algo/DesignPatterns/CreativeType" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
       <module name="algo" />
-      <working_directory value="$PROJECT_DIR$/DesignPatterns/StructuralType" />
+      <working_directory value="$PROJECT_DIR$/DesignPatterns/CreativeType" />
       <framework value="gotest" />
       <kind value="PACKAGE" />
-      <package value="algo/DesignPatterns/StructuralType" />
+      <package value="algo/DesignPatterns/CreativeType" />
       <directory value="$PROJECT_DIR$/" />
       <filePath value="$PROJECT_DIR$/" />
-      <pattern value="^TestBarrageRedVideoPlay_GetMediaContent$" />
+      <pattern value="^TestBuyer_BuyTicket$" />
       <method v="2" />
     </configuration>
     <configuration name="TestConcreteCommand_DoExec in algo/DesignPatterns/BehavioralType" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
@@ -105,15 +106,15 @@
       <pattern value="^TestGunSystem_Fire$" />
       <method v="2" />
     </configuration>
-    <configuration name="TestMobilePhone_Run in algo/DesignPatterns/StructuralType" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+    <configuration name="TestRoleChinese_Clone in algo/DesignPatterns/CreativeType" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
       <module name="algo" />
-      <working_directory value="$PROJECT_DIR$/DesignPatterns/StructuralType" />
+      <working_directory value="$PROJECT_DIR$/DesignPatterns/CreativeType" />
       <framework value="gotest" />
       <kind value="PACKAGE" />
-      <package value="algo/DesignPatterns/StructuralType" />
+      <package value="algo/DesignPatterns/CreativeType" />
       <directory value="$PROJECT_DIR$/" />
       <filePath value="$PROJECT_DIR$/" />
-      <pattern value="^TestMobilePhone_Run$" />
+      <pattern value="^TestRoleChinese_Clone$" />
       <method v="2" />
     </configuration>
     <configuration name="TestTelev_Play in algo/DesignPatterns/BehavioralType" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
@@ -128,19 +129,19 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="Go Test.TestMobilePhone_Run in algo/DesignPatterns/StructuralType" />
-      <item itemvalue="Go Test.TestBarrageRedVideoPlay_GetMediaContent in algo/DesignPatterns/StructuralType" />
       <item itemvalue="Go Test.TestGunSystem_Fire in algo/DesignPatterns/StructuralType" />
       <item itemvalue="Go Test.TestTelev_Play in algo/DesignPatterns/BehavioralType" />
       <item itemvalue="Go Test.TestConcreteCommand_DoExec in algo/DesignPatterns/BehavioralType" />
+      <item itemvalue="Go Test.TestBuyer_BuyTicket in algo/DesignPatterns/CreativeType" />
+      <item itemvalue="Go Test.TestRoleChinese_Clone in algo/DesignPatterns/CreativeType" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Go Test.TestRoleChinese_Clone in algo/DesignPatterns/CreativeType" />
+        <item itemvalue="Go Test.TestBuyer_BuyTicket in algo/DesignPatterns/CreativeType" />
         <item itemvalue="Go Test.TestConcreteCommand_DoExec in algo/DesignPatterns/BehavioralType" />
         <item itemvalue="Go Test.TestTelev_Play in algo/DesignPatterns/BehavioralType" />
         <item itemvalue="Go Test.TestGunSystem_Fire in algo/DesignPatterns/StructuralType" />
-        <item itemvalue="Go Test.TestBarrageRedVideoPlay_GetMediaContent in algo/DesignPatterns/StructuralType" />
-        <item itemvalue="Go Test.TestMobilePhone_Run in algo/DesignPatterns/StructuralType" />
       </list>
     </recent_temporary>
   </component>
