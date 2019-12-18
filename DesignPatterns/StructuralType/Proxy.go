@@ -1,4 +1,4 @@
-package CreativeType
+package StructuralType
 
 import "fmt"
 
