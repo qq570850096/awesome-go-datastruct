@@ -3,15 +3,14 @@ package BehavioralType
 import "testing"
 
 func TestTelev_Play(t *testing.T) {
-	tv := Telev{
-		ITelevision: nil,
-		state:       POWER_OFF_STATE,
-	}
-	// 这里因为电视还是关机状态，所以不会有任何的输出
-	tv.Play()
+	context := RemoteControlMachine{}
 
-	tv.PowerOn()
-	tv.Play()
-	tv.Standby()
-	tv.PowerOff()
+	context.SetCurrentSate(&PowerOffState{})
+	// 如果直接播放，因为电视处于关机状态，所以不会有输出
+	context.Play()
+
+	context.PowerOn()
+	context.Play()
+	context.Standby()
+	context.PowerOff()
 }

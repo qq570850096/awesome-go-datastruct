@@ -2,32 +2,36 @@ package StructuralType
 
 import "fmt"
 
-type Target interface {
-	TargetMethod1()
-	TargetMethod2()
+type Duck interface {
+	Quack()
+	Fly()
 }
 
-type Adaptee struct {
+type Turkey interface {
+	Gobble()
+	TurkeyFly()
 }
 
-func (Adaptee) MethodA ()  {
-	fmt.Println("Adaptee methodA invoked")
+type Adaptee struct {}
+
+func (a Adaptee) Gobble() {
+	fmt.Println("火鸡咕咕叫")
 }
 
-func (Adaptee) MethodB ()  {
-	fmt.Println("Adaptee methodB invoked")
+func (a Adaptee) TurkeyFly() {
+	fmt.Println("火鸡起飞")
 }
 
 type Adapter struct {
 	Adaptee
 }
 
-func (Adapter) TargetMethod1()  {
-	fmt.Println("Adapter targetMethod1 invoked")
-	Adaptee{}.MethodA()
+func (a Adapter) Quack() {
+	fmt.Println("鸭子嘎嘎叫")
 }
 
-func (Adapter) TargetMethod2()  {
-	fmt.Println("Adapter targetMethod1 invoked")
-	Adapter{}.MethodB()
+func (a Adapter) Fly() {
+	fmt.Println("鸭子嘎嘎叫")
 }
+
+

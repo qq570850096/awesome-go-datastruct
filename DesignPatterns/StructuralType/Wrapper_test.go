@@ -5,6 +5,8 @@ import "testing"
 func TestAdapter_TargetMethod1(t *testing.T) {
 	adapter := Adapter{}
 
-	adapter.TargetMethod1()
-	adapter.TargetMethod2()
+	adapter.Quack()
+	adapter.Gobble()
+	adapter.Fly()
+	adapter.TurkeyFly()
 }
