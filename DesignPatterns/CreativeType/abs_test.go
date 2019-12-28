@@ -1,17 +1,20 @@
 package CreativeType
 
-import "testing"
+import (
+	"testing"
+)
 // 抽象工厂的测试类
 func TestTCLFactory_NewTV(t *testing.T) {
-	TCLfactory := TCLFactory{}
-	ref := TCLfactory.NewRefrigerator()
+	var factory Factory
+	factory = &TCLFactory{}
+	ref := factory.NewRefrigerator()
 	ref.DoSomething()
-	tv := TCLfactory.NewTV()
+	tv := factory.NewTV()
+	tv.DoSomething()
+	factory = &MediaFactory{}
+	ref = factory.NewRefrigerator()
+	ref.DoSomething()
+	tv = factory.NewTV()
 	tv.DoSomething()
 
-	MEdiaF := MediaFactory{}
-	ref = MEdiaF.NewRefrigerator()
-	ref.DoSomething()
-	tv = MEdiaF.NewTV()
-	tv.DoSomething()
 }

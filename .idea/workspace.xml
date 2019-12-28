@@ -2,15 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="15396f75-4e06-402f-8e73-7074f17a3c9a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/DesignPatterns/StructuralType/Component.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DesignPatterns/StructuralType/Component_test.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DesignPatterns/StructuralType/Filter.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DesignPatterns/StructuralType/Filter_test.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DesignPatterns/StructuralType/Flyweight.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DesignPatterns/StructuralType/Flyweight_test.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DesignPatterns/Compound.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DesignPatterns/Compound_test.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DesignPatterns/CreativeType/Proxy.go" beforeDir="false" afterPath="$PROJECT_DIR$/DesignPatterns/StructuralType/Proxy.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DesignPatterns/CreativeType/Proxy_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/DesignPatterns/StructuralType/Proxy_test.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DesignPatterns/BehavioralType/State.go" beforeDir="false" afterPath="$PROJECT_DIR$/DesignPatterns/BehavioralType/State.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DesignPatterns/BehavioralType/State_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/DesignPatterns/BehavioralType/State_test.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DesignPatterns/CreativeType/abs_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/DesignPatterns/CreativeType/abs_test.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DesignPatterns/StructuralType/Wrapper.go" beforeDir="false" afterPath="$PROJECT_DIR$/DesignPatterns/StructuralType/Wrapper.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DesignPatterns/StructuralType/Wrapper_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/DesignPatterns/StructuralType/Wrapper_test.go" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -24,16 +23,6 @@
         <option value="Go File" />
       </list>
     </option>
-  </component>
-  <component name="FindInProjectRecents">
-    <findStrings>
-      <find>link</find>
-      <find>LRU</find>
-    </findStrings>
-    <replaceStrings>
-      <replace />
-      <replace>LFU</replace>
-    </replaceStrings>
   </component>
   <component name="GOROOT" path="D:\Go" />
   <component name="Git.Settings">
@@ -76,8 +65,19 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Go Test.TestExamInfo_Subject in algo/DesignPatterns/StructuralType">
-    <configuration name="TestBuyer_BuyTicket in algo/DesignPatterns/CreativeType" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Go Test.TestDuckCall_RemoveObserver in algo/DesignPatterns">
+    <configuration name="TestAdapter_TargetMethod1 in algo/DesignPatterns/StructuralType" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+      <module name="algo" />
+      <working_directory value="$PROJECT_DIR$/DesignPatterns/StructuralType" />
+      <framework value="gotest" />
+      <kind value="PACKAGE" />
+      <package value="algo/DesignPatterns/StructuralType" />
+      <directory value="$PROJECT_DIR$/" />
+      <filePath value="$PROJECT_DIR$/" />
+      <pattern value="^TestAdapter_TargetMethod1$" />
+      <method v="2" />
+    </configuration>
+    <configuration name="TestDirector in algo/DesignPatterns/CreativeType" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
       <module name="algo" />
       <working_directory value="$PROJECT_DIR$/DesignPatterns/CreativeType" />
       <framework value="gotest" />
@@ -85,67 +85,56 @@
       <package value="algo/DesignPatterns/CreativeType" />
       <directory value="$PROJECT_DIR$/" />
       <filePath value="$PROJECT_DIR$/" />
-      <pattern value="^TestBuyer_BuyTicket$" />
+      <pattern value="^TestDirector$" />
       <method v="2" />
     </configuration>
-    <configuration name="TestBuyer_BuyTicket in algo/DesignPatterns/StructuralType" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+    <configuration name="TestDuckCall_RemoveObserver in algo/DesignPatterns" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
       <module name="algo" />
-      <working_directory value="$PROJECT_DIR$/DesignPatterns/StructuralType" />
+      <working_directory value="$PROJECT_DIR$/DesignPatterns" />
       <framework value="gotest" />
       <kind value="PACKAGE" />
-      <package value="algo/DesignPatterns/StructuralType" />
+      <package value="algo/DesignPatterns" />
       <directory value="$PROJECT_DIR$/" />
       <filePath value="$PROJECT_DIR$/" />
-      <pattern value="^TestBuyer_BuyTicket$" />
+      <pattern value="^TestDuckCall_RemoveObserver$" />
       <method v="2" />
     </configuration>
-    <configuration name="TestComposite_Add in algo/DesignPatterns/StructuralType" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+    <configuration name="TestRoleChinese_Clone in algo/DesignPatterns/CreativeType" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
       <module name="algo" />
-      <working_directory value="$PROJECT_DIR$/DesignPatterns/StructuralType" />
+      <working_directory value="$PROJECT_DIR$/DesignPatterns/CreativeType" />
       <framework value="gotest" />
       <kind value="PACKAGE" />
-      <package value="algo/DesignPatterns/StructuralType" />
+      <package value="algo/DesignPatterns/CreativeType" />
       <directory value="$PROJECT_DIR$/" />
       <filePath value="$PROJECT_DIR$/" />
-      <pattern value="^TestComposite_Add$" />
+      <pattern value="^TestRoleChinese_Clone$" />
       <method v="2" />
     </configuration>
-    <configuration name="TestExamInfo_Subject in algo/DesignPatterns/StructuralType" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+    <configuration name="TestTelev_Play in algo/DesignPatterns/BehavioralType" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
       <module name="algo" />
-      <working_directory value="$PROJECT_DIR$/DesignPatterns/StructuralType" />
+      <working_directory value="$PROJECT_DIR$/DesignPatterns/BehavioralType" />
       <framework value="gotest" />
       <kind value="PACKAGE" />
-      <package value="algo/DesignPatterns/StructuralType" />
+      <package value="algo/DesignPatterns/BehavioralType" />
       <directory value="$PROJECT_DIR$/" />
       <filePath value="$PROJECT_DIR$/" />
-      <pattern value="^TestExamInfo_Subject$" />
-      <method v="2" />
-    </configuration>
-    <configuration name="TestHarmfulRubbishCriteria_RubbishFilter in algo/DesignPatterns/StructuralType" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
-      <module name="algo" />
-      <working_directory value="$PROJECT_DIR$/DesignPatterns/StructuralType" />
-      <framework value="gotest" />
-      <kind value="PACKAGE" />
-      <package value="algo/DesignPatterns/StructuralType" />
-      <directory value="$PROJECT_DIR$/" />
-      <filePath value="$PROJECT_DIR$/" />
-      <pattern value="^TestHarmfulRubbishCriteria_RubbishFilter$" />
+      <pattern value="^TestTelev_Play$" />
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="Go Test.TestBuyer_BuyTicket in algo/DesignPatterns/CreativeType" />
-      <item itemvalue="Go Test.TestHarmfulRubbishCriteria_RubbishFilter in algo/DesignPatterns/StructuralType" />
-      <item itemvalue="Go Test.TestComposite_Add in algo/DesignPatterns/StructuralType" />
-      <item itemvalue="Go Test.TestBuyer_BuyTicket in algo/DesignPatterns/StructuralType" />
-      <item itemvalue="Go Test.TestExamInfo_Subject in algo/DesignPatterns/StructuralType" />
+      <item itemvalue="Go Test.TestDirector in algo/DesignPatterns/CreativeType" />
+      <item itemvalue="Go Test.TestRoleChinese_Clone in algo/DesignPatterns/CreativeType" />
+      <item itemvalue="Go Test.TestAdapter_TargetMethod1 in algo/DesignPatterns/StructuralType" />
+      <item itemvalue="Go Test.TestTelev_Play in algo/DesignPatterns/BehavioralType" />
+      <item itemvalue="Go Test.TestDuckCall_RemoveObserver in algo/DesignPatterns" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Go Test.TestExamInfo_Subject in algo/DesignPatterns/StructuralType" />
-        <item itemvalue="Go Test.TestBuyer_BuyTicket in algo/DesignPatterns/StructuralType" />
-        <item itemvalue="Go Test.TestComposite_Add in algo/DesignPatterns/StructuralType" />
-        <item itemvalue="Go Test.TestHarmfulRubbishCriteria_RubbishFilter in algo/DesignPatterns/StructuralType" />
-        <item itemvalue="Go Test.TestBuyer_BuyTicket in algo/DesignPatterns/CreativeType" />
+        <item itemvalue="Go Test.TestDuckCall_RemoveObserver in algo/DesignPatterns" />
+        <item itemvalue="Go Test.TestTelev_Play in algo/DesignPatterns/BehavioralType" />
+        <item itemvalue="Go Test.TestAdapter_TargetMethod1 in algo/DesignPatterns/StructuralType" />
+        <item itemvalue="Go Test.TestRoleChinese_Clone in algo/DesignPatterns/CreativeType" />
+        <item itemvalue="Go Test.TestDirector in algo/DesignPatterns/CreativeType" />
       </list>
     </recent_temporary>
   </component>
@@ -203,19 +192,34 @@
           <option name="timeStamp" value="18" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DlvLineBreakpoint">
-          <url>file://$PROJECT_DIR$/DesignPatterns/StructuralType/Barrage_test.go</url>
+          <url>file://$PROJECT_DIR$/DesignPatterns/StructuralType/Decorator_test.go</url>
           <line>13</line>
           <option name="timeStamp" value="21" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
-          <url>file://$PROJECT_DIR$/DesignPatterns/BehavioralType/State_test.go</url>
-          <line>10</line>
-          <option name="timeStamp" value="22" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DlvLineBreakpoint">
           <url>file://$PROJECT_DIR$/DesignPatterns/BehavioralType/Command_test.go</url>
           <line>20</line>
           <option name="timeStamp" value="24" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
+          <url>file://$PROJECT_DIR$/DesignPatterns/BehavioralType/Observer_test.go</url>
+          <line>17</line>
+          <option name="timeStamp" value="28" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
+          <url>file://$PROJECT_DIR$/DesignPatterns/BehavioralType/Template_test.go</url>
+          <line>8</line>
+          <option name="timeStamp" value="30" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
+          <url>file://$PROJECT_DIR$/DesignPatterns/BehavioralType/State_test.go</url>
+          <line>9</line>
+          <option name="timeStamp" value="32" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
+          <url>file://$PROJECT_DIR$/DesignPatterns/Compound_test.go</url>
+          <line>43</line>
+          <option name="timeStamp" value="37" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
@@ -225,6 +229,8 @@
         <watch expression="*(*&quot;map[uint8]*algo/Trie.Node&quot;)(824634057960)" />
         <watch expression="t" />
         <watch expression="*(*&quot;void&quot;)(0)" />
+        <watch expression="*(*&quot;algo/DesignPatterns/BehavioralType.FlyWithWings&quot;)(7201224)" />
+        <watch expression="*(*&quot;algo/DesignPatterns/BehavioralType.FlyWithWings&quot;)(7201224)" />
       </configuration>
     </watches-manager>
   </component>
