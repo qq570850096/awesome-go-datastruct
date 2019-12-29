@@ -2,35 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="15396f75-4e06-402f-8e73-7074f17a3c9a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/DesignPatterns/BehavioralType/Docs/中介者模式.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DesignPatterns/BehavioralType/Docs/命令模式.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DesignPatterns/BehavioralType/Docs/备忘录模式.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DesignPatterns/BehavioralType/Docs/模板方法模式.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DesignPatterns/BehavioralType/Docs/状态模式.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DesignPatterns/BehavioralType/Docs/策略模式.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DesignPatterns/BehavioralType/Docs/观察者模式.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DesignPatterns/BehavioralType/Docs/解释器模式.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DesignPatterns/BehavioralType/Docs/责任链模式.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DesignPatterns/BehavioralType/Docs/迭代器模式.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DesignPatterns/CreativeType/Docs/单例模式.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DesignPatterns/CreativeType/Docs/原型模式.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DesignPatterns/CreativeType/Docs/建造者模式.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DesignPatterns/CreativeType/Docs/抽象工厂.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DesignPatterns/CreativeType/Docs/简单工厂模式.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DesignPatterns/StructuralType/Docs/享元模式.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DesignPatterns/StructuralType/Docs/代理模式.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DesignPatterns/StructuralType/Docs/修饰器模式.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DesignPatterns/StructuralType/Docs/外观模式.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DesignPatterns/StructuralType/Docs/桥接模式.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DesignPatterns/StructuralType/Docs/组合模式.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DesignPatterns/StructuralType/Docs/过滤模式.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DesignPatterns/StructuralType/Docs/适配器模式.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DesignPatterns/七大设计原则.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DesignPatterns/7Rules.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DesignPatterns/7Rules_test.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DesignPatterns/CreativeType/Singleton.go" beforeDir="false" afterPath="$PROJECT_DIR$/DesignPatterns/CreativeType/Singleton.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DesignPatterns/CreativeType/Singleton_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/DesignPatterns/CreativeType/Singleton_test.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DesignPatterns/CreativeType/abs_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/DesignPatterns/CreativeType/abs_test.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DesignPatterns/README.MD" beforeDir="false" afterPath="$PROJECT_DIR$/DesignPatterns/README.MD" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DesignPatterns/七大设计原则.md" beforeDir="false" afterPath="$PROJECT_DIR$/DesignPatterns/七大设计原则.md" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -63,18 +38,18 @@
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\go_workspace\src\algo\DesignPatterns\CreativeType" />
-      <recent name="D:\go_workspace\src\algo\DesignPatterns\CreativeType\Singleton" />
-      <recent name="D:\go_workspace\src\algo\DesignPatterns\CreativeType\AbstractFactory" />
-      <recent name="D:\go_workspace\src\algo\DesignPatterns\StructuralType\Docs" />
-      <recent name="D:\go_workspace\src\algo\DesignPatterns\CreativeType\Docs" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\exia\go\src\algo\Trie" />
       <recent name="C:\Users\exia\go\src\algo\Segment" />
       <recent name="C:\Users\exia\go\src\algo\Heap" />
       <recent name="C:\Users\exia\go\src\algo\Linked" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\go_workspace\src\algo\DesignPatterns" />
+      <recent name="D:\go_workspace\src\algo\DesignPatterns\CreativeType" />
+      <recent name="D:\go_workspace\src\algo\DesignPatterns\CreativeType\Singleton" />
+      <recent name="D:\go_workspace\src\algo\DesignPatterns\CreativeType\AbstractFactory" />
+      <recent name="D:\go_workspace\src\algo\DesignPatterns\StructuralType\Docs" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -89,16 +64,16 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Go Test.go test algo/DesignPatterns/CreativeType">
-    <configuration name="TestBuyer_BuyTicket in algo/DesignPatterns/StructuralType" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Go Test.TestBenzCar_GetName in algo/DesignPatterns">
+    <configuration name="TestBenzCar_GetName in algo/DesignPatterns" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
       <module name="algo" />
-      <working_directory value="$PROJECT_DIR$/DesignPatterns/StructuralType" />
+      <working_directory value="$PROJECT_DIR$/DesignPatterns" />
       <framework value="gotest" />
       <kind value="PACKAGE" />
-      <package value="algo/DesignPatterns/StructuralType" />
+      <package value="algo/DesignPatterns" />
       <directory value="$PROJECT_DIR$/" />
       <filePath value="$PROJECT_DIR$/" />
-      <pattern value="^TestBuyer_BuyTicket$" />
+      <pattern value="^TestBenzCar_GetName$" />
       <method v="2" />
     </configuration>
     <configuration name="TestGetInstance in algo/DesignPatterns/CreativeType" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
@@ -145,19 +120,19 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="Go Test.TestBuyer_BuyTicket in algo/DesignPatterns/StructuralType" />
       <item itemvalue="Go Test.TestTCLFactory_NewTV in algo/DesignPatterns/CreativeType/AbstractFactory" />
       <item itemvalue="Go Test.TestTCLFactory_NewTV in algo/DesignPatterns/CreativeType" />
       <item itemvalue="Go Test.TestGetInstance in algo/DesignPatterns/CreativeType" />
       <item itemvalue="Go Test.go test algo/DesignPatterns/CreativeType" />
+      <item itemvalue="Go Test.TestBenzCar_GetName in algo/DesignPatterns" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Go Test.TestBenzCar_GetName in algo/DesignPatterns" />
         <item itemvalue="Go Test.go test algo/DesignPatterns/CreativeType" />
         <item itemvalue="Go Test.TestGetInstance in algo/DesignPatterns/CreativeType" />
         <item itemvalue="Go Test.TestTCLFactory_NewTV in algo/DesignPatterns/CreativeType" />
         <item itemvalue="Go Test.TestTCLFactory_NewTV in algo/DesignPatterns/CreativeType/AbstractFactory" />
-        <item itemvalue="Go Test.TestBuyer_BuyTicket in algo/DesignPatterns/StructuralType" />
       </list>
     </recent_temporary>
   </component>
