@@ -2,20 +2,35 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="15396f75-4e06-402f-8e73-7074f17a3c9a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/DesignPatterns/BehavioralType/Handler_test.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DesignPatterns/BehavioralType/Interpreter.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DesignPatterns/BehavioralType/Interpreter_test.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DesignPatterns/BehavioralType/Iterator.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DesignPatterns/BehavioralType/Iterator_test.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DesignPatterns/BehavioralType/Mediator.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DesignPatterns/BehavioralType/Mediator_test.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DesignPatterns/BehavioralType/Memento.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DesignPatterns/BehavioralType/Memento_test.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DesignPatterns/CreativeType/Singleton.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DesignPatterns/CreativeType/Singleton_test.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DesignPatterns/BehavioralType/Docs/中介者模式.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DesignPatterns/BehavioralType/Docs/命令模式.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DesignPatterns/BehavioralType/Docs/备忘录模式.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DesignPatterns/BehavioralType/Docs/模板方法模式.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DesignPatterns/BehavioralType/Docs/状态模式.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DesignPatterns/BehavioralType/Docs/策略模式.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DesignPatterns/BehavioralType/Docs/观察者模式.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DesignPatterns/BehavioralType/Docs/解释器模式.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DesignPatterns/BehavioralType/Docs/责任链模式.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DesignPatterns/BehavioralType/Docs/迭代器模式.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DesignPatterns/CreativeType/Docs/单例模式.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DesignPatterns/CreativeType/Docs/原型模式.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DesignPatterns/CreativeType/Docs/建造者模式.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DesignPatterns/CreativeType/Docs/抽象工厂.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DesignPatterns/CreativeType/Docs/简单工厂模式.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DesignPatterns/StructuralType/Docs/享元模式.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DesignPatterns/StructuralType/Docs/代理模式.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DesignPatterns/StructuralType/Docs/修饰器模式.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DesignPatterns/StructuralType/Docs/外观模式.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DesignPatterns/StructuralType/Docs/桥接模式.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DesignPatterns/StructuralType/Docs/组合模式.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DesignPatterns/StructuralType/Docs/过滤模式.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DesignPatterns/StructuralType/Docs/适配器模式.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DesignPatterns/七大设计原则.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DesignPatterns/BehavioralType/Compound.go" beforeDir="false" afterPath="$PROJECT_DIR$/DesignPatterns/BehavioralType/Handler.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DesignPatterns/Compound.go" beforeDir="false" afterPath="$PROJECT_DIR$/DesignPatterns/Compound.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DesignPatterns/CreativeType/Singleton.go" beforeDir="false" afterPath="$PROJECT_DIR$/DesignPatterns/CreativeType/Singleton.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DesignPatterns/CreativeType/Singleton_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/DesignPatterns/CreativeType/Singleton_test.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DesignPatterns/CreativeType/abs_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/DesignPatterns/CreativeType/abs_test.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DesignPatterns/README.MD" beforeDir="false" afterPath="$PROJECT_DIR$/DesignPatterns/README.MD" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -48,15 +63,18 @@
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\go_workspace\src\algo\DesignPatterns\CreativeType" />
+      <recent name="D:\go_workspace\src\algo\DesignPatterns\CreativeType\Singleton" />
+      <recent name="D:\go_workspace\src\algo\DesignPatterns\CreativeType\AbstractFactory" />
+      <recent name="D:\go_workspace\src\algo\DesignPatterns\StructuralType\Docs" />
+      <recent name="D:\go_workspace\src\algo\DesignPatterns\CreativeType\Docs" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\exia\go\src\algo\Trie" />
       <recent name="C:\Users\exia\go\src\algo\Segment" />
       <recent name="C:\Users\exia\go\src\algo\Heap" />
       <recent name="C:\Users\exia\go\src\algo\Linked" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\go_workspace\src\algo\DesignPatterns\StructuralType" />
-      <recent name="D:\go_workspace\src\algo\DesignPatterns\CreativeType" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -71,76 +89,75 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Go Test.TestCaretaker_GetMemento in algo/DesignPatterns/BehavioralType">
-    <configuration name="TestCaretaker_GetMemento in algo/DesignPatterns/BehavioralType" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Go Test.go test algo/DesignPatterns/CreativeType">
+    <configuration name="TestBuyer_BuyTicket in algo/DesignPatterns/StructuralType" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
       <module name="algo" />
-      <working_directory value="$PROJECT_DIR$/DesignPatterns/BehavioralType" />
+      <working_directory value="$PROJECT_DIR$/DesignPatterns/StructuralType" />
       <framework value="gotest" />
       <kind value="PACKAGE" />
-      <package value="algo/DesignPatterns/BehavioralType" />
+      <package value="algo/DesignPatterns/StructuralType" />
       <directory value="$PROJECT_DIR$/" />
       <filePath value="$PROJECT_DIR$/" />
-      <pattern value="^TestCaretaker_GetMemento$" />
+      <pattern value="^TestBuyer_BuyTicket$" />
       <method v="2" />
     </configuration>
-    <configuration name="TestColleagueSeller_Colleguer in algo/DesignPatterns/BehavioralType" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+    <configuration name="TestGetInstance in algo/DesignPatterns/CreativeType" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
       <module name="algo" />
-      <working_directory value="$PROJECT_DIR$/DesignPatterns/BehavioralType" />
+      <working_directory value="$PROJECT_DIR$/DesignPatterns/CreativeType" />
       <framework value="gotest" />
       <kind value="PACKAGE" />
-      <package value="algo/DesignPatterns/BehavioralType" />
+      <package value="algo/DesignPatterns/CreativeType" />
       <directory value="$PROJECT_DIR$/" />
       <filePath value="$PROJECT_DIR$/" />
-      <pattern value="^TestColleagueSeller_Colleguer$" />
+      <pattern value="^TestGetInstance$" />
       <method v="2" />
     </configuration>
-    <configuration name="TestConcreteAggregate_Add in algo/DesignPatterns/BehavioralType" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+    <configuration name="TestTCLFactory_NewTV in algo/DesignPatterns/CreativeType" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
       <module name="algo" />
-      <working_directory value="$PROJECT_DIR$/DesignPatterns/BehavioralType" />
+      <working_directory value="$PROJECT_DIR$/DesignPatterns/CreativeType" />
       <framework value="gotest" />
       <kind value="PACKAGE" />
-      <package value="algo/DesignPatterns/BehavioralType" />
+      <package value="algo/DesignPatterns/CreativeType" />
       <directory value="$PROJECT_DIR$/" />
       <filePath value="$PROJECT_DIR$/" />
-      <pattern value="^TestConcreteAggregate_Add$" />
+      <pattern value="^TestTCLFactory_NewTV$" />
       <method v="2" />
     </configuration>
-    <configuration name="TestInitPrimary in algo/DesignPatterns/BehavioralType" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+    <configuration name="TestTCLFactory_NewTV in algo/DesignPatterns/CreativeType/AbstractFactory" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
       <module name="algo" />
-      <working_directory value="$PROJECT_DIR$/DesignPatterns/BehavioralType" />
+      <working_directory value="$PROJECT_DIR$/DesignPatterns/CreativeType/AbstractFactory" />
       <framework value="gotest" />
       <kind value="PACKAGE" />
-      <package value="algo/DesignPatterns/BehavioralType" />
+      <package value="algo/DesignPatterns/CreativeType/AbstractFactory" />
       <directory value="$PROJECT_DIR$/" />
       <filePath value="$PROJECT_DIR$/" />
-      <pattern value="^TestInitPrimary$" />
+      <pattern value="^TestTCLFactory_NewTV$" />
       <method v="2" />
     </configuration>
-    <configuration name="TestNonTerminalExpression_Interpreter in algo/DesignPatterns/BehavioralType" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+    <configuration name="go test algo/DesignPatterns/CreativeType" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
       <module name="algo" />
-      <working_directory value="$PROJECT_DIR$/DesignPatterns/BehavioralType" />
+      <working_directory value="$PROJECT_DIR$/DesignPatterns/CreativeType" />
       <framework value="gotest" />
       <kind value="PACKAGE" />
-      <package value="algo/DesignPatterns/BehavioralType" />
+      <package value="algo/DesignPatterns/CreativeType" />
       <directory value="$PROJECT_DIR$/" />
       <filePath value="$PROJECT_DIR$/" />
-      <pattern value="^TestNonTerminalExpression_Interpreter$" />
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="Go Test.TestInitPrimary in algo/DesignPatterns/BehavioralType" />
-      <item itemvalue="Go Test.TestNonTerminalExpression_Interpreter in algo/DesignPatterns/BehavioralType" />
-      <item itemvalue="Go Test.TestConcreteAggregate_Add in algo/DesignPatterns/BehavioralType" />
-      <item itemvalue="Go Test.TestColleagueSeller_Colleguer in algo/DesignPatterns/BehavioralType" />
-      <item itemvalue="Go Test.TestCaretaker_GetMemento in algo/DesignPatterns/BehavioralType" />
+      <item itemvalue="Go Test.TestBuyer_BuyTicket in algo/DesignPatterns/StructuralType" />
+      <item itemvalue="Go Test.TestTCLFactory_NewTV in algo/DesignPatterns/CreativeType/AbstractFactory" />
+      <item itemvalue="Go Test.TestTCLFactory_NewTV in algo/DesignPatterns/CreativeType" />
+      <item itemvalue="Go Test.TestGetInstance in algo/DesignPatterns/CreativeType" />
+      <item itemvalue="Go Test.go test algo/DesignPatterns/CreativeType" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Go Test.TestCaretaker_GetMemento in algo/DesignPatterns/BehavioralType" />
-        <item itemvalue="Go Test.TestColleagueSeller_Colleguer in algo/DesignPatterns/BehavioralType" />
-        <item itemvalue="Go Test.TestConcreteAggregate_Add in algo/DesignPatterns/BehavioralType" />
-        <item itemvalue="Go Test.TestNonTerminalExpression_Interpreter in algo/DesignPatterns/BehavioralType" />
-        <item itemvalue="Go Test.TestInitPrimary in algo/DesignPatterns/BehavioralType" />
+        <item itemvalue="Go Test.go test algo/DesignPatterns/CreativeType" />
+        <item itemvalue="Go Test.TestGetInstance in algo/DesignPatterns/CreativeType" />
+        <item itemvalue="Go Test.TestTCLFactory_NewTV in algo/DesignPatterns/CreativeType" />
+        <item itemvalue="Go Test.TestTCLFactory_NewTV in algo/DesignPatterns/CreativeType/AbstractFactory" />
+        <item itemvalue="Go Test.TestBuyer_BuyTicket in algo/DesignPatterns/StructuralType" />
       </list>
     </recent_temporary>
   </component>
@@ -241,11 +258,6 @@
           <url>file://$PROJECT_DIR$/DesignPatterns/BehavioralType/Interpreter_test.go</url>
           <line>17</line>
           <option name="timeStamp" value="41" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
-          <url>file://$PROJECT_DIR$/DesignPatterns/BehavioralType/Iterator_test.go</url>
-          <line>18</line>
-          <option name="timeStamp" value="43" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DlvLineBreakpoint">
           <url>file://$PROJECT_DIR$/DesignPatterns/BehavioralType/Mediator_test.go</url>
