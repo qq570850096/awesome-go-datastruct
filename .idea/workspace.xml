@@ -2,14 +2,20 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="15396f75-4e06-402f-8e73-7074f17a3c9a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/DesignPatterns/Compound.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DesignPatterns/Compound_test.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DesignPatterns/BehavioralType/Handler_test.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DesignPatterns/BehavioralType/Interpreter.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DesignPatterns/BehavioralType/Interpreter_test.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DesignPatterns/BehavioralType/Iterator.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DesignPatterns/BehavioralType/Iterator_test.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DesignPatterns/BehavioralType/Mediator.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DesignPatterns/BehavioralType/Mediator_test.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DesignPatterns/BehavioralType/Memento.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DesignPatterns/BehavioralType/Memento_test.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DesignPatterns/CreativeType/Singleton.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DesignPatterns/CreativeType/Singleton_test.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DesignPatterns/BehavioralType/State.go" beforeDir="false" afterPath="$PROJECT_DIR$/DesignPatterns/BehavioralType/State.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DesignPatterns/BehavioralType/State_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/DesignPatterns/BehavioralType/State_test.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DesignPatterns/CreativeType/abs_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/DesignPatterns/CreativeType/abs_test.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DesignPatterns/StructuralType/Wrapper.go" beforeDir="false" afterPath="$PROJECT_DIR$/DesignPatterns/StructuralType/Wrapper.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DesignPatterns/StructuralType/Wrapper_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/DesignPatterns/StructuralType/Wrapper_test.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DesignPatterns/BehavioralType/Compound.go" beforeDir="false" afterPath="$PROJECT_DIR$/DesignPatterns/BehavioralType/Handler.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DesignPatterns/Compound.go" beforeDir="false" afterPath="$PROJECT_DIR$/DesignPatterns/Compound.go" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -65,52 +71,8 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Go Test.TestDuckCall_RemoveObserver in algo/DesignPatterns">
-    <configuration name="TestAdapter_TargetMethod1 in algo/DesignPatterns/StructuralType" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
-      <module name="algo" />
-      <working_directory value="$PROJECT_DIR$/DesignPatterns/StructuralType" />
-      <framework value="gotest" />
-      <kind value="PACKAGE" />
-      <package value="algo/DesignPatterns/StructuralType" />
-      <directory value="$PROJECT_DIR$/" />
-      <filePath value="$PROJECT_DIR$/" />
-      <pattern value="^TestAdapter_TargetMethod1$" />
-      <method v="2" />
-    </configuration>
-    <configuration name="TestDirector in algo/DesignPatterns/CreativeType" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
-      <module name="algo" />
-      <working_directory value="$PROJECT_DIR$/DesignPatterns/CreativeType" />
-      <framework value="gotest" />
-      <kind value="PACKAGE" />
-      <package value="algo/DesignPatterns/CreativeType" />
-      <directory value="$PROJECT_DIR$/" />
-      <filePath value="$PROJECT_DIR$/" />
-      <pattern value="^TestDirector$" />
-      <method v="2" />
-    </configuration>
-    <configuration name="TestDuckCall_RemoveObserver in algo/DesignPatterns" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
-      <module name="algo" />
-      <working_directory value="$PROJECT_DIR$/DesignPatterns" />
-      <framework value="gotest" />
-      <kind value="PACKAGE" />
-      <package value="algo/DesignPatterns" />
-      <directory value="$PROJECT_DIR$/" />
-      <filePath value="$PROJECT_DIR$/" />
-      <pattern value="^TestDuckCall_RemoveObserver$" />
-      <method v="2" />
-    </configuration>
-    <configuration name="TestRoleChinese_Clone in algo/DesignPatterns/CreativeType" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
-      <module name="algo" />
-      <working_directory value="$PROJECT_DIR$/DesignPatterns/CreativeType" />
-      <framework value="gotest" />
-      <kind value="PACKAGE" />
-      <package value="algo/DesignPatterns/CreativeType" />
-      <directory value="$PROJECT_DIR$/" />
-      <filePath value="$PROJECT_DIR$/" />
-      <pattern value="^TestRoleChinese_Clone$" />
-      <method v="2" />
-    </configuration>
-    <configuration name="TestTelev_Play in algo/DesignPatterns/BehavioralType" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Go Test.TestCaretaker_GetMemento in algo/DesignPatterns/BehavioralType">
+    <configuration name="TestCaretaker_GetMemento in algo/DesignPatterns/BehavioralType" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
       <module name="algo" />
       <working_directory value="$PROJECT_DIR$/DesignPatterns/BehavioralType" />
       <framework value="gotest" />
@@ -118,23 +80,67 @@
       <package value="algo/DesignPatterns/BehavioralType" />
       <directory value="$PROJECT_DIR$/" />
       <filePath value="$PROJECT_DIR$/" />
-      <pattern value="^TestTelev_Play$" />
+      <pattern value="^TestCaretaker_GetMemento$" />
+      <method v="2" />
+    </configuration>
+    <configuration name="TestColleagueSeller_Colleguer in algo/DesignPatterns/BehavioralType" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+      <module name="algo" />
+      <working_directory value="$PROJECT_DIR$/DesignPatterns/BehavioralType" />
+      <framework value="gotest" />
+      <kind value="PACKAGE" />
+      <package value="algo/DesignPatterns/BehavioralType" />
+      <directory value="$PROJECT_DIR$/" />
+      <filePath value="$PROJECT_DIR$/" />
+      <pattern value="^TestColleagueSeller_Colleguer$" />
+      <method v="2" />
+    </configuration>
+    <configuration name="TestConcreteAggregate_Add in algo/DesignPatterns/BehavioralType" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+      <module name="algo" />
+      <working_directory value="$PROJECT_DIR$/DesignPatterns/BehavioralType" />
+      <framework value="gotest" />
+      <kind value="PACKAGE" />
+      <package value="algo/DesignPatterns/BehavioralType" />
+      <directory value="$PROJECT_DIR$/" />
+      <filePath value="$PROJECT_DIR$/" />
+      <pattern value="^TestConcreteAggregate_Add$" />
+      <method v="2" />
+    </configuration>
+    <configuration name="TestInitPrimary in algo/DesignPatterns/BehavioralType" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+      <module name="algo" />
+      <working_directory value="$PROJECT_DIR$/DesignPatterns/BehavioralType" />
+      <framework value="gotest" />
+      <kind value="PACKAGE" />
+      <package value="algo/DesignPatterns/BehavioralType" />
+      <directory value="$PROJECT_DIR$/" />
+      <filePath value="$PROJECT_DIR$/" />
+      <pattern value="^TestInitPrimary$" />
+      <method v="2" />
+    </configuration>
+    <configuration name="TestNonTerminalExpression_Interpreter in algo/DesignPatterns/BehavioralType" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+      <module name="algo" />
+      <working_directory value="$PROJECT_DIR$/DesignPatterns/BehavioralType" />
+      <framework value="gotest" />
+      <kind value="PACKAGE" />
+      <package value="algo/DesignPatterns/BehavioralType" />
+      <directory value="$PROJECT_DIR$/" />
+      <filePath value="$PROJECT_DIR$/" />
+      <pattern value="^TestNonTerminalExpression_Interpreter$" />
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="Go Test.TestDirector in algo/DesignPatterns/CreativeType" />
-      <item itemvalue="Go Test.TestRoleChinese_Clone in algo/DesignPatterns/CreativeType" />
-      <item itemvalue="Go Test.TestAdapter_TargetMethod1 in algo/DesignPatterns/StructuralType" />
-      <item itemvalue="Go Test.TestTelev_Play in algo/DesignPatterns/BehavioralType" />
-      <item itemvalue="Go Test.TestDuckCall_RemoveObserver in algo/DesignPatterns" />
+      <item itemvalue="Go Test.TestInitPrimary in algo/DesignPatterns/BehavioralType" />
+      <item itemvalue="Go Test.TestNonTerminalExpression_Interpreter in algo/DesignPatterns/BehavioralType" />
+      <item itemvalue="Go Test.TestConcreteAggregate_Add in algo/DesignPatterns/BehavioralType" />
+      <item itemvalue="Go Test.TestColleagueSeller_Colleguer in algo/DesignPatterns/BehavioralType" />
+      <item itemvalue="Go Test.TestCaretaker_GetMemento in algo/DesignPatterns/BehavioralType" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Go Test.TestDuckCall_RemoveObserver in algo/DesignPatterns" />
-        <item itemvalue="Go Test.TestTelev_Play in algo/DesignPatterns/BehavioralType" />
-        <item itemvalue="Go Test.TestAdapter_TargetMethod1 in algo/DesignPatterns/StructuralType" />
-        <item itemvalue="Go Test.TestRoleChinese_Clone in algo/DesignPatterns/CreativeType" />
-        <item itemvalue="Go Test.TestDirector in algo/DesignPatterns/CreativeType" />
+        <item itemvalue="Go Test.TestCaretaker_GetMemento in algo/DesignPatterns/BehavioralType" />
+        <item itemvalue="Go Test.TestColleagueSeller_Colleguer in algo/DesignPatterns/BehavioralType" />
+        <item itemvalue="Go Test.TestConcreteAggregate_Add in algo/DesignPatterns/BehavioralType" />
+        <item itemvalue="Go Test.TestNonTerminalExpression_Interpreter in algo/DesignPatterns/BehavioralType" />
+        <item itemvalue="Go Test.TestInitPrimary in algo/DesignPatterns/BehavioralType" />
       </list>
     </recent_temporary>
   </component>
@@ -221,6 +227,31 @@
           <line>43</line>
           <option name="timeStamp" value="37" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
+          <url>file://$PROJECT_DIR$/DesignPatterns/CreativeType/Singleton_test.go</url>
+          <line>16</line>
+          <option name="timeStamp" value="38" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
+          <url>file://$PROJECT_DIR$/DesignPatterns/BehavioralType/Handler_test.go</url>
+          <line>45</line>
+          <option name="timeStamp" value="39" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
+          <url>file://$PROJECT_DIR$/DesignPatterns/BehavioralType/Interpreter_test.go</url>
+          <line>17</line>
+          <option name="timeStamp" value="41" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
+          <url>file://$PROJECT_DIR$/DesignPatterns/BehavioralType/Iterator_test.go</url>
+          <line>18</line>
+          <option name="timeStamp" value="43" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
+          <url>file://$PROJECT_DIR$/DesignPatterns/BehavioralType/Mediator_test.go</url>
+          <line>21</line>
+          <option name="timeStamp" value="44" />
+        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
     <watches-manager>
@@ -231,6 +262,7 @@
         <watch expression="*(*&quot;void&quot;)(0)" />
         <watch expression="*(*&quot;algo/DesignPatterns/BehavioralType.FlyWithWings&quot;)(7201224)" />
         <watch expression="*(*&quot;algo/DesignPatterns/BehavioralType.FlyWithWings&quot;)(7201224)" />
+        <watch expression="*(*&quot;algo/DesignPatterns/BehavioralType.Primary&quot;)(824634156304)" />
       </configuration>
     </watches-manager>
   </component>
