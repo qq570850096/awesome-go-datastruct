@@ -87,7 +87,7 @@ func (r *RubberDuck) quack() {
 	fmt.Println("RubberDuck")
 }
 
-// 第一次需求变动，鹅也想叫
+// 第一次需求变动，现在农场多了一些鹅，鹅也想quack()但是鹅只有creak()
 // 采用适配器模式
 // 适配模式
 type Creak interface {
@@ -144,8 +144,8 @@ func (q *QuackCounter) NotifyObservers() {
 
 func (q *QuackCounter) quack() {
 	q.q.quack()
-	fmt.Println("鸭子第",q.numberOfQuacks,"次叫")
 	q.numberOfQuacks++
+	fmt.Println("鸭子第",q.numberOfQuacks,"次叫")
 }
 
 // 第三次需求变更为了防止调用者忘了建立叫声统计类
