@@ -2,10 +2,29 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="15396f75-4e06-402f-8e73-7074f17a3c9a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/DesignPatterns/7Rules.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DesignPatterns/7Rules_test.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BasicGo/GoRoutine/Goroutine.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BasicGo/GoRoutine/Goroutine_test.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BasicGo/defer/defer.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BasicGo/defer/defer_test.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BasicGo/reflect/Reflect.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BasicGo/reflect/Reflect_test.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Graph_algo/leetcode/1091.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Graph_algo/leetcode/1091_test.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Graph_algo/leetcode/4LWater.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Graph_algo/leetcode/4LWater_test.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Graph_algo/leetcode/695.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Graph_algo/leetcode/695_2.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Graph_algo/leetcode/695_test.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Graph_algo/leetcode/752.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Graph_algo/leetcode/785.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DesignPatterns/七大设计原则.md" beforeDir="false" afterPath="$PROJECT_DIR$/DesignPatterns/七大设计原则.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DesignPatterns/CreativeType/Builder.go" beforeDir="false" afterPath="$PROJECT_DIR$/DesignPatterns/CreativeType/Builder.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DesignPatterns/CreativeType/Docs/单例模式.md" beforeDir="false" afterPath="$PROJECT_DIR$/DesignPatterns/CreativeType/Docs/单例模式.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DesignPatterns/CreativeType/Singleton.go" beforeDir="false" afterPath="$PROJECT_DIR$/DesignPatterns/CreativeType/Singleton.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DesignPatterns/CreativeType/Singleton_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/DesignPatterns/CreativeType/Singleton_test.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DoubleLinked/LRU_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/DoubleLinked/LRU_test.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DoubleLinked/test.txt" beforeDir="false" afterPath="$PROJECT_DIR$/DoubleLinked/test.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Graph_algo/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/Graph_algo/main.go" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -33,23 +52,23 @@
     <property name="go.gopath.indexing.explicitly.defined" value="true" />
     <property name="go.import.settings.migrated" value="true" />
     <property name="go.sdk.automatically.set" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../go-crontab" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/Graph_algo" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\exia\go\src\algo\Trie" />
-      <recent name="C:\Users\exia\go\src\algo\Segment" />
-      <recent name="C:\Users\exia\go\src\algo\Heap" />
-      <recent name="C:\Users\exia\go\src\algo\Linked" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\go_workspace\src\algo\DesignPatterns" />
       <recent name="D:\go_workspace\src\algo\DesignPatterns\CreativeType" />
       <recent name="D:\go_workspace\src\algo\DesignPatterns\CreativeType\Singleton" />
       <recent name="D:\go_workspace\src\algo\DesignPatterns\CreativeType\AbstractFactory" />
       <recent name="D:\go_workspace\src\algo\DesignPatterns\StructuralType\Docs" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\exia\go\src\algo\Trie" />
+      <recent name="C:\Users\exia\go\src\algo\Segment" />
+      <recent name="C:\Users\exia\go\src\algo\Heap" />
+      <recent name="C:\Users\exia\go\src\algo\Linked" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -64,75 +83,74 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Go Test.TestBenzCar_GetName in algo/DesignPatterns">
-    <configuration name="TestBenzCar_GetName in algo/DesignPatterns" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Go Test.TestMax2 in algo/Graph_algo/leetcode">
+    <configuration name="go build algo/Graph_algo" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
       <module name="algo" />
-      <working_directory value="$PROJECT_DIR$/DesignPatterns" />
-      <framework value="gotest" />
+      <working_directory value="$PROJECT_DIR$/Graph_algo" />
       <kind value="PACKAGE" />
-      <package value="algo/DesignPatterns" />
+      <filePath value="$PROJECT_DIR$/Graph_algo/main.go" />
+      <package value="algo/Graph_algo" />
       <directory value="$PROJECT_DIR$/" />
-      <filePath value="$PROJECT_DIR$/" />
-      <pattern value="^TestBenzCar_GetName$" />
       <method v="2" />
     </configuration>
-    <configuration name="TestGetInstance in algo/DesignPatterns/CreativeType" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+    <configuration name="Test in algo/Graph_algo/leetcode" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
       <module name="algo" />
-      <working_directory value="$PROJECT_DIR$/DesignPatterns/CreativeType" />
+      <working_directory value="$PROJECT_DIR$/Graph_algo/leetcode" />
       <framework value="gotest" />
       <kind value="PACKAGE" />
-      <package value="algo/DesignPatterns/CreativeType" />
+      <package value="algo/Graph_algo/leetcode" />
       <directory value="$PROJECT_DIR$/" />
       <filePath value="$PROJECT_DIR$/" />
-      <pattern value="^TestGetInstance$" />
+      <pattern value="^Test$" />
       <method v="2" />
     </configuration>
-    <configuration name="TestTCLFactory_NewTV in algo/DesignPatterns/CreativeType" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+    <configuration name="TestMax in algo/Graph_algo/leetcode (1)" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
       <module name="algo" />
-      <working_directory value="$PROJECT_DIR$/DesignPatterns/CreativeType" />
+      <working_directory value="$PROJECT_DIR$/Graph_algo/leetcode" />
       <framework value="gotest" />
       <kind value="PACKAGE" />
-      <package value="algo/DesignPatterns/CreativeType" />
+      <package value="algo/Graph_algo/leetcode" />
       <directory value="$PROJECT_DIR$/" />
       <filePath value="$PROJECT_DIR$/" />
-      <pattern value="^TestTCLFactory_NewTV$" />
+      <pattern value="^TestMax$" />
       <method v="2" />
     </configuration>
-    <configuration name="TestTCLFactory_NewTV in algo/DesignPatterns/CreativeType/AbstractFactory" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+    <configuration name="TestMax in algo/Graph_algo/leetcode" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
       <module name="algo" />
-      <working_directory value="$PROJECT_DIR$/DesignPatterns/CreativeType/AbstractFactory" />
+      <working_directory value="$PROJECT_DIR$/Graph_algo/leetcode" />
       <framework value="gotest" />
       <kind value="PACKAGE" />
-      <package value="algo/DesignPatterns/CreativeType/AbstractFactory" />
+      <package value="algo/Graph_algo/leetcode" />
       <directory value="$PROJECT_DIR$/" />
       <filePath value="$PROJECT_DIR$/" />
-      <pattern value="^TestTCLFactory_NewTV$" />
+      <pattern value="^TestMax$" />
       <method v="2" />
     </configuration>
-    <configuration name="go test algo/DesignPatterns/CreativeType" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+    <configuration name="TestMax2 in algo/Graph_algo/leetcode" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
       <module name="algo" />
-      <working_directory value="$PROJECT_DIR$/DesignPatterns/CreativeType" />
+      <working_directory value="$PROJECT_DIR$/Graph_algo/leetcode" />
       <framework value="gotest" />
       <kind value="PACKAGE" />
-      <package value="algo/DesignPatterns/CreativeType" />
+      <package value="algo/Graph_algo/leetcode" />
       <directory value="$PROJECT_DIR$/" />
       <filePath value="$PROJECT_DIR$/" />
+      <pattern value="^TestMax2$" />
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="Go Test.TestTCLFactory_NewTV in algo/DesignPatterns/CreativeType/AbstractFactory" />
-      <item itemvalue="Go Test.TestTCLFactory_NewTV in algo/DesignPatterns/CreativeType" />
-      <item itemvalue="Go Test.TestGetInstance in algo/DesignPatterns/CreativeType" />
-      <item itemvalue="Go Test.go test algo/DesignPatterns/CreativeType" />
-      <item itemvalue="Go Test.TestBenzCar_GetName in algo/DesignPatterns" />
+      <item itemvalue="Go Build.go build algo/Graph_algo" />
+      <item itemvalue="Go Test.Test in algo/Graph_algo/leetcode" />
+      <item itemvalue="Go Test.TestMax in algo/Graph_algo/leetcode" />
+      <item itemvalue="Go Test.TestMax in algo/Graph_algo/leetcode (1)" />
+      <item itemvalue="Go Test.TestMax2 in algo/Graph_algo/leetcode" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Go Test.TestBenzCar_GetName in algo/DesignPatterns" />
-        <item itemvalue="Go Test.go test algo/DesignPatterns/CreativeType" />
-        <item itemvalue="Go Test.TestGetInstance in algo/DesignPatterns/CreativeType" />
-        <item itemvalue="Go Test.TestTCLFactory_NewTV in algo/DesignPatterns/CreativeType" />
-        <item itemvalue="Go Test.TestTCLFactory_NewTV in algo/DesignPatterns/CreativeType/AbstractFactory" />
+        <item itemvalue="Go Test.TestMax2 in algo/Graph_algo/leetcode" />
+        <item itemvalue="Go Test.TestMax in algo/Graph_algo/leetcode (1)" />
+        <item itemvalue="Go Test.TestMax in algo/Graph_algo/leetcode" />
+        <item itemvalue="Go Test.Test in algo/Graph_algo/leetcode" />
+        <item itemvalue="Go Build.go build algo/Graph_algo" />
       </list>
     </recent_temporary>
   </component>
@@ -221,7 +239,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DlvLineBreakpoint">
           <url>file://$PROJECT_DIR$/DesignPatterns/CreativeType/Singleton_test.go</url>
-          <line>16</line>
+          <line>18</line>
           <option name="timeStamp" value="38" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DlvLineBreakpoint">
@@ -239,6 +257,51 @@
           <line>21</line>
           <option name="timeStamp" value="44" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
+          <url>file://$PROJECT_DIR$/DesignPatterns/CreativeType/Singleton_test.go</url>
+          <line>9</line>
+          <option name="timeStamp" value="45" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
+          <url>file://$PROJECT_DIR$/BasicGo/GoRoutine/Goroutine_test.go</url>
+          <line>12</line>
+          <option name="timeStamp" value="46" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
+          <url>file://$PROJECT_DIR$/BasicGo/GoRoutine/Goroutine_test.go</url>
+          <line>10</line>
+          <option name="timeStamp" value="47" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
+          <url>file://$PROJECT_DIR$/BasicGo/GoRoutine/Goroutine_test.go</url>
+          <line>38</line>
+          <option name="timeStamp" value="48" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
+          <url>file://$PROJECT_DIR$/BasicGo/GoRoutine/Goroutine_test.go</url>
+          <line>45</line>
+          <option name="timeStamp" value="50" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
+          <url>file://$PROJECT_DIR$/BasicGo/GoRoutine/Goroutine_test.go</url>
+          <line>49</line>
+          <option name="timeStamp" value="51" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
+          <url>file://$PROJECT_DIR$/DoubleLinked/LRU_test.go</url>
+          <line>18</line>
+          <option name="timeStamp" value="52" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
+          <url>file://$PROJECT_DIR$/Graph_algo/leetcode/695_test.go</url>
+          <line>10</line>
+          <option name="timeStamp" value="53" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
+          <url>file://$PROJECT_DIR$/Graph_algo/leetcode/1091_test.go</url>
+          <line>15</line>
+          <option name="timeStamp" value="56" />
+        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
     <watches-manager>
@@ -250,6 +313,9 @@
         <watch expression="*(*&quot;algo/DesignPatterns/BehavioralType.FlyWithWings&quot;)(7201224)" />
         <watch expression="*(*&quot;algo/DesignPatterns/BehavioralType.FlyWithWings&quot;)(7201224)" />
         <watch expression="*(*&quot;algo/DesignPatterns/BehavioralType.Primary&quot;)(824634156304)" />
+        <watch expression="*(*&quot;map[int][]int&quot;)(824634006560)" />
+        <watch expression="*(*&quot;map[int][]int&quot;)(824634006560)" />
+        <watch expression="*(*&quot;[]int&quot;)(824634031848)" />
       </configuration>
     </watches-manager>
   </component>
