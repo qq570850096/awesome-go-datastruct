@@ -2,29 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="15396f75-4e06-402f-8e73-7074f17a3c9a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/BasicGo/GoRoutine/Goroutine.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BasicGo/GoRoutine/Goroutine_test.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BasicGo/defer/defer.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BasicGo/defer/defer_test.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BasicGo/reflect/Reflect.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BasicGo/reflect/Reflect_test.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Graph_algo/leetcode/1091.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Graph_algo/leetcode/1091_test.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Graph_algo/leetcode/4LWater.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Graph_algo/leetcode/4LWater_test.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Graph_algo/leetcode/695.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Graph_algo/leetcode/695_2.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Graph_algo/leetcode/695_test.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Graph_algo/leetcode/752.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Graph_algo/leetcode/785.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Graph_algo/leetcode/shuffle.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Graph_algo/leetcode/shuffle_test.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DesignPatterns/CreativeType/Builder.go" beforeDir="false" afterPath="$PROJECT_DIR$/DesignPatterns/CreativeType/Builder.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DesignPatterns/CreativeType/Docs/单例模式.md" beforeDir="false" afterPath="$PROJECT_DIR$/DesignPatterns/CreativeType/Docs/单例模式.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DesignPatterns/CreativeType/Singleton.go" beforeDir="false" afterPath="$PROJECT_DIR$/DesignPatterns/CreativeType/Singleton.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DesignPatterns/CreativeType/Singleton_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/DesignPatterns/CreativeType/Singleton_test.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DoubleLinked/LRU_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/DoubleLinked/LRU_test.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DoubleLinked/test.txt" beforeDir="false" afterPath="$PROJECT_DIR$/DoubleLinked/test.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Graph_algo/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/Graph_algo/main.go" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -83,16 +63,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Go Test.TestMax2 in algo/Graph_algo/leetcode">
-    <configuration name="go build algo/Graph_algo" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
-      <module name="algo" />
-      <working_directory value="$PROJECT_DIR$/Graph_algo" />
-      <kind value="PACKAGE" />
-      <filePath value="$PROJECT_DIR$/Graph_algo/main.go" />
-      <package value="algo/Graph_algo" />
-      <directory value="$PROJECT_DIR$/" />
-      <method v="2" />
-    </configuration>
+  <component name="RunManager" selected="Go Test.TestShuffle_Run in algo/Graph_algo/leetcode">
     <configuration name="Test in algo/Graph_algo/leetcode" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
       <module name="algo" />
       <working_directory value="$PROJECT_DIR$/Graph_algo/leetcode" />
@@ -137,20 +108,31 @@
       <pattern value="^TestMax2$" />
       <method v="2" />
     </configuration>
+    <configuration name="TestShuffle_Run in algo/Graph_algo/leetcode" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+      <module name="algo" />
+      <working_directory value="$PROJECT_DIR$/Graph_algo/leetcode" />
+      <framework value="gotest" />
+      <kind value="PACKAGE" />
+      <package value="algo/Graph_algo/leetcode" />
+      <directory value="$PROJECT_DIR$/" />
+      <filePath value="$PROJECT_DIR$/" />
+      <pattern value="^TestShuffle_Run$" />
+      <method v="2" />
+    </configuration>
     <list>
-      <item itemvalue="Go Build.go build algo/Graph_algo" />
       <item itemvalue="Go Test.Test in algo/Graph_algo/leetcode" />
       <item itemvalue="Go Test.TestMax in algo/Graph_algo/leetcode" />
       <item itemvalue="Go Test.TestMax in algo/Graph_algo/leetcode (1)" />
       <item itemvalue="Go Test.TestMax2 in algo/Graph_algo/leetcode" />
+      <item itemvalue="Go Test.TestShuffle_Run in algo/Graph_algo/leetcode" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Go Test.TestShuffle_Run in algo/Graph_algo/leetcode" />
         <item itemvalue="Go Test.TestMax2 in algo/Graph_algo/leetcode" />
         <item itemvalue="Go Test.TestMax in algo/Graph_algo/leetcode (1)" />
         <item itemvalue="Go Test.TestMax in algo/Graph_algo/leetcode" />
         <item itemvalue="Go Test.Test in algo/Graph_algo/leetcode" />
-        <item itemvalue="Go Build.go build algo/Graph_algo" />
       </list>
     </recent_temporary>
   </component>
