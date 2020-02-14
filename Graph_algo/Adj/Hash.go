@@ -113,6 +113,14 @@ func (hash *Hash) LinkedVertex(v int) (edgeArr []int) {
 	}
 	return
 }
+func Find(a []int,v int)(index int){
+	for index,_ = range a {
+		if v == a[index]{
+			return
+		}
+	}
+	return -1
+}
 
 // 构造打印方法
 func (hash *Hash) String() string {
