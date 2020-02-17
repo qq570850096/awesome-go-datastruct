@@ -73,10 +73,10 @@ func (this *List) Get (index int) int {
 	}
 	return cur.E
 }
-func (this *List) GetFirst (index int) int{
+func (this *List) GetFirst () int{
 	return this.Get(0)
 }
-func (this *List) GetLast (index int) int{
+func (this *List) GetLast () int{
 	return this.Get(this.size-1)
 }
 // 在链表index个位置中放入元素e
@@ -115,10 +115,10 @@ func (this *List) Remove (index int) int {
 	this.size--
 	return retNode.E
 }
-func (this *List) RemoveFirst (index int) int{
+func (this *List) RemoveFirst () int{
 	return this.Remove(0)
 }
-func (this *List) RemoveLast (index int) int{
+func (this *List) RemoveLast () int{
 	return this.Remove(this.size-1)
 }
 // 删除元素E
@@ -136,6 +136,8 @@ func (this *List) RemoveElement (e int) {
 		DelNode = nil
 	}
 }
+// 在Golang中，如果我们想对自建数据结构自定义在Println的时候打印出什么结果
+// 就可以使用这种方式去自己构建打印的字符串格式
 func (this *List) String () string {
 	var builder strings.Builder
 	cur := this.dummyHead.Next
@@ -146,5 +148,4 @@ func (this *List) String () string {
 	fmt.Fprintf(&builder,"NULL")
 	return builder.String()
 }
-
 

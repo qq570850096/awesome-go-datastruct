@@ -1,23 +1,18 @@
 package Linked
 
 import (
+	"fmt"
 	"testing"
 )
 
 func TestList(t *testing.T) {
 	list := InitList()
-	list2 := InitList()
-	for i:=0;i<5 ; i=i+2  {
-		list.AddLast(i)
+	for i:=0;i<5 ; i++  {
+		list.AddFirst(i)
 	}
-	for i:=0;i<6 ; i=i+2  {
-		list2.AddLast(i+1)
-	}
-	t.Log(list)
-	t.Log(list2)
-	list2.Head().Next.Next = list.Head().Next.Next
-	t.Log(list2)
-	t.Log(*list2.CheckIntersect(list2.Head(),list.Head()))
+	fmt.Println(list)
+	list.Reverse()
+	fmt.Println(list)
 	//for i:=9;i>0;i--{
 	//	if list.FindLastK(i) == nil {
 	//		t.Error("超过链表可表示长度")
