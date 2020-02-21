@@ -2,22 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="15396f75-4e06-402f-8e73-7074f17a3c9a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Red-Black/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Union/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/skiplists/SkipLists.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/skiplists/SkipLists_test.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BinarySearch/Tree_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/BinarySearch/Tree_test.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DesignPatterns/7Rules_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/DesignPatterns/7Rules_test.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Graph_algo/leetcode/200.go" beforeDir="false" afterPath="$PROJECT_DIR$/Graph_algo/leetcode/200.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Heap/Array.go" beforeDir="false" afterPath="$PROJECT_DIR$/Heap/Array.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Linked/List.go" beforeDir="false" afterPath="$PROJECT_DIR$/Linked/List.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Linked/List_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/Linked/List_test.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Linked/go语言实现链表相关题目.md" beforeDir="false" afterPath="$PROJECT_DIR$/Linked/go语言实现链表相关题目.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Sorts/Bucket.go" beforeDir="false" afterPath="$PROJECT_DIR$/Sorts/Bucket.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Sorts/Quick.go" beforeDir="false" afterPath="$PROJECT_DIR$/Sorts/Quick.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Trie/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/Trie/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main/622.go" beforeDir="false" afterPath="$PROJECT_DIR$/main/622.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/queue/queue.go" beforeDir="false" afterPath="$PROJECT_DIR$/queue/queue.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/stack/stack.go" beforeDir="false" afterPath="$PROJECT_DIR$/stack/stack.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/stack/stack_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/stack/stack_test.go" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -76,7 +64,18 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Go Test.TestFind in algo/Graph_algo/Adj">
+  <component name="RunManager" selected="Go Test.TestNew in algo/skiplists">
+    <configuration name="BenchmarkRBTree in algo/Red-Black" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+      <module name="algo" />
+      <working_directory value="$PROJECT_DIR$/Red-Black" />
+      <framework value="gobench" />
+      <kind value="PACKAGE" />
+      <package value="algo/Red-Black" />
+      <directory value="$PROJECT_DIR$/" />
+      <filePath value="$PROJECT_DIR$/" />
+      <pattern value="^BenchmarkRBTree$" />
+      <method v="2" />
+    </configuration>
     <configuration name="TestFind in algo/Graph_algo/Adj" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
       <module name="algo" />
       <working_directory value="$PROJECT_DIR$/Graph_algo/Adj" />
@@ -88,64 +87,53 @@
       <pattern value="^TestFind$" />
       <method v="2" />
     </configuration>
-    <configuration name="TestGetInstance in algo/DesignPatterns/CreativeType" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+    <configuration name="TestFind in algo/Union" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
       <module name="algo" />
-      <working_directory value="$PROJECT_DIR$/DesignPatterns/CreativeType" />
+      <working_directory value="$PROJECT_DIR$/Union" />
       <framework value="gotest" />
       <kind value="PACKAGE" />
-      <package value="algo/DesignPatterns/CreativeType" />
+      <package value="algo/Union" />
       <directory value="$PROJECT_DIR$/" />
       <filePath value="$PROJECT_DIR$/" />
-      <pattern value="^TestGetInstance$" />
+      <pattern value="^TestFind$" />
       <method v="2" />
     </configuration>
-    <configuration name="TestMatrix_Degree in algo/Graph_algo/Adj" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+    <configuration name="TestNew in algo/skiplists" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
       <module name="algo" />
-      <working_directory value="$PROJECT_DIR$/Graph_algo/Adj" />
+      <working_directory value="$PROJECT_DIR$/skiplists" />
       <framework value="gotest" />
       <kind value="PACKAGE" />
-      <package value="algo/Graph_algo/Adj" />
+      <package value="algo/skiplists" />
       <directory value="$PROJECT_DIR$/" />
       <filePath value="$PROJECT_DIR$/" />
-      <pattern value="^TestMatrix_Degree$" />
+      <pattern value="^TestNew$" />
       <method v="2" />
     </configuration>
-    <configuration name="TestMaxHeap in algo/Heap" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+    <configuration name="TestTree in algo/Segment" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
       <module name="algo" />
-      <working_directory value="$PROJECT_DIR$/Heap" />
+      <working_directory value="$PROJECT_DIR$/Segment" />
       <framework value="gotest" />
       <kind value="PACKAGE" />
-      <package value="algo/Heap" />
-      <directory value="$PROJECT_DIR$/" />
-      <filePath value="$PROJECT_DIR$/" />
-      <pattern value="^TestMaxHeap$" />
-      <method v="2" />
-    </configuration>
-    <configuration name="TestTree in algo/BinarySearch" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
-      <module name="algo" />
-      <working_directory value="$PROJECT_DIR$/BinarySearch" />
-      <framework value="gotest" />
-      <kind value="PACKAGE" />
-      <package value="algo/BinarySearch" />
+      <package value="algo/Segment" />
       <directory value="$PROJECT_DIR$/" />
       <filePath value="$PROJECT_DIR$/" />
       <pattern value="^TestTree$" />
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="Go Test.TestTree in algo/BinarySearch" />
-      <item itemvalue="Go Test.TestMaxHeap in algo/Heap" />
-      <item itemvalue="Go Test.TestGetInstance in algo/DesignPatterns/CreativeType" />
-      <item itemvalue="Go Test.TestMatrix_Degree in algo/Graph_algo/Adj" />
       <item itemvalue="Go Test.TestFind in algo/Graph_algo/Adj" />
+      <item itemvalue="Go Test.TestFind in algo/Union" />
+      <item itemvalue="Go Test.TestTree in algo/Segment" />
+      <item itemvalue="Go Test.BenchmarkRBTree in algo/Red-Black" />
+      <item itemvalue="Go Test.TestNew in algo/skiplists" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Go Test.TestNew in algo/skiplists" />
+        <item itemvalue="Go Test.BenchmarkRBTree in algo/Red-Black" />
+        <item itemvalue="Go Test.TestTree in algo/Segment" />
+        <item itemvalue="Go Test.TestFind in algo/Union" />
         <item itemvalue="Go Test.TestFind in algo/Graph_algo/Adj" />
-        <item itemvalue="Go Test.TestMatrix_Degree in algo/Graph_algo/Adj" />
-        <item itemvalue="Go Test.TestGetInstance in algo/DesignPatterns/CreativeType" />
-        <item itemvalue="Go Test.TestMaxHeap in algo/Heap" />
-        <item itemvalue="Go Test.TestTree in algo/BinarySearch" />
       </list>
     </recent_temporary>
   </component>
