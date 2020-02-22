@@ -242,6 +242,7 @@ func (this *Tree) flipColors (node *Node) {
 
 #### 情况一：调整右边的红链接
 
+
 当我们发现某个节点的**左儿子是黑色**但**右儿子是红色**时，我们要将右边的红色链接转到左边来：
 
 ![rbtree-insert-1](https://git.oschina.net/riteme/blogimg/raw/master/rbtree-and-2-3-tree/rbtree-insert-1.png)
