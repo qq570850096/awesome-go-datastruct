@@ -17,6 +17,6 @@ func TestBenzCar_GetName(t *testing.T) {
 		fmt.Println("车名:",v.GetName(),"\t价格:",v.GetPrice())
 	}
 
-	person := Person{ani:&Rubbit{}}
-	person.WalkAnimal()
+	//person := Person{ani:&Rubbit{}}
+	//person.WalkAnimal()
 }

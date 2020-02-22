@@ -13,37 +13,38 @@ func (heap *MaxHeap) InitHeapWithArray (arr []int) *MaxHeap {
 	}
 	return heap
 }
-
+// 返回堆中元素个数
 func(heap *MaxHeap) Size() int {
 	return len(heap.arr)
 }
-
+// 返回堆是否为空
 func(heap *MaxHeap) IsEmpty () bool {
 	if len(heap.arr) == 0 {
 		return true
 	}
 	return false
 }
+// 计算父节点
 func(heap *MaxHeap) parent (index int) int {
 	if index==0 {
 		panic("0节点没有父亲节点")
 	}
 	return (index-1)/2
 }
-
+// 计算左孩子索引
 func(heap *MaxHeap) leftChild(index int) int {
 	return index*2+1
 }
-
+// 计算右孩子索引
 func(heap *MaxHeap) rightChild(index int) int {
 	return index*2+2
 }
-
+// 增加元素
 func (heap *MaxHeap)Add(e int)  {
 	heap.arr = append(heap.arr,e)
 	heap.siftUp(heap.Size()-1)
 }
-
+// 数据上浮
 func (heap *MaxHeap) siftUp(size int) {
 
 	for size > 0 && heap.arr[heap.parent(size)] < heap.arr[size]{
@@ -58,6 +59,7 @@ func (heap *MaxHeap) Replace(e int) int {
 	heap.siftDown(0)
 	return ret
 }
+// 删除最大元素
 func(heap *MaxHeap) RemoveMax() int {
 	var ret int = heap.FindMax()
 	heap.arr[heap.Size()-1],heap.arr[heap.Size()-1] = heap.arr[heap.Size()-1],heap.arr[heap.Size()-1]
@@ -66,7 +68,7 @@ func(heap *MaxHeap) RemoveMax() int {
 
 	return ret
 }
-
+// 数据下沉
 func (heap *MaxHeap) siftDown(index int) {
 	var (
 		j int

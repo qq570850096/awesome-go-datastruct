@@ -93,7 +93,7 @@ func QuickSort(arr []int,l,r int)  {
 	if l >= r {
 		return
 	}
-	p := partition2(arr,l,r)
+	p := partition(arr,l,r)
 	QuickSort(arr,l,p-1)
 	QuickSort(arr,p+1,r)
 }

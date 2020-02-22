@@ -56,7 +56,6 @@ type Builder interface {
 	BuildGround()
 	BuildCement()
 	BuildRoof()
-	
 	BuildProduct() *Product
 }
 

@@ -16,6 +16,7 @@ var once sync.Once
 func GetInstance() *ChocolateBoiler {
 	// 使用Once保证创建实例的方法永远只能运行一次,就算在并发状态下也一定只执行一次
 	once.Do(func() {
+		fmt.Println("锅已创建")
 		instance = &ChocolateBoiler{true,false}
 	})
 	return instance

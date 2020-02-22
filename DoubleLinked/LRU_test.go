@@ -17,7 +17,7 @@ func TestLRUCache(t *testing.T) {
 	}
 	defer file.Close()
 	LRU := InitLRU(3)
-	for i:=0;i<3;i++ {
+	for i:=0;i<4;i++ {
 		var key int
 		fmt.Fscanf(file,"%d",&key)
 		LRU.Put(key,rand.Intn(100))
