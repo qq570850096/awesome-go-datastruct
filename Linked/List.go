@@ -149,3 +149,32 @@ func (this *List) String () string {
 	return builder.String()
 }
 
+func (this *List) Sort() {
+	// 链表快速排序
+	if(this.Head()==nil || this.Head().Next==nil){
+		return
+	}
+	qsortList(this.Head(),nil)
+}
+
+func qsortList(head,tail *Node){
+	// 链表范围是[Low,high)
+	if(head != tail && head.Next != tail){
+		mid := partitionList(head,tail)
+		qsortList(head,mid)
+		qsortList(mid.Next,tail)
+	}
+}
+
+func partitionList(head,tail *Node) *Node {
+	key := head.E
+	loc := head
+	for i := head.Next; i != tail; i = i.Next {
+		if i.E < key {
+			loc = loc.Next
+			i.E,loc.E = loc.E,i.E
+		}
+	}
+	loc.E,head.E = head.E,loc.E
+	return loc
+}
