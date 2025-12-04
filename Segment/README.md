@@ -1,6 +1,7 @@
 ## 线段树（Segment Tree）
 
 ### 定义
+
 **线段树（segment tree）**，顾名思义， 是用来存放给定区间（segment, or interval）内对应信息的一种数据结构。与树状数组（binary indexed tree）相似，线段树也用来处理数组相应的**区间查询（range query）**和**元素更新（update）**操作。与树状数组不同的是，线段树不止可以适用于区间求和的查询，也可以进行**区间最大值，区间最小值（Range Minimum/Maximum Query problem）或者区间异或值**的查询。
 
 对应于树状数组，线段树进行更新（update）的操作为O(logn)，进行区间查询（range query）的操作也为O(logn)。
@@ -239,12 +240,3 @@ func (this *NumArray) SumRange(i int, j int) int {
 执行用时 :52 ms, 在所有 Go 提交中击败了97.37%的用户
 内存消耗 :9.2 MB, 在所有 Go 提交中击败了71.43%的用户
 ```
-
-
-
-
-
-
-
-
-
