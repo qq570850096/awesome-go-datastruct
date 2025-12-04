@@ -18,17 +18,16 @@ type Flyweight interface {
 	operate()
 }
 
-
 type ExamInfo struct {
 	// 内部状态,用于在不同对象中共享
 	user string
-	
+
 	// 外部状态，随环境改变而改变
 	subject string
 }
 
 func (e *ExamInfo) operate() {
-	fmt.Println(e.user,"开始考试，考试科目为",e.subject)
+	fmt.Println(e.user, "开始考试，考试科目为", e.subject)
 }
 
 func (e *ExamInfo) User() string {
@@ -47,10 +46,10 @@ func (e *ExamInfo) SetSubject(subject string) {
 	e.subject = subject
 }
 
-func (e *ExamInfo) String () string {
+func (e *ExamInfo) String() string {
 	return "ExamInfo{" +
 		"user = " + e.user + "\n" +
-		"subject = " + e.subject + "\n" + "}" 
+		"subject = " + e.subject + "\n" + "}"
 }
 
 // 享元工厂
@@ -58,13 +57,16 @@ type ExamInfoFactory struct {
 	pool map[string]*ExamInfo
 }
 
-func (e *ExamInfoFactory)GetExamInfo(subject string) (Ex *ExamInfo) {
-	if v,ok := e.pool[subject]; ok {
+func (e *ExamInfoFactory) GetExamInfo(subject string) (Ex *ExamInfo) {
+	if e.pool == nil {
+		e.pool = make(map[string]*ExamInfo)
+	}
+	if v, ok := e.pool[subject]; ok {
 		Ex = v
-		fmt.Println("直接从池中获取",subject)
+		fmt.Println("直接从池中获取", subject)
 	} else {
-		fmt.Println("建立对象，并且放入池中",subject)
-		Ex = &ExamInfo{subject:subject}
+		fmt.Println("建立对象，并且放入池中", subject)
+		Ex = &ExamInfo{subject: subject}
 		e.pool[subject] = Ex
 	}
 	return

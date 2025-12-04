@@ -1,77 +1,68 @@
 package main
 
 type MyCircularQueue struct {
-	arr []int
+	arr   []int
 	front int
-	rear int
-	size int
+	rear  int
+	size  int
 }
-
 
 /** Initialize your data structure here. Set the size of the queue to be k. */
 func Constructor(k int) MyCircularQueue {
 	return MyCircularQueue{
-		make([]int,k),
+		make([]int, k),
 		0,
 		0,
 		0,
 	}
 }
-
 
 /** Insert an element into the circular queue. Return true if the operation is successful. */
 func (this *MyCircularQueue) EnQueue(value int) bool {
-	if this.arr == nil || (this.size == len(this.arr) && (this.rear) % len(this.arr) == this.front){
+	if this.arr == nil || (this.size == len(this.arr) && (this.rear)%len(this.arr) == this.front) {
 		return false
 	}
-	this.arr[this.rear % len(this.arr)] = value
-	this.rear = this.rear % len(this.arr)+1
-	this.size ++
+	this.arr[this.rear%len(this.arr)] = value
+	this.rear = this.rear%len(this.arr) + 1
+	this.size++
 	return true
 }
 
-
 /** Delete an element from the circular queue. Return true if the operation is successful. */
 func (this *MyCircularQueue) DeQueue() bool {
-	if this.arr == nil || this.size == 0  {
+	if this.arr == nil || this.size == 0 {
 		return false
-	}else {
-		this.front = this.front % len(this.arr) + 1
+	} else {
+		this.front = this.front%len(this.arr) + 1
 		this.size--
 		return true
 	}
 }
-
 
 /** Get the front item from the queue. */
 func (this *MyCircularQueue) Front() int {
 	if this.IsEmpty() {
 		return -1
 	}
-	return this.arr[this.front]
+	return this.arr[this.front%len(this.arr)]
 }
-
 
 /** Get the last item from the queue. */
 func (this *MyCircularQueue) Rear() int {
 	if this.IsEmpty() {
 		return -1
 	}
-	if this.size > 0 && this.rear == 0 {
-		return this.arr[len(this.arr)-1]
-	}
-	return this.arr[this.rear-1]
+	last := (this.rear - 1 + len(this.arr)) % len(this.arr)
+	return this.arr[last]
 }
-
 
 /** Checks whether the circular queue is empty or not. */
 func (this *MyCircularQueue) IsEmpty() bool {
-	if this.size == 0{
+	if this.size == 0 {
 		return true
 	}
 	return false
 }
-
 
 /** Checks whether the circular queue is full or not. */
 func (this *MyCircularQueue) IsFull() bool {
@@ -80,7 +71,6 @@ func (this *MyCircularQueue) IsFull() bool {
 	}
 	return false
 }
-
 
 /**
  * Your MyCircularQueue object will be instantiated and called as such:

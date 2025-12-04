@@ -16,6 +16,7 @@ func TestTrie(t *testing.T) {
 	if err != nil {
 		log.Fatal(err)
 	}
+	defer file.Close()
 	scanner := bufio.NewScanner(file)
 	// 缺省的分隔函数是bufio.ScanLines,我们这里使用ScanWords。
 	// 也可以定制一个SplitFunc类型的分隔函数
@@ -26,10 +27,10 @@ func TestTrie(t *testing.T) {
 	for success {
 		word := scanner.Text()
 		word = strings.ToLower(word)
-		for len(word) > 0  && (word[0] < 'a' || word[0] > 'z') {
+		for len(word) > 0 && (word[0] < 'a' || word[0] > 'z') {
 			word = word[1:]
 		}
-		for len(word) > 0  && (word[len(word)-1] < 'a' || word[len(word)-1] > 'z') {
+		for len(word) > 0 && (word[len(word)-1] < 'a' || word[len(word)-1] > 'z') {
 			word = word[:len(word)-1]
 		}
 		trie.Push(word)
@@ -46,6 +47,6 @@ func TestTrie(t *testing.T) {
 	}
 	end := time.Now()
 	// fmt.Println(trie.SearchPrefix("pri"))
-	fmt.Println("傲慢与偏见一共",trie.Size(),"个单词")
-	fmt.Println("统计整本书共用时：",end.Sub(start))
+	fmt.Println("傲慢与偏见一共", trie.Size(), "个单词")
+	fmt.Println("统计整本书共用时：", end.Sub(start))
 }

@@ -19,7 +19,7 @@ func (C *Path) Dfs(v int, parent int) bool {
 	for _, w := range C.graph.LinkedVertex(v) {
 		if !C.visited[w] {
 			if C.Dfs(w, v) {
-				return false
+				return true
 			}
 		}
 	}

@@ -2,11 +2,11 @@ package skiplists
 
 import "math/rand"
 
-
 const (
-	maxLevel int     = 16   // Should be enough for 2^16 elements
+	maxLevel int     = 16 // Should be enough for 2^16 elements
 	p        float32 = 0.25
 )
+
 // Element is an Element of a skiplist.
 type Node struct {
 	Score   float64
@@ -26,8 +26,8 @@ func newElement(score float64, value interface{}, level int) *Node {
 // The zero value from SkipList is an empty skiplist ready to use.
 type SkipList struct {
 	header *Node // header is a dummy element
-	len    int      // current skiplist length，header not included
-	level  int      // current skiplist level，header not included
+	len    int   // current skiplist length，header not included
+	level  int   // current skiplist level，header not included
 }
 
 // New returns a new empty SkipList.
@@ -36,6 +36,7 @@ func New() *SkipList {
 		header: &Node{forward: make([]*Node, maxLevel)},
 	}
 }
+
 // 返回长度
 func (s *SkipList) Size() int {
 	return s.len
@@ -123,14 +124,18 @@ func (sl *SkipList) Delete(score float64) *Node {
 	}
 	x = x.forward[0]
 
-	if x != nil && x.Score == score {
-		for i := 0; i < sl.level; i++ {
-			if update[i].forward[i] != x {
-				return nil
-			}
-			update[i].forward[i] = x.forward[i]
-		}
-		sl.len--
+	if x == nil || x.Score != score {
+		return nil
 	}
+	for i := 0; i < len(x.forward); i++ {
+		if update[i].forward[i] != x {
+			break
+		}
+		update[i].forward[i] = x.forward[i]
+	}
+	for sl.level > 1 && sl.header.forward[sl.level-1] == nil {
+		sl.level--
+	}
+	sl.len--
 	return x
 }
