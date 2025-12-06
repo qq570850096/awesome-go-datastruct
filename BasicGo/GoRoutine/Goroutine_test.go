@@ -9,14 +9,14 @@ import (
 )
 
 func TestThread(t *testing.T) {
-	//Thread()
-	//ThreadWrong()
-	//t.Log(CounterWrong())
-	//t.Log(Counter())
-	//t.Log(WaitGroupExam())
-	//ret := AsnyService()
-	//otherTask()
-	//fmt.Println(<-ret)
+	// 调用 Thread()
+	// 调用 ThreadWrong()
+	// 打印 CounterWrong() 结果
+	// 打印 Counter() 结果
+	// t.Log(WaitGroupExam()) // 检查 WaitGroup 示例
+	// ret := AsnyService() // 调用异步服务
+	// otherTask() // 处理其他任务
+	// fmt.Println(<-ret) // 读取异步结果
 	select {
 	case ret := <-AsnyService():
 		t.Log(ret)
@@ -31,7 +31,7 @@ func TestConsumer(t *testing.T) {
 	// 创造一个同步通道
 	ch := make(chan int)
 	// 创造一个异步通道
-	// cha := make(chan int,3)
+	// cha := make(chan int,3) // 带缓冲通道示例
 	wg.Add(1)
 	go Producer(ch,&wg)
 	for i := 0; i < 3; i++ {

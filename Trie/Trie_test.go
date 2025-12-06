@@ -46,7 +46,7 @@ func TestTrie(t *testing.T) {
 		}
 	}
 	end := time.Now()
-	// fmt.Println(trie.SearchPrefix("pri"))
+	// 如需测试前缀查询，可打印：fmt.Println(trie.SearchPrefix("pri"))
 	fmt.Println("傲慢与偏见一共", trie.Size(), "个单词")
 	fmt.Println("统计整本书共用时：", end.Sub(start))
 }

@@ -114,9 +114,9 @@ func (matrix *Matrix) LinkedVertex(v int) (edgearr []int) {
 func (matrix *Matrix) String() string {
 	var (
 		builder strings.Builder
-		//index int
+		// index int 行号
 		value []int
-		//j int
+		// j int 列号
 		finalValue int
 	)
 	fmt.Fprintf(&builder, "V = %d, E = %d", matrix.v, matrix.e)

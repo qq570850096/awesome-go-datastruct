@@ -33,7 +33,7 @@ func partition2(arr []int,l,r int) int {
 	arr[l],arr[randIndex] = arr[randIndex],arr[l]
 
 	v := arr[l]
-	// arr[l+1...i) <= v; arr(j...r] >= v
+	// 不变式：arr[l+1...i) <= v; arr(j...r] >= v
 	i,j := l+1,r
 	for {
 		// 注意这里的边界, arr[i] < v, 不能是arr[i] <= v
@@ -68,9 +68,9 @@ func quickSort3Ways(arr []int,l,r int)  {
 	arr[l],arr[randIndex] = arr[randIndex],arr[l]
 
 	v := arr[l]
-	// arr[l+1...lt] < v
-	// arr[gt...r] > v
-	// arr[lt+1...i) == v
+	// 小于区间：arr[l+1...lt] < v
+	// 大于区间：arr[gt...r] > v
+	// 等于区间：arr[lt+1...i) == v
 	lt,gt,i := l,r+1,l+1
 	for i < gt {
 		if arr[i] < v {

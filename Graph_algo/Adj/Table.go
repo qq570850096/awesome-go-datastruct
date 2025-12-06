@@ -110,7 +110,7 @@ func (table *Table) String() string {
 		builder strings.Builder
 		index int
 		value []int
-		//j int
+		// j int 临时索引
 		finalValue int
 	)
 	fmt.Fprintf(&builder, "V = %d, E = %d",table.v,table.e)

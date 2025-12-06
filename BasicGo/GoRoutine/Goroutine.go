@@ -78,7 +78,7 @@ func WaitGroupExam() int {
 func AsnyService() <-chan string {
 	// 这里制造一个无缓冲区的channel，这种时候的通道是一个同步的操作
 	// 也就是说只有收发双方都对接上了，才会进行传递
-	// retCh := make(chan string)
+	// retCh := make(chan string) // 无缓冲通道示例
 	// 这里我们换成一个带缓冲区的channel，虽然长度为1，也可以让他变成异步执行
 	retCh := make(chan string,1)
 	go func() {

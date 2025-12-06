@@ -61,28 +61,28 @@ func TestAVLDuplicatesAreIgnored(t *testing.T) {
 }
 
 func TestAVLRotations(t *testing.T) {
-	// LL
+	// LL 型：左左失衡场景
 	treeLL := &Tree{}
 	for _, v := range []int{30, 20, 10} {
 		treeLL.Add(v)
 	}
 	assertAVL(t, treeLL, []int{10, 20, 30})
 
-	// RR
+	// RR 型：右右失衡场景
 	treeRR := &Tree{}
 	for _, v := range []int{10, 20, 30} {
 		treeRR.Add(v)
 	}
 	assertAVL(t, treeRR, []int{10, 20, 30})
 
-	// LR
+	// LR 型：左右失衡场景
 	treeLR := &Tree{}
 	for _, v := range []int{30, 10, 20} {
 		treeLR.Add(v)
 	}
 	assertAVL(t, treeLR, []int{10, 20, 30})
 
-	// RL
+	// RL 型：右左失衡场景
 	treeRL := &Tree{}
 	for _, v := range []int{10, 30, 20} {
 		treeRL.Add(v)

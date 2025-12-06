@@ -7,7 +7,7 @@ type MyCircularQueue struct {
 	size  int
 }
 
-/** Initialize your data structure here. Set the size of the queue to be k. */
+/** 初始化循环队列，设置容量为 k。 */
 func Constructor(k int) MyCircularQueue {
 	return MyCircularQueue{
 		make([]int, k),
@@ -17,7 +17,7 @@ func Constructor(k int) MyCircularQueue {
 	}
 }
 
-/** Insert an element into the circular queue. Return true if the operation is successful. */
+/** 向循环队列插入元素，成功返回 true。 */
 func (this *MyCircularQueue) EnQueue(value int) bool {
 	if this.arr == nil || (this.size == len(this.arr) && (this.rear)%len(this.arr) == this.front) {
 		return false
@@ -28,7 +28,7 @@ func (this *MyCircularQueue) EnQueue(value int) bool {
 	return true
 }
 
-/** Delete an element from the circular queue. Return true if the operation is successful. */
+/** 从循环队列删除一个元素，成功返回 true。 */
 func (this *MyCircularQueue) DeQueue() bool {
 	if this.arr == nil || this.size == 0 {
 		return false
@@ -39,7 +39,7 @@ func (this *MyCircularQueue) DeQueue() bool {
 	}
 }
 
-/** Get the front item from the queue. */
+/** 获取队首元素。 */
 func (this *MyCircularQueue) Front() int {
 	if this.IsEmpty() {
 		return -1
@@ -47,7 +47,7 @@ func (this *MyCircularQueue) Front() int {
 	return this.arr[this.front%len(this.arr)]
 }
 
-/** Get the last item from the queue. */
+/** 获取队尾元素。 */
 func (this *MyCircularQueue) Rear() int {
 	if this.IsEmpty() {
 		return -1
@@ -56,7 +56,7 @@ func (this *MyCircularQueue) Rear() int {
 	return this.arr[last]
 }
 
-/** Checks whether the circular queue is empty or not. */
+/** 判断循环队列是否为空。 */
 func (this *MyCircularQueue) IsEmpty() bool {
 	if this.size == 0 {
 		return true
@@ -64,7 +64,7 @@ func (this *MyCircularQueue) IsEmpty() bool {
 	return false
 }
 
-/** Checks whether the circular queue is full or not. */
+/** 判断循环队列是否已满。 */
 func (this *MyCircularQueue) IsFull() bool {
 	if this.size == len(this.arr) {
 		return true
@@ -73,12 +73,12 @@ func (this *MyCircularQueue) IsFull() bool {
 }
 
 /**
- * Your MyCircularQueue object will be instantiated and called as such:
- * obj := Constructor(k);
- * param_1 := obj.EnQueue(value);
- * param_2 := obj.DeQueue();
- * param_3 := obj.Front();
- * param_4 := obj.Rear();
- * param_5 := obj.IsEmpty();
- * param_6 := obj.IsFull();
+ * 使用示例：
+ * obj := Constructor(k); // 创建队列
+ * param_1 := obj.EnQueue(value); // 入队
+ * param_2 := obj.DeQueue(); // 出队
+ * param_3 := obj.Front(); // 查看队首
+ * param_4 := obj.Rear(); // 查看队尾
+ * param_5 := obj.IsEmpty(); // 判空
+ * param_6 := obj.IsFull(); // 判满
  */

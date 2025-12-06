@@ -8,7 +8,7 @@ func BenchmarkSort(t *testing.B) {
 		arr = append(arr,i)
 	}
 	t.Log(arr)
-	//MergeSort(arr,0,len(arr)-1)
+	// 如需测试归并排序可调用：MergeSort(arr,0,len(arr)-1)
 	ShellSort(arr,len(arr))
 	t.Log(arr)
 }

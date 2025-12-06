@@ -35,11 +35,11 @@ func TestDuckCall_RemoveObserver(t *testing.T) {
 	observer = &DuckDoctor{}
 
 	quackable.RegisterObserver(observer)
-	//quackable.NotifyObservers()
+	// 手动触发通知：quackable.NotifyObservers()
 	flok.NotifyObservers()
 	quackable = factory.CreateRedheadDuck()
 	quackable.RegisterObserver(observer)
-	//quackable.NotifyObservers()
+	// 手动触发通知：quackable.NotifyObservers()
 	flok.Add(quackable)
 	flok.NotifyObservers()
 }

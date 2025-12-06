@@ -75,11 +75,11 @@ func (this *Tree) push (node *Node,k,v int) *Node {
 	}
 	return node
 }
-//   node                     x
+//   节点 node                 x
 //  /   \     左旋转         /  \
-// T1   x   --------->   node   T3
-//     / \              /   \
-//    T2 T3            T1   T2
+// T1   x   --------->   节点 node   T3
+// 示意：/ \              /   \
+// 示意：T2 T3            T1   T2
 func (this *Tree) leftRotate (node *Node) *Node {
 	x := node.right
 	node.right = x.left
@@ -96,11 +96,11 @@ func (this *Tree) flipColors (node *Node) {
 }
 
 // 红黑树的右旋转过程
-//     node                   x
+//     节点 node               x
 //    /   \     右旋转       /  \
-//   x    T2   ------->   y   node
-//  / \                       /  \
-// y  T1                     T1  T2
+//   x    T2   ------->   y   节点 node
+// 示意：/ \                       /  \
+// 示意：y  T1                     T1  T2
 func (this *Tree) rightRotate (node *Node) *Node{
 	x := node.left
 	node.left = x.right

@@ -4,8 +4,8 @@ import "fmt"
 
 // 享元模式是以共享的模式来支持大量细粒度对象的复用。听起来可能有点绕
 // 其实java中的string就是一个享元模式
-// String a = "abc";
-// String b = "abc";
+// 示例：String a = "abc";
+// 示例：String b = "abc";
 // System.out.pirntln(a==b) 会得到一个true
 // 上面的例子中，a，b其实被创建的时候，都指向了常量池中某个字符串"abc"
 

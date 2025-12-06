@@ -38,7 +38,7 @@ func (s *StandByState) Play(r *RemoteControlMachine) {
 }
 
 func (s *StandByState) Standby(r *RemoteControlMachine) {
-	// do nothing
+	// 待机状态下无需处理
 }
 // 关机状态
 type PowerOffState struct {

@@ -19,7 +19,7 @@ func openLock(deadends []string, target string) int {
 		return 0
 	}
 
-	// BFS
+	// 使用 BFS 扩展状态图
 	queue := make([]string,0)
 	queue = append(queue, "0000")
 	visited := make(map[string]int)
@@ -41,7 +41,7 @@ func openLock(deadends []string, target string) int {
 			curs[i] = v
 
 		}
-		// TODO:Next
+		// TODO: 生成完整的下一层状态
 
 		for _,v := range next  {
 			if _,ok := visited[v];!ok && !deadSet[v] {
