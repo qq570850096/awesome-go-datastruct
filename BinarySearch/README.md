@@ -1,393 +1,410 @@
-# 二分搜索树
+## 二分搜索树（Binary Search Tree）
 
-[TOC]
+### 定义
 
+**二分搜索树**（Binary Search Tree，简称BST）是一种特殊的二叉树，它满足以下性质：
+1. 每个节点的左子树中所有节点的值都小于该节点的值
+2. 每个节点的右子树中所有节点的值都大于该节点的值
+3. 左右子树也分别是二分搜索树
 
+这种有序性使得二分搜索树能够高效地进行查找、插入和删除操作。
 
-在理解二分搜索树之前，我们先来看看二叉树是什么。
+### 为什么使用二分搜索树？
 
-## 1.1 二叉树
+二分搜索树通过有序存储数据，实现了类似"二分查找"的高效查询。与数组的二分查找不同，BST是动态数据结构，可以高效地进行插入和删除操作。
 
-二叉树也是一种动态的数据结构。每个节点只有两个叉，也就是两个孩子节点，分别叫做左孩子，右孩子，而没有一个孩子的节点叫做叶子节点。每个节点最多有一个父亲节点，最多有两个孩子节点(也可以没有孩子节点或者只有一个孩子节点)。47左半边的所有节点组合起来形成了47的左子树，47右半边所有节点结合起来形成了47的右子树。如下图所示：
+**应用场景：**
+- 实现动态有序集合
+- 字典/映射的底层实现
+- 数据库索引
+- 文件系统目录结构
+- 符号表
 
+**生活类比：** 图书馆的图书按照编号排列，超市的商品按照类别分区——这些都是"有序存储"的思想，能够大大加快查找速度。
 
+### 特性
 
-![img](http://exia.gz01.bdysite.com/uploads/big/2827ed392cfebe4fc9041712791fd3ac.png)
+| 操作 | 平均时间复杂度 | 最坏时间复杂度 |
+|------|---------------|---------------|
+| 查找 | O(log n) | O(n) |
+| 插入 | O(log n) | O(n) |
+| 删除 | O(log n) | O(n) |
+| 遍历 | O(n) | O(n) |
 
-1-1
+> **注意**：最坏情况发生在树退化为链表时（如按顺序插入元素），此时所有操作退化为O(n)。
 
-综合一下，涉及到的概念有：
-
-> 根节点：二叉树的起始节点，唯一没有父亲节点的节点；
-> 父亲节点：每个节点只有一个父亲节点。如上图47就是35的父亲节点；
-> 左右孩子节点：每个节点至多拥有两个孩子节点，分别叫左孩子，右孩子；
-> 左子树右子树：每个节点左边或者右边部分所有节点组合成的树结构。
-
-## 1.2 二分搜索树
-
-### 1.2.1 性质
-
-第一，二分搜索树是一颗二叉树，满足二叉树的所有定义；
-第二，二分搜索树每个节点的左子树的值都小于该节点的值，每个节点右子树的值都大于该节点的值。
-第三，任意节点的每颗子树都满足二分搜索树的定义。
-
-
-
-![img](http://exia.gz01.bdysite.com/uploads/big/f3e3cd20b6e8a1c597e83c40fd724147.png)
-
-1-2
-
-### 1.2.2 意义
-
-当我们看到二分搜索树的定义时，是否会去联系这样定义的意义何在呢？其实，二分搜索树是在给数据做整理，因为左右子树的值和根节点存在大小关系，**所以在查找元素时，我们于根节点进行对比后，就能每次近乎一半的去除掉查找范围，这就大大的加快了我们的查询速度，插入元素时也是一样。**
-
-在图1-2中，如果要查找元素55，那么和根节点47对比后，发现55比47大，于是就往47右孩子60中去查询，接着发现55比60小，就往60左孩子中查询，于是就找到了这个元素。想象一下，如果是一个链表，那么将一个一个查询下去，速度可想而知。
-
-其实在生活中，这样的例子也比比皆是，我们去超市买东西，超市也把一二三楼卖的是啥写的很清楚，假如三楼卖的是生鲜果蔬，而我们要买今天的菜，那么我们就直接去三楼，一楼和二楼我们就可以不用去找了，大大加快了我们选购商品的速度。图书馆找书也是这样的例子。所以二分搜索树的意义也就在此，**很多时候数据结构其实来源于生活，于生活中解决实际问题，这就是技术的力量和价值的体现。**
-
-> 但是，为了达到这样的高效性，树结构由此也需要每个节点之间具备可比较性。而链表数据结构就没有这类要求，所以还是那句话，有得必有失。
-
-**注意**：本篇文章中关于二分搜索树做了没有重复元素的假定，如果遇到重复元素则不插入。
-
-### 1.2.3 二分搜索树的数据结构
+### 数据结构
 
 ```go
+// Node 表示二分搜索树的节点
 type Node struct {
-	E int
-	Left *Node
-	Right *Node
+    E     int   // 节点存储的元素值
+    Left  *Node // 左子节点
+    Right *Node // 右子节点
 }
 
-// 约定在此样例代码中我们的二分搜索树中没有重复元素
-// 如果想包涵重复元素的话，只需要以下定义：
-// 左子树小于等于此节点，或右子树大于等于节点
+// Tree 表示二分搜索树
 type Tree struct {
-	root *Node
-	size int
-}
-// 以下是getter方法
-func (t Tree) Size() int {
-	return t.size
+    root *Node // 根节点
+    size int   // 树中元素个数
 }
 
-func (t Tree) Root() *Node {
-	return t.root
-}
-// 对节点Node做初始化的方法
+// 初始化节点
 func InitNode(E int) *Node {
-	return &Node{
-		E:E,
-		Left:nil,
-		Right:nil,
-	}
+    return &Node{
+        E:     E,
+        Left:  nil,
+        Right: nil,
+    }
 }
 ```
 
-### 1.2.4 插入元素
+### 核心方法实现
 
-我们一起来看看在一个树中插入元素的动画演示过程，如下图元素65插入树结构所示，元素在插入时，不断跟当前根节点进行对比，以来选择插入到左子树还是右子树。
-
-![](http://exia.gz01.bdysite.com/uploads/big/2c461a5af08de072bd0918de54de9631.gif)
+#### 插入元素
 
 ```go
-// 向二分搜索树添加元素的公有方法
-func (this *Tree) AddE(e int) {
-    // 如果根节点为空，那么直接把这个node作为根节点即可
-	if this.root == nil {
-		this.root = InitNode(e)
-		this.size++
-    // 如果根节点不为空，那么进入递归的方式插入node节点
-	} else {
-		this.add(this.root,e)
-	}
-}
-// 向二分搜索树添加元素的私有方法
-// 向以node为根的二分搜索树中插入元素E，递归算法
-func (this *Tree) add(node *Node,e int){
-
-	// 不管是递归还是回溯，首先我们都应该先写出递归的结束条件是什么
-	if e == node.E {
-		return
-	} else if e > node.E && node.Right == nil{
-		node.Right = InitNode(e)
-		this.size++
-		return
-	} else if  e < node.E && node.Left == nil {
-		node.Left = InitNode(e)
-		this.size++
-		return
-	}
-	// 如果e大于当前节点的e，那么应该插入到右子树中
-	if e > node.E {
-		this.add(node.Right, e)
-    // 反之则应该插入左子树中
-	} else {
-		this.add(node.Left, e)
-	}
+// 向二分搜索树添加元素（公有方法）
+func (t *Tree) AddE(e int) {
+    t.root = t.add(t.root, e)
 }
 
+// 向以node为根的二分搜索树中插入元素（递归实现）
+func (t *Tree) add(node *Node, e int) *Node {
+    // 递归终止条件：找到空位置，创建新节点
+    if node == nil {
+        t.size++
+        return InitNode(e)
+    }
+
+    // 递归插入
+    if e > node.E {
+        node.Right = t.add(node.Right, e)
+    } else if e < node.E {
+        node.Left = t.add(node.Left, e)
+    }
+    // e == node.E 时不做操作（不允许重复元素）
+
+    return node
+}
 ```
 
-刚刚我们动画演示了一个插入右子树的过程，接下来的动画演示插入左子树:
-
-![](http://exia.gz01.bdysite.com/uploads/big/d61183686555c4950cb89f6d7735fb4c.gif)
-
-测试代码:
+#### 查找元素
 
 ```go
-package BinarySearch
+// 查找二分搜索树中是否包含元素e
+func (t *Tree) Contains(e int) bool {
+    return t.contains(t.root, e)
+}
 
-import (
-	"fmt"
-	"math/rand"
-	"testing"
-)
-
-func TestTree(t *testing.T) {
-	tree := &Tree{}
-	fmt.Println(tree.IsEmpty())
-	for i:=0;i<10;i++ {
-		temp := rand.Intn(10000)
-		tree.AddE(temp)
-	}
-	fmt.Println(tree.size)
-	fmt.Println(tree.IsEmpty())
+// 递归查找
+func (t *Tree) contains(node *Node, e int) bool {
+    if node == nil {
+        return false
+    }
+    if e == node.E {
+        return true
+    } else if e > node.E {
+        return t.contains(node.Right, e)
+    } else {
+        return t.contains(node.Left, e)
+    }
 }
 ```
 
-测试结果：
-
-```
-=== RUN   TestTree
-true
-10
-false
---- PASS: TestTree (0.00s)
-PASS
-```
-
-#### 对于插入元素的递归条件的优化
-
-在上文中我们已经可以准确的实现二分搜索树的建立过程了，但是还有一个问题就是：**我们的递归条件其实非常的臃肿**
-
-1. 我们对于e和node.E的值做了两次判断
-2. 我们判断了左右子树是否为空，增加了递归条件的复杂性
-
-对于这个递归条件，其实我们可以这么思考一下，**我们其实不需要判断左右子树的情况，只要e>E我们就向右走，反之同理。那么最后我们一定会走到一个值为空的子树上，那么对于二叉树来说，空也是一颗子树。所以我们的递归结束条件可以简化成这样:**
+#### 遍历操作
 
 ```go
-if node == nil {
-	return InitNode(e)
+// 前序遍历：根 -> 左 -> 右
+func PreOrder(node *Node) {
+    if node == nil {
+        return
+    }
+    fmt.Printf("%d ", node.E)
+    PreOrder(node.Left)
+    PreOrder(node.Right)
+}
+
+// 非递归前序遍历（使用栈）
+func (t *Tree) PreOrderNR() {
+    stack := make([]*Node, 0)
+    stack = append(stack, t.root)
+    for len(stack) > 0 {
+        curNode := stack[len(stack)-1]
+        stack = stack[:len(stack)-1]
+        fmt.Printf("%d ", curNode.E)
+        // 先压右子树，再压左子树（保证左子树先出栈）
+        if curNode.Right != nil {
+            stack = append(stack, curNode.Right)
+        }
+        if curNode.Left != nil {
+            stack = append(stack, curNode.Left)
+        }
+    }
+}
+
+// 中序遍历：左 -> 根 -> 右（结果有序）
+func MidOrder(node *Node) {
+    if node == nil {
+        return
+    }
+    MidOrder(node.Left)
+    fmt.Printf("%d ", node.E)
+    MidOrder(node.Right)
+}
+
+// 后序遍历：左 -> 右 -> 根
+func BackOrder(node *Node) {
+    if node == nil {
+        return
+    }
+    BackOrder(node.Left)
+    BackOrder(node.Right)
+    fmt.Printf("%d ", node.E)
+}
+
+// 层序遍历（使用队列）
+func (t *Tree) LevelOrder() {
+    queue := make([]*Node, 0)
+    queue = append(queue, t.root)
+    for len(queue) > 0 {
+        curNode := queue[0]
+        queue = queue[1:]
+        fmt.Printf("%d ", curNode.E)
+        if curNode.Left != nil {
+            queue = append(queue, curNode.Left)
+        }
+        if curNode.Right != nil {
+            queue = append(queue, curNode.Right)
+        }
+    }
 }
 ```
 
-那么这样又引出了新的问题，我们一开始的add函数是没有返回值的，现在要返回一个Node指针，那么由谁来接受呢？
-
-答案其实很简单：**哪边的子树发生了改变哪边来接收这个变化**
+#### 查找最值
 
 ```go
-func (this *Tree) AddE(e int) {
-	this.root = this.add(this.root,e)
+// 查找最小值（最左节点）
+func (t *Tree) FindMin() int {
+    if t.IsEmpty() {
+        panic("二叉树为空")
+    }
+    return minimum(t.root).E
 }
 
-func (this *Tree) add(node *Node,e int) *Node{
+func minimum(node *Node) *Node {
+    if node.Left == nil {
+        return node
+    }
+    return minimum(node.Left)
+}
 
-	// 不管是递归还是回溯，首先我们都应该先写出递归的结束条件是什么
-	if node == nil {
-		this.size++
-		return InitNode(e)
-	}
+// 查找最大值（最右节点）
+func (t *Tree) FindMax() int {
+    if t.IsEmpty() {
+        panic("二叉树为空")
+    }
+    return maximum(t.root).E
+}
 
-	if e > node.E {
-		node.Right = this.add(node.Right, e)
-	} else if e < node.E {
-		node.Left = this.add(node.Left, e)
-	}
-	return node
+func maximum(node *Node) *Node {
+    if node.Right == nil {
+        return node
+    }
+    return maximum(node.Right)
 }
 ```
 
-这样优化后，我们的代码就可以更加的简洁。
+#### 删除操作
 
-### 1.2.5二分搜索树的遍历
-
-树的遍历分为前序遍历，中序遍历，后序遍历，层序遍历。我们依次来讲一讲。
-
-前序遍历，就是我们在递归调用前，先做我们的逻辑（这里的逻辑就是打印一下当前元素），前序遍历代码如下：
+删除节点时需要考虑三种情况：
+1. 待删除节点只有左子树
+2. 待删除节点只有右子树
+3. 待删除节点左右子树都有（用后继节点替换）
 
 ```go
-// 递归式前序遍历
-func PreOrder(node *Node)  {
-	if node == nil {
-		return
-	}
-	fmt.Printf("%d ",node.E)
-	PreOrder(node.Left)
-	PreOrder(node.Right)
+// 删除指定元素
+func (t *Tree) Remove(e int) {
+    t.root = t.remove(t.root, e)
 }
-// 非递归的前序遍历
-func (this *Tree) PreOrderNR() {
-	stack := make([]*Node, 0)
-	stack = append(stack, this.root)
-	for len(stack) > 0 {
-		curNode := stack[len(stack)-1]
-		stack = stack[:len(stack)-1]
-		fmt.Printf("%d ",curNode.E)
-		if curNode.Right != nil {
-			stack = append(stack, curNode.Right)
-		}
-		if curNode.Left != nil {
-			stack = append(stack, curNode.Left)
-		}
-	}
-	fmt.Println()
+
+func (t *Tree) remove(node *Node, e int) *Node {
+    if node == nil {
+        return nil
+    }
+
+    if e > node.E {
+        node.Right = t.remove(node.Right, e)
+        return node
+    } else if e < node.E {
+        node.Left = t.remove(node.Left, e)
+        return node
+    } else {
+        // 找到待删除节点
+
+        // 情况1：只有右子树
+        if node.Left == nil {
+            nodeRight := node.Right
+            node.Right = nil
+            t.size--
+            return nodeRight
+        }
+
+        // 情况2：只有左子树
+        if node.Right == nil {
+            nodeLeft := node.Left
+            node.Left = nil
+            t.size--
+            return nodeLeft
+        }
+
+        // 情况3：左右子树都存在
+        // 找到后继节点（右子树中的最小值）
+        nodeNext := minimum(node.Right)
+        nodeNext.Right = t.rmMin(node.Right)
+        nodeNext.Left = node.Left
+        node.Left = nil
+        node.Right = nil
+        return nodeNext
+    }
+}
+
+// 删除最小节点
+func (t *Tree) rmMin(node *Node) *Node {
+    if node.Left == nil {
+        nodeRight := node.Right
+        node.Right = nil
+        t.size--
+        return nodeRight
+    }
+    node.Left = t.rmMin(node.Left)
+    return node
 }
 ```
 
-那么接下来就是中序遍历，中序遍历就是把对元素的操作操作放在了中间，先不断递归左孩子，然后对元素进行操作，最后递归右孩子。所以很容易的推理出来，中序遍历是对元素从小到大的排序遍历。这个性质可以作为判断二分搜索树的一个条件。
-
-同理可以推出还有后续遍历，这里就不再赘述了。直接看代码
+### 测试用例
 
 ```go
-// 2.中序遍历
-func MidOrder(node *Node)  {
-	if node == nil {
-		return
-	}
+func TestBST(t *testing.T) {
+    tree := &Tree{}
 
-	MidOrder(node.Left)
-	fmt.Printf("%d ",node.E)
-	MidOrder(node.Right)
-}
-// 3.后序遍历
-func BackOrder(node *Node)  {
-	if node == nil {
-		return
-	}
-	BackOrder(node.Left)
-	BackOrder(node.Right)
-	fmt.Printf("%d ",node.E)
+    // 插入元素
+    elements := []int{47, 35, 60, 22, 37, 55, 67}
+    for _, e := range elements {
+        tree.AddE(e)
+    }
+
+    fmt.Println("前序遍历:")
+    tree.PreOrder() // 47 35 22 37 60 55 67
+
+    fmt.Println("中序遍历（有序）:")
+    tree.MidOrder() // 22 35 37 47 55 60 67
+
+    fmt.Println("层序遍历:")
+    tree.LevelOrder() // 47 35 60 22 37 55 67
+
+    fmt.Println("最小值:", tree.FindMin()) // 22
+    fmt.Println("最大值:", tree.FindMax()) // 67
+
+    // 删除节点
+    tree.Remove(47)
+    fmt.Println("删除47后中序遍历:")
+    tree.MidOrder() // 22 35 37 55 60 67
 }
 ```
 
-最后我们一起来聊聊层序遍历，顾名思义，层序遍历就是对树结构一层一层的遍历。要做到这一点，我们可以很方便的想到利用队列来实现这一过程。我们每次从队列中取出一个元素时，接着就把该元素的左右两孩子推入队列中，然后依次取出元素，以此来做到按层把元素遍历一遍。
+### 运行方式
 
-一起来看看动画爸爸给我们的演示，最直观。
+```bash
+go test ./BinarySearch
+```
 
-![](http://exia.gz01.bdysite.com/uploads/big/37e56b12709d542802c5b882e94a3739.gif)
+### LeetCode 实战
 
-代码:
+#### [98. 验证二叉搜索树](https://leetcode-cn.com/problems/validate-binary-search-tree/)
+
+验证一棵树是否为有效的二分搜索树：
 
 ```go
-// 二分搜索树的层序遍历
-func (this *Tree)LevelOrder(){
-	queue := make([]*Node,0)
-	queue = append(queue, this.root)
-	for len(queue) > 0 {
-		curNode := queue[0]
-		queue = queue[1:]
-		fmt.Printf("%d ",curNode.E)
-		if curNode.Left != nil {
-			queue = append(queue,curNode.Left)
-		}
-		if curNode.Right != nil {
-			queue = append(queue,curNode.Right)
-		}
-	}
+func isValidBST(root *TreeNode) bool {
+    return validate(root, math.MinInt64, math.MaxInt64)
+}
+
+func validate(node *TreeNode, min, max int64) bool {
+    if node == nil {
+        return true
+    }
+    val := int64(node.Val)
+    if val <= min || val >= max {
+        return false
+    }
+    return validate(node.Left, min, val) && validate(node.Right, val, max)
 }
 ```
 
-### 1.2.6二分搜索树删除元素
+#### [700. 二叉搜索树中的搜索](https://leetcode-cn.com/problems/search-in-a-binary-search-tree/)
 
-接下来，我们聊聊元素的删除。在此之前，我们先得引入一个概念，元素的前驱或者后继节点。
-
-> 后继节点：一个节点右子树中，最小的节点为该节点的后继节点。后继节点是比该节点所有大的元素中最小的元素。
-
-之所以要引入这个概念，原因是在删除元素时，我们需要找一个元素替代被删除位置的元素，但是由于二分搜索树的特性，不能随便找元素过来代替，必须得找一个和被删除元素最接近的元素来替代其位置。所以找前驱或后继替代都可以。
-
-比如说，如下图，47的后继节点就是55，右子树中最小的元素。
-
-![](http://exia.gz01.bdysite.com/uploads/big/f3e3cd20b6e8a1c597e83c40fd724147.png)
-
-我们先看如下两种简单的删除情况：
-
-1. 删除最大节点
-2. 删除最小节点
-
-通过二分搜索树的定义和图示我们可以知道——最大节点在二叉树最右边，最小节点在二叉树最左边，也就是是**最大节点没有右子树，最小节点没有左子树**
+在BST中搜索给定值：
 
 ```go
-// 删除掉以node为根的二分搜索树的最小节点
-// 返回删除节点后新的二分搜索树的根
-func (this *Tree) rmMin(node *Node) *Node {
-	if node.Left == nil {
-		nodeRight := node.Right
-		node.Right = nil
-		this.size--
-		return nodeRight
-	}
-	node.Left = this.rmMin(node.Left)
-	return node
-}
-// 删除掉以node为根的二分搜索树的最大节点
-// 返回删除节点后新的二分搜索树的根
-func (this *Tree) rmMax(node *Node) *Node {
-	if node.Right == nil {
-		nodeLeft := node.Left
-		node.Left = nil
-		this.size--
-		return nodeLeft
-	}
-	node.Right = this.rmMax(node.Right)
-	return node
+func searchBST(root *TreeNode, val int) *TreeNode {
+    if root == nil || root.Val == val {
+        return root
+    }
+    if val < root.Val {
+        return searchBST(root.Left, val)
+    }
+    return searchBST(root.Right, val)
 }
 ```
 
-那么我们再看更复杂的情况，也就是删除任意节点时，有可能左右子树都不为空，我们可以按照图示思路去删除
+#### [701. 二叉搜索树中的插入操作](https://leetcode-cn.com/problems/insert-into-a-binary-search-tree/)
 
-![](http://exia.gz01.bdysite.com/uploads/big/b5594ce301cdb91d97f41c284bb7d7c6.gif)
-
-第一步，找到待删除元素；
-第二步，找到待删除元素的后继节点；
-第三步，把待删除元素的左子树赋值给后继节点的左子树，把待删除元素的右子树最小元素删除后，赋值给后继节点的右子树。
-
-代码:
+向BST中插入新值：
 
 ```go
-func (this *Tree) remove(node *Node,e int) *Node {
-	if node == nil {
-		return nil
-	}
-	if e > node.E {
-		node.Right = this.remove(node.Right,e)
-		return node
-	} else if e < node.E {
-		node.Left = this.remove(node.Left,e)
-		return node
-	} else {
-		// 如果左子树为空的时候
-		if node.Left == nil {
-			nodeRight := node.Right
-			node.Right = nil
-			this.size--
-			return nodeRight
-		}
-		// 如果右子树为空
-		if node.Right == nil {
-			nodeLeft := node.Left
-			node.Left = nil
-			this.size--
-			return nodeLeft
-		}
-		// 如果左右子树都不为空，那么我们需要找到node的后继
-		// 就是所有比node值大的节点中值最小的那个，显然它在node的右子树中
-		nodeNext := minimum(node.Right)
-		nodeNext.Right = this.rmMin(node.Right)
-		nodeNext.Left = node.Left
-		node.Left = nil
-		node.Right = nil
-		return nodeNext
-	}
+func insertIntoBST(root *TreeNode, val int) *TreeNode {
+    if root == nil {
+        return &TreeNode{Val: val}
+    }
+    if val < root.Val {
+        root.Left = insertIntoBST(root.Left, val)
+    } else {
+        root.Right = insertIntoBST(root.Right, val)
+    }
+    return root
 }
 ```
 
+#### [450. 删除二叉搜索树中的节点](https://leetcode-cn.com/problems/delete-node-in-a-bst/)
+
+从BST中删除给定值的节点：
+
+```go
+func deleteNode(root *TreeNode, key int) *TreeNode {
+    if root == nil {
+        return nil
+    }
+    if key < root.Val {
+        root.Left = deleteNode(root.Left, key)
+    } else if key > root.Val {
+        root.Right = deleteNode(root.Right, key)
+    } else {
+        // 找到待删除节点
+        if root.Left == nil {
+            return root.Right
+        }
+        if root.Right == nil {
+            return root.Left
+        }
+        // 找到后继节点（右子树最小值）
+        minNode := root.Right
+        for minNode.Left != nil {
+            minNode = minNode.Left
+        }
+        root.Val = minNode.Val
+        root.Right = deleteNode(root.Right, minNode.Val)
+    }
+    return root
+}
+```
