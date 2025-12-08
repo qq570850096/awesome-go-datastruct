@@ -8,6 +8,10 @@
 
 | 子目录 | 主题 | 关键内容 |
 |-------|------|---------|
+| [basics](./basics/) | 语言基础语法 | 变量、常量、控制流、函数、多返回值 |
+| [structs](./structs/) | 结构体与方法 | 值/指针接收者、组合/嵌入、`json` tag |
+| [interface](./interface/) | 接口与多态 | 行为抽象、空接口、`error` 实现 |
+| [slicemap](./slicemap/) | slice 与 map 深入 | nil vs 空、底层共享、原地过滤、map 计数与 Set |
 | [defer](./defer/) | 延迟执行与异常恢复 | `defer`、`panic`、`recover` |
 | [GoRoutine](./GoRoutine/) | 协程与并发同步 | 闭包陷阱、`sync.Mutex`、`WaitGroup`、`context` |
 | [reflect](./reflect/) | 反射机制 | `TypeOf`、`ValueOf`、字段读写 |
@@ -16,6 +20,193 @@
 | [channelselect](./channelselect/) | select 与 channel | `FanIn`、日志聚合、心跳触发 |
 | [generics](./generics/) | 泛型容器 | `Stack[T]`、`MapSlice`、类型约束 |
 | [testingdemo](./testingdemo/) | 测试与基准 | 表驱动测试、`Benchmark` |
+
+---
+
+### basics：语言基础语法
+
+**文件**：`basics/vars.go`、`basics/control.go`、`basics/funcs.go`
+
+**涵盖内容**：
+- 变量与常量：`var`、短变量声明 `:=`、零值、`const`
+- 控制流：`if` 带初始化、`for` 三种写法、`switch` 与 `type switch`
+- 函数：多返回值、命名返回值、变参函数、闭包捕获
+
+```go
+// 零值与常量
+func ZeroValues() (int, string, bool) {
+    var i int
+    var s string
+    var b bool
+    return i, s, b // 0, "", false
+}
+
+const Pi = 3.14
+
+// 变参 + for-range
+func Sum(nums ...int) int {
+    total := 0
+    for _, n := range nums {
+        total += n
+    }
+    return total
+}
+
+// 闭包：返回一个自增计数器
+func NewCounter(start int) func() int {
+    counter := start
+    return func() int {
+        counter++
+        return counter
+    }
+}
+```
+
+**运行测试**：`go test ./BasicGo/basics`
+
+---
+
+### structs：结构体与方法
+
+**文件**：`structs/receiver.go`、`structs/embedding.go`、`structs/tag.go`
+
+**核心概念**：
+- 值接收者 vs 指针接收者：是否修改调用方持有的对象
+- 结构体嵌入：通过组合复用能力，而不是继承
+- struct tag：配合 `encoding/json` 做序列化控制
+
+```go
+// 值接收者：不会修改原对象
+func (u User) RenameValue(newName string) {
+    u.Name = newName
+}
+
+// 指针接收者：直接修改原对象
+func (u *User) RenamePointer(newName string) {
+    u.Name = newName
+}
+
+// 通过嵌入实现"带日志"的 Service
+type Logger struct {
+    Prefix string
+}
+
+func (l *Logger) Log(msg string) string {
+    return l.Prefix + ": " + msg
+}
+
+type Service struct {
+    Logger        // 嵌入字段，方法会被"提升"
+    Name string
+}
+
+// Account 展示 json tag 与字段忽略
+type Account struct {
+    ID    int    `json:"id"`
+    Name  string `json:"name,omitempty"`
+    Token string `json:"-"` // 不参与 JSON 编解码
+}
+```
+
+**运行测试**：`go test ./BasicGo/structs`
+
+---
+
+### interface：接口与多态
+
+**文件**：`interface/shape.go`、`interface/empty.go`、`interface/error_interface.go`
+
+**核心概念**：
+- 接口隐式实现：类型只要实现方法即可满足接口
+- 空接口 `interface{}` / `any`：搭配 `type switch` 做动态分派
+- `error` 也是接口：自定义错误类型与错误链（`%w`、`errors.Is/As`）
+
+```go
+// 行为接口：只关心 Area，忽略具体形状
+type Shape interface {
+    Area() float64
+}
+
+type Rect struct{ Width, Height float64 }
+type Circle struct{ Radius float64 }
+
+func (r Rect) Area() float64   { return r.Width * r.Height }
+func (c Circle) Area() float64 { return math.Pi * c.Radius * c.Radius }
+
+// 空接口 + type switch
+func Describe(v any) string {
+    switch x := v.(type) {
+    case nil:
+        return "nil"
+    case int:
+        return fmt.Sprintf("int:%d", x)
+    case string:
+        return fmt.Sprintf("string:%s", x)
+    default:
+        return "unknown"
+    }
+}
+
+// 自定义错误类型实现 error 接口
+type OpError struct {
+    Op   string
+    Code int
+    Msg  string
+}
+
+func (e OpError) Error() string {
+    return fmt.Sprintf("%s failed(%d): %s", e.Op, e.Code, e.Msg)
+}
+```
+
+**运行测试**：`go test ./BasicGo/interface`
+
+---
+
+### slicemap：slice 与 map 深入
+
+**文件**：`slicemap/slice.go`、`slicemap/map.go`
+
+**核心概念**：
+- `nil` 切片 vs 空切片：`len` 一样，为 0，但是否等于 `nil` 不同
+- 切片底层共享：多个切片视图指向同一底层数组
+- 原地过滤：利用切片复用底层数组，避免额外 allocations
+- map 计数与集合：`map[string]int`、`map[string]struct{}` 的常见用法
+
+```go
+// 返回 nil 切片与空切片
+func MakeNilAndEmpty() (nilSlice, emptySlice []int) {
+    var s []int          // nil
+    e := make([]int, 0)  // 非 nil，len=0
+    return s, e
+}
+
+// 底层数组共享示例
+func ShareUnderlying() (base, sub, grown []int) {
+    base = []int{1, 2, 3, 4}
+    sub = base[:2]
+    sub[0] = 10      // 修改 sub 同时影响 base
+    grown = append(sub, 99)
+    return base, sub, grown
+}
+
+// 原地过滤奇数
+func FilterInPlace(nums []int, keep func(int) bool) []int {
+    j := 0
+    for _, v := range nums {
+        if keep(v) {
+            nums[j] = v
+            j++
+        }
+    }
+    return nums[:j]
+}
+
+// 用 map 模拟 Set
+type Set map[string]struct{}
+```
+
+**运行测试**：`go test ./BasicGo/slicemap`
 
 ---
 
@@ -407,8 +598,11 @@ go test ./BasicGo/testingdemo -bench=.
 ```
 
 **推荐学习顺序**：
-1. `defer` → 理解延迟执行和异常恢复
-2. `GoRoutine` → 掌握并发基础和常见陷阱
-3. `context` → 学习超时控制和取消机制
-4. `channelselect` → 深入 CSP 并发模式
-5. `generics` → 了解 Go 1.18+ 泛型特性
+1. `basics` → 打好语法与函数基础
+2. `structs` → 学会用结构体建模数据，理解值/指针接收者
+3. `interface` → 掌握行为抽象与接口多态
+4. `slicemap` → 熟悉集合操作与常见坑（切片共享、map 用法）
+5. `defer` → 理解延迟执行和异常恢复
+6. `GoRoutine` / `channelselect` / `context` → 系统掌握并发模型
+7. `errors` / `testingdemo` → 错误与测试习惯
+8. `generics` / `reflect` → 进阶特性与工具箱能力

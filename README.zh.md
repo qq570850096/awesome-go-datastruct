@@ -22,7 +22,7 @@
 - 堆/优先队列：`Heap`
 - 字典树：`Trie`
 - 排序算法：`Sorts`
-- 其他练习：并发/语言特性 `BasicGo`，组合工具 `pkg`/`Utils`
+- 其他练习：基础语法与并发特性 `BasicGo`，组合工具 `pkg`/`Utils`，Web 实战 `webdemo`
 
 > 说明：Go 内建 `slice`/`map` 已覆盖动态数组、栈/队列基础版本，本仓库更关注手写实现与算法练习。
 
