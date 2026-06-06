@@ -66,7 +66,7 @@ func (hash *Hash) ReadFromFile(filename string) (err error) {
 		if err = hash.ValidateVertex(e); err != nil {
 			return
 		}
-		if value, ok := hash.adj[v]; ok && Find(value, e) != -1 {
+		if value, ok := hash.adj[v]; ok && indexOfIntSlice(value, e) != -1 {
 			err = errors.New("Parallel edges are detected!")
 			return
 		}
@@ -77,7 +77,6 @@ func (hash *Hash) ReadFromFile(filename string) (err error) {
 		hash.adj[v] = append(hash.adj[v], e)
 		hash.adj[e] = append(hash.adj[e], v)
 	}
-	return
 }
 
 // 验证是否越界
@@ -96,7 +95,7 @@ func (hash *Hash) HasEdge(v int, e int) bool {
 	if err := hash.ValidateVertex(e); err != nil {
 		panic(err)
 	}
-	if value, ok := hash.adj[v]; ok && Find(value, e) != -1 {
+	if value, ok := hash.adj[v]; ok && indexOfIntSlice(value, e) != -1 {
 		return true
 	}
 	return false
@@ -112,14 +111,6 @@ func (hash *Hash) LinkedVertex(v int) (edgeArr []int) {
 		edgeArr = append(edgeArr, value)
 	}
 	return
-}
-func Find(a []int,v int)(index int){
-	for index,_ = range a {
-		if v == a[index]{
-			return
-		}
-	}
-	return -1
 }
 
 // 构造打印方法

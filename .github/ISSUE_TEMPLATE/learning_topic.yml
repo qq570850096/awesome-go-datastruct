@@ -1,0 +1,24 @@
+name: Learning topic
+description: Suggest a new data structure, algorithm, or exercise.
+title: "[Topic]: "
+labels: ["learning", "enhancement"]
+body:
+  - type: input
+    id: topic
+    attributes:
+      label: Topic
+      placeholder: Dijkstra, topological sort, generic stack...
+    validations:
+      required: true
+  - type: textarea
+    id: learning-goal
+    attributes:
+      label: Learning goal
+      description: What should a learner understand after this topic?
+    validations:
+      required: true
+  - type: textarea
+    id: tests
+    attributes:
+      label: Suggested tests
+      description: Edge cases or table-driven cases that should be included.

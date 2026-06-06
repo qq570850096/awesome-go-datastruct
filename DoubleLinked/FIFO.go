@@ -4,11 +4,11 @@ import "fmt"
 
 type FIFOCache struct {
 	capacity int
-	size int
-	list *List
-	find map[interface{}]*Node
-	k int
-	// count记录缺页中断的次数
+	size     int
+	list     *List
+	find     map[interface{}]*Node
+	k        int
+	// count records cache/page misses in the FIFO examples.
 	count int
 }
 
@@ -20,53 +20,56 @@ func InitFIFO(capacity int) *FIFOCache {
 	}
 }
 
-func (this *FIFOCache)GetCount() int {
+func (this *FIFOCache) GetCount() int {
 	return this.count
 }
 
-func (this *FIFOCache)Get(key interface{}) interface{} {
-	if value,ok := this.find[key];!ok{
-		this.k = this.k%this.capacity
-		node := this.list.head
-		for i:=0;i<this.k;i++ {
-			node = node.next
-		}
-		fmt.Println("发生了一次缺页中断")
-		delete(this.find,node.key)
-		node.key = key
-		this.find[key] = node
-		this.k++
-		this.count++
-		return -1
-	} else {
-		node := value
+func (this *FIFOCache) Get(key interface{}) interface{} {
+	if node, ok := this.find[key]; ok {
 		return node.value
 	}
+	if this.capacity == 0 {
+		return -1
+	}
+
+	fmt.Println("发生了一次缺页中断")
+	this.count++
+	node := InitNode(key, -1)
+	if this.size == this.capacity {
+		oldNode := this.list.Pop()
+		if oldNode != nil {
+			delete(this.find, oldNode.key)
+			this.size--
+		}
+	}
+	this.list.Append(node)
+	this.find[key] = node
+	this.size++
+	return -1
 }
 
-func (this *FIFOCache)Put(key,value interface{})  {
+func (this *FIFOCache) Put(key, value interface{}) {
 	if this.capacity == 0 {
 		return
 	}
-	if v,ok := this.find[key];ok {
-		node := v
-		this.list.Remove(node)
+	if node, ok := this.find[key]; ok {
 		node.value = value
-		this.list.Append(node)
-	} else {
+		return
+	}
 
-		if this.size == this.capacity {
-			node := this.list.Pop()
-			delete(this.find,node.key)
+	if this.size == this.capacity {
+		oldNode := this.list.Pop()
+		if oldNode != nil {
+			delete(this.find, oldNode.key)
 			this.size--
 		}
-		node := InitNode(key,value)
-		this.list.Append(node)
-		this.find[key] = node
-		this.size++
 	}
+	node := InitNode(key, value)
+	this.list.Append(node)
+	this.find[key] = node
+	this.size++
 }
 
-func (this *FIFOCache)String() string {
+func (this *FIFOCache) String() string {
 	return this.list.String()
 }

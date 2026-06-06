@@ -77,7 +77,6 @@ func (matrix *Matrix) ReadFromFile(filename string) (err error) {
 		matrix.adj[v][e] = 1
 		matrix.adj[e][v] = 1
 	}
-	return
 }
 
 // 验证是否越界

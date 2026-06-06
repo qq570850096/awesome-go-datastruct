@@ -44,7 +44,6 @@ func (this *FCFS) InitFromFile(filename string) {
 		}
 		this.pending = append(this.pending, proce)
 	}
-	return
 }
 
 func (this *FCFS) Push(process Process) {
