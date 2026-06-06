@@ -5,6 +5,9 @@ This catalog is the fast index for learners and maintainers.
 | Topic | Path | Core idea | Typical complexity |
 | --- | --- | --- | --- |
 | Basic Go | `BasicGo/` | Language syntax and runtime behavior | Varies |
+| Pointers | `BasicGo/pointers/` | Address semantics and linked nodes | O(1) for pointer operations |
+| Shared variables | `BasicGo/sharedvars/` | Mutex, atomic values, and once-only initialization | Varies |
+| Low-level layout | `BasicGo/lowlevel/` | Size, alignment, and field offsets | O(1) inspection |
 | Singly linked list | `Linked/` | `next` pointers and dummy heads | Search O(n), insert/delete by node O(1) |
 | Doubly linked list | `DoubleLinked/` | `prev` and `next` pointers | Move/delete by node O(1) |
 | LRU cache | `DoubleLinked/LRU.go` | Map plus doubly linked list | Get/Put O(1) |

@@ -53,6 +53,7 @@ For a sortable topic index, see [docs/catalog.md](docs/catalog.md).
 ## Project Standards
 
 - Learning path: [docs/learning-path.md](docs/learning-path.md)
+- Go Bible gap map: [docs/go-bible-gap-map.md](docs/go-bible-gap-map.md)
 - Topic catalog: [docs/catalog.md](docs/catalog.md)
 - Quality bar: [docs/project-standards.md](docs/project-standards.md)
 - Reference projects: [docs/reference-projects.md](docs/reference-projects.md)

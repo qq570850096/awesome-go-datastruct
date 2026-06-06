@@ -7,7 +7,7 @@
 - 环境：推荐 Go 1.22+。
 - 运行检查：在仓库根目录执行 `go vet ./...` 和 `go test ./...`（如仅阅读代码可跳过）。
 - 阅读顺序：按下文模块循序渐进；每个模块先理解原理与场景，再结合对应目录下代码。
-- 学习路线：见 `docs/learning-path.md`；模块索引：见 `docs/catalog.md`。
+- 学习路线：见 `docs/learning-path.md`；Go 语言圣经章节对照：见 `docs/go-bible-gap-map.md`；模块索引：见 `docs/catalog.md`。
 - 项目质量标准：见 `docs/project-standards.md`；参考项目：见 `docs/reference-projects.md`；路线图：见 `ROADMAP.md`。
 
 ## 模块导航

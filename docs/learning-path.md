@@ -8,10 +8,11 @@ Start with `BasicGo/`.
 
 Focus:
 
-- Basic syntax, variables, functions, control flow, slices, maps, structs, methods, and interfaces.
+- Basic syntax, variables, functions, pointers, control flow, slices, maps, structs, methods, and interfaces.
 - Errors, `defer`, `panic`, and `recover`.
-- Goroutines, channels, `select`, `sync`, and `context`.
+- Goroutines, channels, `select`, shared variables, `sync`, `sync/atomic`, and `context`.
 - Generics and reflection.
+- Low-level layout concepts with `unsafe`.
 
 Practice:
 

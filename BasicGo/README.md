@@ -9,12 +9,15 @@
 | 子目录 | 主题 | 关键内容 |
 |-------|------|---------|
 | [basics](./basics/) | 语言基础语法 | 变量、常量、控制流、函数、多返回值 |
+| [pointers](./pointers/) | 指针与地址语义 | 值传递、指针修改、交换、链式节点 |
 | [structs](./structs/) | 结构体与方法 | 值/指针接收者、组合/嵌入、`json` tag |
 | [interface](./interface/) | 接口与多态 | 行为抽象、空接口、`error` 实现 |
 | [slicemap](./slicemap/) | slice 与 map 深入 | nil vs 空、底层共享、原地过滤、map 计数与 Set |
 | [defer](./defer/) | 延迟执行与异常恢复 | `defer`、`panic`、`recover` |
 | [GoRoutine](./GoRoutine/) | 协程与并发同步 | 闭包陷阱、`sync.Mutex`、`WaitGroup`、`context` |
+| [sharedvars](./sharedvars/) | 共享变量并发 | `sync.Mutex`、`sync.Once`、`sync/atomic` |
 | [reflect](./reflect/) | 反射机制 | `TypeOf`、`ValueOf`、字段读写 |
+| [lowlevel](./lowlevel/) | 底层编程入门 | `unsafe.Sizeof`、`Alignof`、`Offsetof` |
 | [errors](./errors/) | 错误处理 | `errors.Is/As`、错误包装、自定义错误 |
 | [context](./context/) | 上下文与超时 | `WithTimeout`、`WithValue`、`Done()` |
 | [channelselect](./channelselect/) | select 与 channel | `FanIn`、日志聚合、心跳触发 |
@@ -63,6 +66,20 @@ func NewCounter(start int) func() int {
 ```
 
 **运行测试**：`go test ./BasicGo/basics`
+
+---
+
+### pointers：指针与地址语义
+
+**文件**：`pointers/pointers.go`
+
+**核心概念**：
+- Go 默认按值传递，函数参数会复制值。
+- 指针让函数能够修改调用方持有的变量。
+- `nil` 指针需要显式处理。
+- 链表、树、图等结构都依赖指针表达连接关系。
+
+**运行测试**：`go test ./BasicGo/pointers`
 
 ---
 
@@ -344,6 +361,20 @@ func (p *ObjPool) GetObj(timeout time.Duration) (*ReusableObj, error) {
 
 ---
 
+### sharedvars：共享变量并发
+
+**文件**：`sharedvars/sharedvars.go`
+
+**核心概念**：
+- 多 goroutine 读写共享变量时需要同步。
+- `sync.Mutex` 保护临界区。
+- `sync/atomic` 适合简单数值状态。
+- `sync.Once` 适合一次性初始化。
+
+**运行测试**：`go test ./BasicGo/sharedvars`
+
+---
+
 ### reflect：反射机制
 
 **文件**：`reflect/Reflect.go`
@@ -363,6 +394,20 @@ func (p *ObjPool) GetObj(timeout time.Duration) (*ReusableObj, error) {
 - 反射操作有性能开销，避免在热路径使用
 
 **运行测试**：`go test ./BasicGo/reflect`
+
+---
+
+### lowlevel：底层编程入门
+
+**文件**：`lowlevel/lowlevel.go`
+
+**核心概念**：
+- `unsafe.Sizeof` 查看值占用空间。
+- `unsafe.Alignof` 查看对齐要求。
+- `unsafe.Offsetof` 查看结构体字段偏移。
+- `unsafe` 只适合学习运行时布局或少数性能/系统边界场景，日常代码应优先使用类型安全写法。
+
+**运行测试**：`go test ./BasicGo/lowlevel`
 
 ---
 
