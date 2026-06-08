@@ -3,6 +3,7 @@ package Adj
 import (
 	"errors"
 	"fmt"
+	"io"
 	"os"
 	"strings"
 )
@@ -58,7 +59,10 @@ func (hash *Hash) ReadFromFile(filename string) (err error) {
 	}
 	for {
 		if _, err = fmt.Fscanln(file, &v, &e); err != nil {
-			return
+			if errors.Is(err, io.EOF) {
+				return nil
+			}
+			return err
 		}
 		if err = hash.ValidateVertex(v); err != nil {
 			return

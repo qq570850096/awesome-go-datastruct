@@ -1,9 +1,6 @@
 package BFS
 
-import (
-	"algo/Graph_algo/Adj"
-	"fmt"
-)
+import "algo/Graph_algo/Adj"
 
 // 广度优先遍历取所有节点
 func Traverse(hash *Adj.Hash, start int) (order []int) {
@@ -32,6 +29,5 @@ func Traverse(hash *Adj.Hash, start int) (order []int) {
 			bfs(i)
 		}
 	}
-	fmt.Println(visited)
 	return
 }
