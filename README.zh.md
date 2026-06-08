@@ -1,10 +1,12 @@
-# 中文入口说明
+# Legacy README Entry
 
-根 README 已经改为中文学习门户，请直接阅读：
+The root [README.md](README.md) is now the single maintained entrypoint for this repository.
 
-- [README.md](README.md)
-- [从 Go 初学者到工程专家](docs/roadmaps/beginner-to-expert.md)
-- [知识谱图](docs/knowledge-graph.md)
-- [练习矩阵](docs/exercise-matrix.md)
+This file is kept only so older links do not break. New documentation should be added to the root README or to the `docs/` directory.
 
-保留本文档是为了兼容旧链接，避免之前引用 `README.zh.md` 的读者失效。后续主要内容只维护在根 README 和 `docs/` 目录中。
+Useful links:
+
+- [Beginner to Expert](docs/roadmaps/beginner-to-expert.md)
+- [Knowledge Graph](docs/knowledge-graph.md)
+- [Exercise Matrix](docs/exercise-matrix.md)
+- [DIRECTORY.md](DIRECTORY.md)

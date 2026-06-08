@@ -1,0 +1,582 @@
+{
+  "nodes": [
+    {
+      "id": "go.basics",
+      "label": "Go basics",
+      "level": "beginner",
+      "type": "concept",
+      "paths": [
+        "BasicGo/basics"
+      ],
+      "outcomes": [
+        "Understand variables, constants, control flow, functions, and package structure",
+        "Run tests for one package"
+      ]
+    },
+    {
+      "id": "go.testing",
+      "label": "Testing",
+      "level": "beginner",
+      "type": "practice",
+      "paths": [
+        "BasicGo/testingdemo"
+      ],
+      "outcomes": [
+        "Write table-driven tests",
+        "Use go test to verify one package"
+      ]
+    },
+    {
+      "id": "go.pointers",
+      "label": "Pointers",
+      "level": "beginner",
+      "type": "concept",
+      "paths": [
+        "BasicGo/pointers"
+      ],
+      "outcomes": [
+        "Understand address and value semantics",
+        "Read pointer updates in linked structures"
+      ]
+    },
+    {
+      "id": "go.structs",
+      "label": "Structs and methods",
+      "level": "beginner",
+      "type": "concept",
+      "paths": [
+        "BasicGo/structs"
+      ],
+      "outcomes": [
+        "Use fields, receivers, embedding, and tags",
+        "Choose value or pointer receivers intentionally"
+      ]
+    },
+    {
+      "id": "go.interfaces",
+      "label": "Interfaces",
+      "level": "beginner",
+      "type": "concept",
+      "paths": [
+        "BasicGo/interface",
+        "Utils/Interfaces"
+      ],
+      "outcomes": [
+        "Understand implicit implementation",
+        "Express stable dependencies with interfaces"
+      ]
+    },
+    {
+      "id": "go.errors",
+      "label": "Errors and defer",
+      "level": "beginner",
+      "type": "concept",
+      "paths": [
+        "BasicGo/errors",
+        "BasicGo/defer"
+      ],
+      "outcomes": [
+        "Wrap and inspect errors",
+        "Use defer for cleanup and understand panic boundaries"
+      ]
+    },
+    {
+      "id": "go.generics",
+      "label": "Generics",
+      "level": "intermediate",
+      "type": "concept",
+      "paths": [
+        "BasicGo/generics"
+      ],
+      "outcomes": [
+        "Use type parameters and constraints",
+        "Remove meaningful duplication with generics"
+      ]
+    },
+    {
+      "id": "go.reflection",
+      "label": "Reflection",
+      "level": "intermediate",
+      "type": "concept",
+      "paths": [
+        "BasicGo/reflect"
+      ],
+      "outcomes": [
+        "Inspect runtime type information",
+        "Explain reflection cost and use cases"
+      ]
+    },
+    {
+      "id": "go.lowlevel",
+      "label": "Low-level layout",
+      "level": "intermediate",
+      "type": "concept",
+      "paths": [
+        "BasicGo/lowlevel"
+      ],
+      "outcomes": [
+        "Inspect size, alignment, and offsets",
+        "Treat unsafe as an exceptional tool"
+      ]
+    },
+    {
+      "id": "concurrency.goroutine",
+      "label": "Goroutines",
+      "level": "intermediate",
+      "type": "concept",
+      "paths": [
+        "BasicGo/GoRoutine"
+      ],
+      "outcomes": [
+        "Start lightweight concurrent work",
+        "Wait for concurrent tasks safely"
+      ]
+    },
+    {
+      "id": "concurrency.channel",
+      "label": "Channels and select",
+      "level": "intermediate",
+      "type": "concept",
+      "paths": [
+        "BasicGo/channelselect"
+      ],
+      "outcomes": [
+        "Use communication and select",
+        "Express timeouts and fan-in"
+      ]
+    },
+    {
+      "id": "concurrency.context",
+      "label": "Context",
+      "level": "intermediate",
+      "type": "engineering",
+      "paths": [
+        "BasicGo/context"
+      ],
+      "outcomes": [
+        "Propagate cancellation and timeouts",
+        "Carry request-scoped lifecycle data"
+      ]
+    },
+    {
+      "id": "concurrency.sharedvars",
+      "label": "Shared variables",
+      "level": "intermediate",
+      "type": "engineering",
+      "paths": [
+        "BasicGo/sharedvars"
+      ],
+      "outcomes": [
+        "Use locks, atomics, and sync.Once",
+        "Check data races with the race detector"
+      ]
+    },
+    {
+      "id": "ds.linear",
+      "label": "Linear structures",
+      "level": "advanced",
+      "type": "module",
+      "paths": [
+        "Linked",
+        "stack",
+        "queue",
+        "main/622.go"
+      ],
+      "outcomes": [
+        "Maintain linked-list, stack, and queue invariants",
+        "Test empty and boundary-capacity cases"
+      ]
+    },
+    {
+      "id": "ds.caches",
+      "label": "Cache structures",
+      "level": "advanced",
+      "type": "module",
+      "paths": [
+        "DoubleLinked"
+      ],
+      "outcomes": [
+        "Explain LRU, LFU, and FIFO eviction",
+        "Verify hit and eviction order"
+      ]
+    },
+    {
+      "id": "ds.heap",
+      "label": "Heap",
+      "level": "advanced",
+      "type": "module",
+      "paths": [
+        "Heap"
+      ],
+      "outcomes": [
+        "Maintain parent-child priority order",
+        "Implement priority-queue operations"
+      ]
+    },
+    {
+      "id": "ds.trees",
+      "label": "Search and balanced trees",
+      "level": "advanced",
+      "type": "module",
+      "paths": [
+        "BinarySearch",
+        "AVL",
+        "Red-Black"
+      ],
+      "outcomes": [
+        "Maintain search-tree ordering",
+        "Compare AVL and red-black balancing"
+      ]
+    },
+    {
+      "id": "ds.range",
+      "label": "Range structures",
+      "level": "advanced",
+      "type": "module",
+      "paths": [
+        "Segment"
+      ],
+      "outcomes": [
+        "Use interval aggregation",
+        "Validate query and update complexity"
+      ]
+    },
+    {
+      "id": "ds.trie",
+      "label": "Trie",
+      "level": "advanced",
+      "type": "module",
+      "paths": [
+        "Trie"
+      ],
+      "outcomes": [
+        "Use prefix sharing",
+        "Analyze string lookup complexity"
+      ]
+    },
+    {
+      "id": "ds.skiplist",
+      "label": "SkipList",
+      "level": "advanced",
+      "type": "module",
+      "paths": [
+        "skiplists"
+      ],
+      "outcomes": [
+        "Understand randomized layered indexing",
+        "Explain average O(log n) lookup"
+      ]
+    },
+    {
+      "id": "ds.union",
+      "label": "Union-find",
+      "level": "advanced",
+      "type": "module",
+      "paths": [
+        "Union"
+      ],
+      "outcomes": [
+        "Use roots and path compression",
+        "Solve connectivity problems"
+      ]
+    },
+    {
+      "id": "algo.sorting",
+      "label": "Sorting",
+      "level": "advanced",
+      "type": "module",
+      "paths": [
+        "Sorts"
+      ],
+      "outcomes": [
+        "Compare comparison and non-comparison sorts",
+        "Verify ordering and element preservation"
+      ]
+    },
+    {
+      "id": "algo.graph.representation",
+      "label": "Graph representation",
+      "level": "advanced",
+      "type": "module",
+      "paths": [
+        "Graph_algo/Adj"
+      ],
+      "outcomes": [
+        "Choose matrix, list, or hash representation",
+        "Understand space and query tradeoffs"
+      ]
+    },
+    {
+      "id": "algo.graph.traversal",
+      "label": "Graph traversal",
+      "level": "advanced",
+      "type": "module",
+      "paths": [
+        "Graph_algo/BFS",
+        "Graph_algo/DFS"
+      ],
+      "outcomes": [
+        "Manage BFS and DFS state",
+        "Analyze O(V + E) complexity"
+      ]
+    },
+    {
+      "id": "algo.graph.search",
+      "label": "Graph search",
+      "level": "advanced",
+      "type": "module",
+      "paths": [
+        "Graph_algo/search",
+        "Graph_algo/leetcode"
+      ],
+      "outcomes": [
+        "Handle paths, cycles, and bipartite checks",
+        "Model graph problems as state search"
+      ]
+    },
+    {
+      "id": "engineering.patterns",
+      "label": "Design patterns",
+      "level": "expert",
+      "type": "engineering",
+      "paths": [
+        "DesignPatterns"
+      ],
+      "outcomes": [
+        "Understand responsibility boundaries",
+        "Avoid mechanical pattern use"
+      ]
+    },
+    {
+      "id": "engineering.web",
+      "label": "Web engineering",
+      "level": "expert",
+      "type": "engineering",
+      "paths": [
+        "webdemo"
+      ],
+      "outcomes": [
+        "Understand HTTP, routing, and middleware",
+        "Maintain small Web demos"
+      ]
+    },
+    {
+      "id": "engineering.os",
+      "label": "Systems practice",
+      "level": "expert",
+      "type": "practice",
+      "paths": [
+        "OSExam"
+      ],
+      "outcomes": [
+        "Understand scheduling examples",
+        "Use tests to express system rules"
+      ]
+    },
+    {
+      "id": "engineering.tooling",
+      "label": "Engineering tooling",
+      "level": "expert",
+      "type": "engineering",
+      "paths": [
+        "CONTRIBUTING.md",
+        "docs/project-standards.md"
+      ],
+      "outcomes": [
+        "Use go vet, go test, and go test -race",
+        "Build local quality gates"
+      ]
+    },
+    {
+      "id": "engineering.performance",
+      "label": "Performance awareness",
+      "level": "expert",
+      "type": "engineering",
+      "paths": [
+        "Sorts",
+        "Heap",
+        "Graph_algo"
+      ],
+      "outcomes": [
+        "Know when benchmark and pprof work is needed",
+        "Connect complexity analysis to measurement"
+      ]
+    },
+    {
+      "id": "engineering.api",
+      "label": "API and package boundaries",
+      "level": "expert",
+      "type": "engineering",
+      "paths": [
+        "CONTRIBUTING.md",
+        "docs/catalog.md"
+      ],
+      "outcomes": [
+        "Design stable package boundaries",
+        "Add README, tests, and catalog entries for new topics"
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "from": "go.basics",
+      "to": "go.testing",
+      "relation": "prerequisite"
+    },
+    {
+      "from": "go.basics",
+      "to": "go.pointers",
+      "relation": "prerequisite"
+    },
+    {
+      "from": "go.basics",
+      "to": "go.structs",
+      "relation": "prerequisite"
+    },
+    {
+      "from": "go.structs",
+      "to": "go.interfaces",
+      "relation": "prerequisite"
+    },
+    {
+      "from": "go.interfaces",
+      "to": "go.errors",
+      "relation": "prerequisite"
+    },
+    {
+      "from": "go.testing",
+      "to": "ds.linear",
+      "relation": "practice_with"
+    },
+    {
+      "from": "go.pointers",
+      "to": "ds.linear",
+      "relation": "practice_with"
+    },
+    {
+      "from": "ds.linear",
+      "to": "ds.caches",
+      "relation": "practice_with"
+    },
+    {
+      "from": "ds.linear",
+      "to": "ds.heap",
+      "relation": "prerequisite"
+    },
+    {
+      "from": "ds.heap",
+      "to": "algo.sorting",
+      "relation": "prerequisite"
+    },
+    {
+      "from": "go.structs",
+      "to": "ds.trees",
+      "relation": "prerequisite"
+    },
+    {
+      "from": "ds.trees",
+      "to": "ds.range",
+      "relation": "practice_with"
+    },
+    {
+      "from": "ds.trees",
+      "to": "ds.trie",
+      "relation": "practice_with"
+    },
+    {
+      "from": "ds.trees",
+      "to": "ds.skiplist",
+      "relation": "practice_with"
+    },
+    {
+      "from": "ds.union",
+      "to": "algo.graph.search",
+      "relation": "practice_with"
+    },
+    {
+      "from": "algo.sorting",
+      "to": "engineering.performance",
+      "relation": "deepens"
+    },
+    {
+      "from": "go.basics",
+      "to": "concurrency.goroutine",
+      "relation": "prerequisite"
+    },
+    {
+      "from": "concurrency.goroutine",
+      "to": "concurrency.channel",
+      "relation": "prerequisite"
+    },
+    {
+      "from": "concurrency.channel",
+      "to": "concurrency.context",
+      "relation": "prerequisite"
+    },
+    {
+      "from": "concurrency.sharedvars",
+      "to": "engineering.tooling",
+      "relation": "deepens"
+    },
+    {
+      "from": "concurrency.context",
+      "to": "engineering.web",
+      "relation": "deepens"
+    },
+    {
+      "from": "go.generics",
+      "to": "engineering.api",
+      "relation": "deepens"
+    },
+    {
+      "from": "go.reflection",
+      "to": "engineering.api",
+      "relation": "deepens"
+    },
+    {
+      "from": "go.lowlevel",
+      "to": "engineering.performance",
+      "relation": "deepens"
+    },
+    {
+      "from": "algo.graph.representation",
+      "to": "algo.graph.traversal",
+      "relation": "prerequisite"
+    },
+    {
+      "from": "algo.graph.traversal",
+      "to": "algo.graph.search",
+      "relation": "prerequisite"
+    },
+    {
+      "from": "algo.graph.search",
+      "to": "engineering.performance",
+      "relation": "deepens"
+    },
+    {
+      "from": "go.interfaces",
+      "to": "engineering.patterns",
+      "relation": "deepens"
+    },
+    {
+      "from": "engineering.patterns",
+      "to": "engineering.api",
+      "relation": "deepens"
+    },
+    {
+      "from": "engineering.web",
+      "to": "engineering.api",
+      "relation": "practice_with"
+    },
+    {
+      "from": "engineering.tooling",
+      "to": "engineering.performance",
+      "relation": "deepens"
+    },
+    {
+      "from": "engineering.os",
+      "to": "engineering.tooling",
+      "relation": "practice_with"
+    }
+  ]
+}

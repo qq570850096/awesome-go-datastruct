@@ -1,42 +1,31 @@
-# Catalog
+# Learning Catalog
 
-This catalog is the fast index for learners and maintainers.
+This catalog is a learning-oriented index. `DIRECTORY.md` is the fast repository index; this file adds difficulty, prerequisites, next topics, and practice tasks.
 
-| Topic | Path | Core idea | Typical complexity |
-| --- | --- | --- | --- |
-| Basic Go | `BasicGo/` | Language syntax and runtime behavior | Varies |
-| Pointers | `BasicGo/pointers/` | Address semantics and linked nodes | O(1) for pointer operations |
-| Shared variables | `BasicGo/sharedvars/` | Mutex, atomic values, and once-only initialization | Varies |
-| Low-level layout | `BasicGo/lowlevel/` | Size, alignment, and field offsets | O(1) inspection |
-| Singly linked list | `Linked/` | `next` pointers and dummy heads | Search O(n), insert/delete by node O(1) |
-| Doubly linked list | `DoubleLinked/` | `prev` and `next` pointers | Move/delete by node O(1) |
-| LRU cache | `DoubleLinked/LRU.go` | Map plus doubly linked list | Get/Put O(1) |
-| LFU cache | `DoubleLinked/LFU.go` | Frequency buckets plus linked lists | Get/Put O(1) average in this model |
-| FIFO cache | `DoubleLinked/FIFO.go` | Evict oldest inserted item | Get/Put O(1) |
-| Stack | `stack/` | Last-in first-out | Push/Pop O(1) |
-| Queue | `queue/` | First-in first-out | Enqueue/Dequeue O(1) |
-| Binary search tree | `BinarySearch/` | Left smaller, right larger | Average O(log n), worst O(n) |
-| AVL tree | `AVL/` | Height-balanced BST | Search/insert/delete O(log n) |
-| Red-black tree | `Red-Black/` | Color-balanced BST | Search/insert/delete O(log n) |
-| Segment tree | `Segment/` | Store merged interval values | Query/update O(log n) |
-| Trie | `Trie/` | Shared prefixes | Search O(length) |
-| Skip list | `skiplists/` | Randomized layered list | Average O(log n) |
-| Heap | `Heap/` | Complete tree stored in array | Add/remove O(log n) |
-| Union-find | `Union/` | Parent array and path compression | Nearly O(1) amortized |
-| Sorting | `Sorts/` | Compare and non-compare sorts | Varies |
-| Graph representation | `Graph_algo/Adj/` | Matrix, slice table, hash table | Depends on representation |
-| BFS/DFS | `Graph_algo/BFS/`, `Graph_algo/DFS/` | Queue or recursion traversal | O(V + E) |
-| Graph search | `Graph_algo/search/` | Paths, cycles, bipartition | O(V + E) |
-| Design patterns | `DesignPatterns/` | Reusable object collaboration shapes | Varies |
-| OS scheduling | `OSExam/` | FCFS, SJF, priority scheduling | Varies |
-| Web demos | `webdemo/` | HTTP, Gin, mini framework | Varies |
+| Topic | Path | Difficulty | Prerequisites | Core idea | Next topics | Practice tasks |
+| --- | --- | --- | --- | --- | --- | --- |
+| Basic Go | [BasicGo](../BasicGo/) | Beginner | None | Learn syntax and runtime behavior through small packages. | Pointers, structs, tests | Add one table-driven test to a basic function. |
+| Pointers | [BasicGo/pointers](../BasicGo/pointers/) | Beginner | Basic syntax | Understand address-based mutation. | Linked lists, trees | Rewrite a value-based update to a pointer-based update. |
+| Structs and methods | [BasicGo/structs](../BasicGo/structs/) | Beginner | Pointers | Model data and behavior with receivers. | Interfaces, design patterns | Add a method with both value and pointer receiver tests. |
+| Interfaces | [BasicGo/interface](../BasicGo/interface/) | Beginner | Structs | Express behavior through implicit contracts. | Errors, patterns | Create a small interface and two implementations. |
+| Concurrency | [BasicGo](../BasicGo/) | Intermediate | Functions and tests | Learn goroutines, channels, context, and shared state. | Web demos, race checks | Run `go test -race ./BasicGo/sharedvars`. |
+| Singly linked list | [Linked](../Linked/) | Advanced | Pointers | Maintain `next` links and list length. | Double linked list, caches | Add tests for empty, one-node, and duplicate cases. |
+| Doubly linked list and caches | [DoubleLinked](../DoubleLinked/) | Advanced | Linked lists, maps | Maintain `prev` and `next` while enforcing eviction policy. | LRU/LFU tuning | Add an eviction-order test. |
+| Stack and queue | [stack](../stack/), [queue](../queue/) | Beginner | Slices | Preserve LIFO or FIFO order. | BFS, circular queue | Add boundary tests for empty pop/dequeue. |
+| Heap | [Heap](../Heap/) | Advanced | Arrays and trees | Preserve parent-child priority order. | Priority queues, Dijkstra | Add a benchmark for heap insert/remove. |
+| Search trees | [BinarySearch](../BinarySearch/), [AVL](../AVL/), [Red-Black](../Red-Black/) | Advanced | Recursion | Preserve ordering and balance. | Segment tree, maps | Add rotation or deletion edge-case tests. |
+| Segment tree | [Segment](../Segment/) | Advanced | Recursion, arrays | Combine child intervals into parent intervals. | Range queries | Add query tests for left-only and right-only intervals. |
+| Trie | [Trie](../Trie/) | Advanced | Strings, maps | Share prefixes for lookup. | Word search | Add tests for prefix-only and missing-word cases. |
+| SkipList | [skiplists](../skiplists/) | Advanced | Linked lists, probability | Use random levels for average logarithmic lookup. | Ordered maps | Add tests with deterministic random seeds where possible. |
+| Union-find | [Union](../Union/) | Advanced | Arrays | Track connected components with roots and compression. | Graph connectivity | Add path compression assertions. |
+| Sorting | [Sorts](../Sorts/) | Advanced | Arrays, recursion | Compare algorithmic tradeoffs and stability. | Benchmarks | Add tests for duplicates and already-sorted input. |
+| Graph representation | [Graph_algo/Adj](../Graph_algo/Adj/) | Advanced | Slices, maps | Choose representation by query and memory needs. | BFS, DFS | Add tests for self-loop and parallel-edge rejection. |
+| Graph traversal | [Graph_algo/BFS](../Graph_algo/BFS/), [Graph_algo/DFS](../Graph_algo/DFS/) | Advanced | Queue, recursion | Track visited state and traversal order. | Graph search | Add disconnected-graph tests. |
+| Graph search | [Graph_algo/search](../Graph_algo/search/) | Advanced | BFS, DFS | Solve paths, cycles, and bipartite checks. | Applied graph problems | Add path reconstruction tests. |
+| Design patterns | [DesignPatterns](../DesignPatterns/) | Expert | Interfaces, composition | Learn responsibility boundaries. | API design | Refactor one example to reduce coupling. |
+| Web demos | [webdemo](../webdemo/) | Expert | HTTP, context | Understand routing and middleware. | API design, testing | Add a middleware test. |
+| OS exercises | [OSExam](../OSExam/) | Expert | Sorting and state | Model scheduling and resource rules. | Systems thinking | Add a scheduling edge case. |
 
-## Topic Checklist
+## Catalog Maintenance
 
-Use this checklist when improving a topic:
-
-- Does the README say what invariant matters?
-- Do tests cover empty input, one element, duplicates, and normal cases?
-- Can a learner run only that package?
-- Is console output limited to demos rather than core tests?
-- Are artifacts and generated files excluded from git?
+When adding a topic, update this file, `DIRECTORY.md`, and `docs/data/knowledge-graph.json` in the same change.

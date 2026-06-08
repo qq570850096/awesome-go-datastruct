@@ -4,33 +4,41 @@ This roadmap keeps the repository moving toward the quality of strong open-sourc
 
 ## Milestone 1: Stable Learning Entry
 
-- Keep `go test ./...` green in CI.
-- Maintain a short root README and a deeper learning path.
-- Keep generated files, IDE files, and binaries out of git.
-- Add table-driven tests for core structures.
+- Keep the root README as the main English learning portal.
+- Keep `README.zh.md` only as a legacy compatibility pointer.
+- Maintain [DIRECTORY.md](DIRECTORY.md), [docs/catalog.md](docs/catalog.md), and the knowledge graph together.
+- Keep generated files, IDE files, binaries, coverage output, and module cache files out of git.
 
 ## Milestone 2: Topic Quality
 
-- Give each major topic a README with invariant, complexity, and usage.
-- Add tests for currently untested packages and edge cases.
+- Give each major topic a README with goal, prerequisites, invariant, complexity, practice tasks, and test command.
+- Add tests for currently weak edge cases.
 - Move console-heavy examples toward testable examples where practical.
-- Add benchmark examples for sorting, heap, union-find, and graph traversal.
+- Keep Markdown files and code comments in English.
 
 ## Milestone 3: Exercise Mode
 
-- Add beginner exercises with TODO markers and hidden/reference tests.
-- Provide guided tasks for each learning pass.
-- Add a progress checklist for learners.
+- Expand [docs/exercise-matrix.md](docs/exercise-matrix.md) with more tasks per module.
+- Add beginner exercises with TODO markers and reference tests where appropriate.
+- Add progress checklists for each stage.
+- Connect exercises back to `DIRECTORY.md` and the knowledge graph.
 
-## Milestone 4: API Consistency
+## Milestone 4: Expert Engineering
 
-- Normalize package names gradually without breaking all imports at once.
-- Prefer constructors for exported structures.
-- Replace panic-heavy teaching code with error-returning variants where the lesson is engineering robustness.
-- Document intentional panics when the topic is about invariants.
+- Add benchmark examples for sorting, heap, union-find, and graph traversal.
+- Add documented `go test -race` examples.
+- Add pprof walkthroughs after benchmark coverage exists.
+- Improve package boundary documentation and API review examples.
 
-## Milestone 5: Advanced Learning
+## Milestone 5: Automation And Maintenance
 
-- Add generic versions of selected structures.
-- Add complexity visualizations or diagrams for trees and graphs.
-- Add Dijkstra, topological sort, MST, dynamic programming, and string matching tracks.
+- Generate `DIRECTORY.md` from structured metadata after the manual format stabilizes.
+- Validate `docs/data/knowledge-graph.json` in local tooling.
+- Add link-checking scripts if the repository adopts automation.
+- Address Dependabot-reported vulnerabilities.
+
+## Current Constraints
+
+- Do not add GitHub Actions workflow files until the available OAuth token has `workflow` scope.
+- Do not move or rename Go packages as part of documentation-only roadmap work.
+- Prefer additive improvements and focused refactors over broad package API churn.
