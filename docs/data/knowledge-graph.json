@@ -6,6 +6,7 @@
       "level": "beginner",
       "type": "concept",
       "paths": [
+        "BasicGo/README.md",
         "BasicGo/basics"
       ],
       "outcomes": [
@@ -19,6 +20,7 @@
       "level": "beginner",
       "type": "practice",
       "paths": [
+        "BasicGo/README.md",
         "BasicGo/testingdemo"
       ],
       "outcomes": [
@@ -32,6 +34,7 @@
       "level": "beginner",
       "type": "concept",
       "paths": [
+        "BasicGo/README.md",
         "BasicGo/pointers"
       ],
       "outcomes": [
@@ -45,6 +48,7 @@
       "level": "beginner",
       "type": "concept",
       "paths": [
+        "BasicGo/README.md",
         "BasicGo/structs"
       ],
       "outcomes": [
@@ -58,6 +62,7 @@
       "level": "beginner",
       "type": "concept",
       "paths": [
+        "BasicGo/README.md",
         "BasicGo/interface",
         "Utils/Interfaces"
       ],
@@ -72,6 +77,7 @@
       "level": "beginner",
       "type": "concept",
       "paths": [
+        "BasicGo/README.md",
         "BasicGo/errors",
         "BasicGo/defer"
       ],
@@ -86,6 +92,7 @@
       "level": "intermediate",
       "type": "concept",
       "paths": [
+        "BasicGo/README.md",
         "BasicGo/generics"
       ],
       "outcomes": [
@@ -99,6 +106,7 @@
       "level": "intermediate",
       "type": "concept",
       "paths": [
+        "BasicGo/README.md",
         "BasicGo/reflect"
       ],
       "outcomes": [
@@ -112,6 +120,7 @@
       "level": "intermediate",
       "type": "concept",
       "paths": [
+        "BasicGo/README.md",
         "BasicGo/lowlevel"
       ],
       "outcomes": [
@@ -125,6 +134,7 @@
       "level": "intermediate",
       "type": "concept",
       "paths": [
+        "BasicGo/README.md",
         "BasicGo/GoRoutine"
       ],
       "outcomes": [
@@ -138,6 +148,7 @@
       "level": "intermediate",
       "type": "concept",
       "paths": [
+        "BasicGo/README.md",
         "BasicGo/channelselect"
       ],
       "outcomes": [
@@ -151,6 +162,7 @@
       "level": "intermediate",
       "type": "engineering",
       "paths": [
+        "BasicGo/README.md",
         "BasicGo/context"
       ],
       "outcomes": [
@@ -164,6 +176,7 @@
       "level": "intermediate",
       "type": "engineering",
       "paths": [
+        "BasicGo/README.md",
         "BasicGo/sharedvars"
       ],
       "outcomes": [
@@ -177,6 +190,10 @@
       "level": "advanced",
       "type": "module",
       "paths": [
+        "Linked/README.md",
+        "stack/README.md",
+        "queue/README.md",
+        "main/README.md",
         "Linked",
         "stack",
         "queue",
@@ -193,6 +210,7 @@
       "level": "advanced",
       "type": "module",
       "paths": [
+        "DoubleLinked/README.md",
         "DoubleLinked"
       ],
       "outcomes": [
@@ -206,6 +224,7 @@
       "level": "advanced",
       "type": "module",
       "paths": [
+        "Heap/README.md",
         "Heap"
       ],
       "outcomes": [
@@ -219,6 +238,9 @@
       "level": "advanced",
       "type": "module",
       "paths": [
+        "BinarySearch/README.md",
+        "AVL/README.md",
+        "Red-Black/README.md",
         "BinarySearch",
         "AVL",
         "Red-Black"
@@ -234,6 +256,7 @@
       "level": "advanced",
       "type": "module",
       "paths": [
+        "Segment/README.md",
         "Segment"
       ],
       "outcomes": [
@@ -247,6 +270,7 @@
       "level": "advanced",
       "type": "module",
       "paths": [
+        "Trie/README.md",
         "Trie"
       ],
       "outcomes": [
@@ -260,6 +284,7 @@
       "level": "advanced",
       "type": "module",
       "paths": [
+        "skiplists/README.md",
         "skiplists"
       ],
       "outcomes": [
@@ -273,6 +298,7 @@
       "level": "advanced",
       "type": "module",
       "paths": [
+        "Union/README.md",
         "Union"
       ],
       "outcomes": [
@@ -286,6 +312,7 @@
       "level": "advanced",
       "type": "module",
       "paths": [
+        "Sorts/README.md",
         "Sorts"
       ],
       "outcomes": [
@@ -299,6 +326,8 @@
       "level": "advanced",
       "type": "module",
       "paths": [
+        "Graph_algo/README.md",
+        "Graph_algo/Adj/README.md",
         "Graph_algo/Adj"
       ],
       "outcomes": [
@@ -312,6 +341,9 @@
       "level": "advanced",
       "type": "module",
       "paths": [
+        "Graph_algo/README.md",
+        "Graph_algo/BFS/README.md",
+        "Graph_algo/DFS/README.md",
         "Graph_algo/BFS",
         "Graph_algo/DFS"
       ],
@@ -326,6 +358,9 @@
       "level": "advanced",
       "type": "module",
       "paths": [
+        "Graph_algo/README.md",
+        "Graph_algo/search/README.md",
+        "Graph_algo/leetcode/README.md",
         "Graph_algo/search",
         "Graph_algo/leetcode"
       ],
@@ -379,6 +414,7 @@
       "level": "expert",
       "type": "engineering",
       "paths": [
+        "docs/textbook-style-guide.md",
         "CONTRIBUTING.md",
         "docs/project-standards.md"
       ],
@@ -393,6 +429,9 @@
       "level": "expert",
       "type": "engineering",
       "paths": [
+        "Sorts/README.md",
+        "Heap/README.md",
+        "Graph_algo/README.md",
         "Sorts",
         "Heap",
         "Graph_algo"
@@ -408,6 +447,7 @@
       "level": "expert",
       "type": "engineering",
       "paths": [
+        "docs/textbook-style-guide.md",
         "CONTRIBUTING.md",
         "docs/catalog.md"
       ],

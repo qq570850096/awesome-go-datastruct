@@ -2,6 +2,18 @@
 
 This catalog is a learning-oriented index. `DIRECTORY.md` is the fast repository index; this file adds difficulty, prerequisites, next topics, and practice tasks.
 
+## Textbook Chapter Spine
+
+Use these module chapters as the primary study route. Every chapter includes worked examples, practice exercises, hints, reference answers, and test commands.
+
+| Stage | Chapters | What the learner practices |
+| --- | --- | --- |
+| Foundation | [BasicGo](../BasicGo/) | Go values, pointers, slices, maps, methods, interfaces, errors, tests, and concurrency primitives. |
+| Linear structures | [Linked](../Linked/), [DoubleLinked](../DoubleLinked/), [stack](../stack/), [queue](../queue/), [Circular queue](../main/) | Pointer updates, boundary cases, cache ordering, LIFO/FIFO invariants, and ring-buffer indexing. |
+| Priority and connectivity | [Heap](../Heap/), [Union](../Union/) | Array-backed trees, priority order, roots, path compression, and connectivity queries. |
+| Trees and search structures | [BinarySearch](../BinarySearch/), [AVL](../AVL/), [Red-Black](../Red-Black/), [Segment](../Segment/), [Trie](../Trie/), [skiplists](../skiplists/) | Ordering, balancing, rotations, range aggregation, prefix search, and randomized indexing. |
+| Sorting and graphs | [Sorts](../Sorts/), [Graph_algo](../Graph_algo/), [Adj](../Graph_algo/Adj/), [BFS](../Graph_algo/BFS/), [DFS](../Graph_algo/DFS/), [search](../Graph_algo/search/), [leetcode](../Graph_algo/leetcode/) | Algorithm selection, stability, representation tradeoffs, traversal state, paths, cycles, and applied graph modeling. |
+
 | Topic | Path | Difficulty | Prerequisites | Core idea | Next topics | Practice tasks |
 | --- | --- | --- | --- | --- | --- | --- |
 | Basic Go | [BasicGo](../BasicGo/) | Beginner | None | Learn syntax and runtime behavior through small packages. | Pointers, structs, tests | Add one table-driven test to a basic function. |

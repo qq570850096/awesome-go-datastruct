@@ -50,10 +50,26 @@ go test ./Graph_algo/search
 
 See the full route in [docs/roadmaps/beginner-to-expert.md](docs/roadmaps/beginner-to-expert.md).
 
+## Textbook Core Spine
+
+The core modules now read like textbook chapters. Each chapter includes goals, prerequisites, a mental model, invariants, operation walkthroughs, complexity derivations, common mistakes, worked examples, exercises, hints, reference answers, and test commands.
+
+| Spine area | Start here | Continue with |
+| --- | --- | --- |
+| Go fundamentals | [BasicGo](BasicGo/) | Pointers, structs, interfaces, errors, tests, concurrency |
+| Linear structures | [Linked](Linked/) | [DoubleLinked](DoubleLinked/), [stack](stack/), [queue](queue/), [Circular queue](main/) |
+| Priority and connectivity | [Heap](Heap/) | [Union](Union/) |
+| Trees and search structures | [BinarySearch](BinarySearch/) | [AVL](AVL/), [Red-Black](Red-Black/), [Segment](Segment/), [Trie](Trie/), [skiplists](skiplists/) |
+| Sorting | [Sorts](Sorts/) | Benchmarks and stability analysis |
+| Graphs | [Graph_algo](Graph_algo/) | [Adjacency](Graph_algo/Adj/), [BFS](Graph_algo/BFS/), [DFS](Graph_algo/DFS/), [Search](Graph_algo/search/), [Applied problems](Graph_algo/leetcode/) |
+
+Maintainers should follow the [Textbook Style Guide](docs/textbook-style-guide.md) when adding or expanding chapters.
+
 ## Learning Entrypoints
 
 | Entrypoint | Purpose |
 | --- | --- |
+| [Textbook Style Guide](docs/textbook-style-guide.md) | Defines the module chapter structure, exercise format, diagrams, complexity notation, and linking rules. |
 | [Knowledge Graph](docs/knowledge-graph.md) | Shows prerequisite, practice, and deepening relationships. |
 | [Structured Knowledge Data](docs/data/knowledge-graph.json) | Stable data for future generated pages or visualizations. |
 | [DIRECTORY.md](DIRECTORY.md) | TheAlgorithms-style topic directory for the whole repository. |

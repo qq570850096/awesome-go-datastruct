@@ -8,6 +8,8 @@ This graph connects Go language mechanics, data structures, algorithms, and engi
 
 Structured data is available in [docs/data/knowledge-graph.json](data/knowledge-graph.json).
 
+The core learning-spine nodes link to textbook-style module chapters. Those chapters contain the local mental model, invariants, complexity derivation, exercises, hints, reference answers, and test commands for the topic.
+
 ```mermaid
 flowchart LR
   subgraph Beginner["Beginner"]
@@ -105,7 +107,7 @@ flowchart LR
 | --- | --- | --- |
 | Beginner | Basics, testing, pointers, structs, interfaces, errors | [BasicGo](../BasicGo/) |
 | Intermediate | Goroutines, channels, context, shared variables, generics, reflection | [BasicGo](../BasicGo/) |
-| Advanced | Lists, queues, heap, trees, graphs, sorting, Trie, SkipList, union-find | [Linked](../Linked/), [Heap](../Heap/), [Graph_algo](../Graph_algo/), [Sorts](../Sorts/) |
+| Advanced | Lists, queues, heap, trees, graphs, sorting, Trie, SkipList, union-find | [Linked](../Linked/), [DoubleLinked](../DoubleLinked/), [Heap](../Heap/), [Union](../Union/), [Graph_algo](../Graph_algo/), [Sorts](../Sorts/) |
 | Expert | Patterns, Web demos, systems practice, tooling, performance, API boundaries | [DesignPatterns](../DesignPatterns/), [webdemo](../webdemo/), [OSExam](../OSExam/), [CONTRIBUTING.md](../CONTRIBUTING.md) |
 
 ## Maintenance Rule

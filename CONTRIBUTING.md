@@ -29,14 +29,15 @@ Every new topic should update:
 
 ## Topic README Template
 
-Each module README should include:
+Each module README should follow the [Textbook Style Guide](docs/textbook-style-guide.md). At minimum, include:
 
 1. Goal: what the topic teaches.
 2. Prerequisites: what the learner should know first.
 3. Core invariant: what must always remain true.
 4. Complexity: time and space cost of important operations.
 5. Practice tasks: small exercises the learner can complete.
-6. Test command: the exact `go test` command for the module.
+6. Hints and reference answers using collapsible `<details>` blocks.
+7. Test command: the exact `go test` command for the module.
 
 Recommended layout:
 

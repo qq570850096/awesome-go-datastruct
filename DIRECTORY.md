@@ -2,6 +2,19 @@
 
 This is the manually maintained, TheAlgorithms-style index for the repository. It is grouped by learning topic rather than by filesystem order.
 
+## Core Textbook Chapters
+
+These chapters form the first complete learning spine. Each one contains exercises with hints and reference answers.
+
+| Area | Chapters |
+| --- | --- |
+| Go fundamentals | [BasicGo](BasicGo/) |
+| Linear structures | [Linked](Linked/), [DoubleLinked](DoubleLinked/), [stack](stack/), [queue](queue/), [Circular queue](main/) |
+| Priority and connectivity | [Heap](Heap/), [Union](Union/) |
+| Trees and search structures | [BinarySearch](BinarySearch/), [AVL](AVL/), [Red-Black](Red-Black/), [Segment](Segment/), [Trie](Trie/), [skiplists](skiplists/) |
+| Sorting | [Sorts](Sorts/) |
+| Graph algorithms | [Graph_algo](Graph_algo/), [Adj](Graph_algo/Adj/), [BFS](Graph_algo/BFS/), [DFS](Graph_algo/DFS/), [search](Graph_algo/search/), [leetcode](Graph_algo/leetcode/) |
+
 ## Go Basics
 
 | Module | Level | Core concepts | Prerequisites | Test command |
