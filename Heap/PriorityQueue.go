@@ -30,6 +30,3 @@ func (this *PriorityQueue) Size() int {
 func (this *PriorityQueue) IsEmpty() bool {
 	return this.heap.IsEmpty()
 }
-
-
-

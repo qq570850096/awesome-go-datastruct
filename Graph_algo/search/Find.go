@@ -1,6 +1,5 @@
 package search
 
-// 寻找单源路径
 type Path struct {
 	*SingleSource
 	T int

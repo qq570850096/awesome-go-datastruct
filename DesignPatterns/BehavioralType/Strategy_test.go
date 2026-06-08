@@ -14,13 +14,13 @@ func TestReadHead_Display(t *testing.T) {
 		quack: quack,
 	}
 	duck.Display()
-	mallard := Mallard {
+	mallard := Mallard{
 		Duck:  &Duck{},
 		fly:   flayWihtwings,
 		quack: quack,
 	}
 	mallard.Display()
-	rub := Rubber {
+	rub := Rubber{
 		Duck:  &Duck{},
 		fly:   flynoway,
 		quack: sqeak,

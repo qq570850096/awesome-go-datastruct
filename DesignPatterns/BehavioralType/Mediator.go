@@ -5,7 +5,6 @@ import (
 	"reflect"
 )
 
-// 抽象中介公司
 type MeditorCompany interface {
 	GetSeller() Colleaguer
 	SetSeller(seller ColleagueSeller)
@@ -13,13 +12,12 @@ type MeditorCompany interface {
 	SetBuyer(ColleagueBuyer)
 	GetName() string
 	SetName(name string)
-	Publish(message string,colleaguer Colleaguer)
-
+	Publish(message string, colleaguer Colleaguer)
 }
-// 具体中介者
+
 type Meditor struct {
-	name string
-	buyer *ColleagueBuyer
+	name   string
+	buyer  *ColleagueBuyer
 	seller *ColleagueSeller
 }
 
@@ -32,8 +30,8 @@ func (m *Meditor) SetBuyer(b ColleagueBuyer) {
 }
 
 func (m *Meditor) Publish(message string, colleaguer Colleaguer) {
-	// 如果是卖家发布
-	if reflect.DeepEqual(colleaguer,m.seller){
+
+	if reflect.DeepEqual(colleaguer, m.seller) {
 		m.buyer.Accept(message)
 	} else if reflect.DeepEqual(colleaguer, m.buyer) {
 		m.seller.Accept(message)
@@ -56,31 +54,27 @@ func (m *Meditor) SetName(name string) {
 	m.name = name
 }
 
-// 抽象同事角色
 type Colleaguer interface {
 	Colleguer(meditor MeditorCompany)
 	Send(string)
 	Accept(string)
 }
 
-// 卖家-同事角色
 type ColleagueSeller struct {
 	meditor MeditorCompany
 }
 
 func (c *ColleagueSeller) Send(message string) {
-	c.meditor.Publish(message,c)
+	c.meditor.Publish(message, c)
 }
 
 func (c *ColleagueSeller) Accept(message string) {
-	fmt.Println("卖家收到的消息是"+message)
+	fmt.Println("seller received message: " + message)
 }
 
 func (c *ColleagueSeller) Colleguer(meditor MeditorCompany) {
 	c.meditor = meditor
 }
-
-// 买家-同事角色
 
 type ColleagueBuyer struct {
 	meditor MeditorCompany
@@ -91,10 +85,9 @@ func (c *ColleagueBuyer) Colleguer(meditor MeditorCompany) {
 }
 
 func (c *ColleagueBuyer) Send(message string) {
-	c.meditor.Publish(message,c)
+	c.meditor.Publish(message, c)
 }
 
 func (c *ColleagueBuyer) Accept(message string) {
-	fmt.Println("买家收到的消息是"+message)
+	fmt.Println("buyer received message: " + message)
 }
-

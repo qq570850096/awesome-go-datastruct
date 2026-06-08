@@ -4,16 +4,15 @@ import (
 	"testing"
 )
 
-// 复合模式测试代码
 func TestDuckCall_RemoveObserver(t *testing.T) {
 	var (
-		factory AbsDuckFactory
+		factory   AbsDuckFactory
 		quackable QuackAble
-		creak Creak
-		flok *Flock
-		observer Observer
+		creak     Creak
+		flok      *Flock
+		observer  Observer
 	)
-	t.Log("测试抽象工厂")
+	t.Log("test abstract factory")
 	factory = &DuckFactory{}
 	quackable = factory.CreateMallardDuck()
 	quackable.quack()
@@ -23,23 +22,23 @@ func TestDuckCall_RemoveObserver(t *testing.T) {
 	quackable.quack()
 	quackable = factory.CreateRubber()
 	quackable.quack()
-	t.Log("测试适配器")
+	t.Log("test adapter")
 	creak = &Goose{}
 	adapter := &GooseAdapter{creak}
 	adapter.quack()
-	t.Log("测试组合模式")
+	t.Log("test composite")
 	flok = &Flock{qs: []QuackAble{}}
 	flok.Add(quackable)
 	flok.quack()
-	t.Log("测试观察者模式")
+	t.Log("test observer")
 	observer = &DuckDoctor{}
 
 	quackable.RegisterObserver(observer)
-	// 手动触发通知：quackable.NotifyObservers()
+
 	flok.NotifyObservers()
 	quackable = factory.CreateRedheadDuck()
 	quackable.RegisterObserver(observer)
-	// 手动触发通知：quackable.NotifyObservers()
+
 	flok.Add(quackable)
 	flok.NotifyObservers()
 }

@@ -8,7 +8,6 @@ import (
 	"strings"
 )
 
-// 使用邻接表表示无向图
 type Table struct {
 	v   int
 	e   int
@@ -31,7 +30,6 @@ func (table *Table) SetV(v int) {
 	table.v = v
 }
 
-// 从文件中读取并创建一个无向图
 func (table *Table) ReadFromFile(filename string) (err error) {
 	var (
 		file *os.File
@@ -42,17 +40,16 @@ func (table *Table) ReadFromFile(filename string) (err error) {
 		return
 	}
 	defer file.Close()
-	// golang按照列读取每行数据的方法
+
 	if _, err = fmt.Fscanln(file, &v, &e); err != nil {
 		return
 	}
 	if v < 0 || e < 0 {
-		return errors.New("图的顶点或边数不能小于0！")
+		return errors.New("vertex or edge count cannot be negative")
 	}
 	table.v = v
 	table.e = e
 
-	// golang独特的建立二维数组的方法
 	table.adj = make([][]int, v)
 	for i := 0; i < v; i++ {
 		table.adj[i] = make([]int, 0)
@@ -84,7 +81,6 @@ func (table *Table) ReadFromFile(filename string) (err error) {
 	}
 }
 
-// 验证是否越界
 func (table *Table) validateVertex(check int) (err error) {
 	if check >= table.v || check < 0 {
 		err = errors.New("vertex is invalid")
@@ -92,7 +88,6 @@ func (table *Table) validateVertex(check int) (err error) {
 	return
 }
 
-// 检测一条边是否联通
 func (table *Table) HasEdge(v int, e int) bool {
 	if err := table.validateVertex(v); err != nil {
 		panic(err)
@@ -103,7 +98,6 @@ func (table *Table) HasEdge(v int, e int) bool {
 	return indexOfIntSlice(table.adj[v], e) != -1
 }
 
-// 根据一个顶点返回所有的联通边
 func (table *Table) LinkedVertex(v int) []int {
 	if err := table.validateVertex(v); err != nil {
 		panic(err)
@@ -111,17 +105,16 @@ func (table *Table) LinkedVertex(v int) []int {
 	return table.adj[v]
 }
 
-// 构造打印方法
 func (table *Table) String() string {
 	var (
 		builder strings.Builder
 		index   int
 		value   []int
-		// j int 临时索引
+
 		finalValue int
 	)
 	fmt.Fprintf(&builder, "V = %d, E = %d", table.v, table.e)
-	// golang独特的遍历二维数组的方法
+
 	for index, value = range table.adj {
 		fmt.Fprintf(&builder, "\n%d : ", index)
 		for _, finalValue = range value {
@@ -131,7 +124,6 @@ func (table *Table) String() string {
 	return builder.String()
 }
 
-// 计算一个节点的度数
 func (table *Table) Degree(v int) (res int) {
 	return len(table.LinkedVertex(v))
 }

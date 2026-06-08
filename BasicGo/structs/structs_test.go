@@ -33,7 +33,7 @@ func TestEmbeddingLogger(t *testing.T) {
 	if msg != "auth: ok" {
 		t.Fatalf("unexpected Info result: %q", msg)
 	}
-	// 直接访问嵌入字段的方法。
+
 	if svc.Log("ping") != "auth: ping" {
 		t.Fatalf("embedded Log not working")
 	}
@@ -81,4 +81,3 @@ func TestJSONTags(t *testing.T) {
 		t.Fatalf("Token should not be filled from json, got %q", decoded.Token)
 	}
 }
-

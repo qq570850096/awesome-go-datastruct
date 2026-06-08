@@ -10,27 +10,27 @@ import (
 func TestLRUCache(t *testing.T) {
 	var (
 		file *os.File
-		err error
+		err  error
 	)
 	if file, err = os.Open("test.txt"); err != nil {
 		return
 	}
 	defer file.Close()
 	LRU := InitLRU(3)
-	for i:=0;i<4;i++ {
+	for i := 0; i < 4; i++ {
 		var key int
-		fmt.Fscanf(file,"%d",&key)
-		LRU.Put(key,rand.Intn(100))
+		fmt.Fscanf(file, "%d", &key)
+		LRU.Put(key, rand.Intn(100))
 	}
 	t.Log(LRU)
 	for {
 		var key int
-		if _,err = fmt.Fscanf(file,"%d",&key);err!=nil{
+		if _, err = fmt.Fscanf(file, "%d", &key); err != nil {
 			break
 		} else {
 			LRU.Get(key)
 		}
 		t.Log(LRU.String())
 	}
-	t.Log("程序正常退出,一共发生",LRU.count,"次缺页中断")
+	t.Log("program exited normally, page faults: ", LRU.count, "page faults")
 }

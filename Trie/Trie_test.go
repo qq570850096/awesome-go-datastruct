@@ -18,10 +18,9 @@ func TestTrie(t *testing.T) {
 	}
 	defer file.Close()
 	scanner := bufio.NewScanner(file)
-	// 缺省的分隔函数是bufio.ScanLines,我们这里使用ScanWords。
-	// 也可以定制一个SplitFunc类型的分隔函数
+
 	scanner.Split(bufio.ScanWords)
-	// scan下一个token.
+
 	success := scanner.Scan()
 	start := time.Now()
 	for success {
@@ -37,7 +36,7 @@ func TestTrie(t *testing.T) {
 		success = scanner.Scan()
 	}
 	if success == false {
-		// 出现错误或者EOF是返回Error
+
 		err = scanner.Err()
 		if err == nil {
 			log.Println("Scan completed and reached EOF")
@@ -46,7 +45,7 @@ func TestTrie(t *testing.T) {
 		}
 	}
 	end := time.Now()
-	// 如需测试前缀查询，可打印：fmt.Println(trie.SearchPrefix("pri"))
-	fmt.Println("傲慢与偏见一共", trie.Size(), "个单词")
-	fmt.Println("统计整本书共用时：", end.Sub(start))
+
+	fmt.Println("Pride and Prejudice contains", trie.Size(), "words")
+	fmt.Println("counting the book took: ", end.Sub(start))
 }

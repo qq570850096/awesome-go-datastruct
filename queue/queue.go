@@ -5,14 +5,13 @@ import (
 )
 
 type Queue struct {
-	container   []int
-	front int
-	rear  int
-	size  int
+	container []int
+	front     int
+	rear      int
+	size      int
 }
 
-
-func NewQueue (k int) *Queue {
+func NewQueue(k int) *Queue {
 	return &Queue{
 		make([]int, k),
 		0,
@@ -20,7 +19,6 @@ func NewQueue (k int) *Queue {
 		0,
 	}
 }
-
 
 func (this *Queue) EnQueue(value int) bool {
 	if this.container == nil || this.IsFull() {
@@ -32,18 +30,16 @@ func (this *Queue) EnQueue(value int) bool {
 	return true
 }
 
-
-func (this *Queue) DeQueue() (bool,int) {
+func (this *Queue) DeQueue() (bool, int) {
 	if this.container == nil || this.IsEmpty() {
-		return false,0
+		return false, 0
 	} else {
 		ret := this.container[this.front%len(this.container)]
 		this.front = this.front%len(this.container) + 1
 		this.size--
-		return true,ret
+		return true, ret
 	}
 }
-
 
 func (this *Queue) IsEmpty() bool {
 	if this.size == 0 {
@@ -61,12 +57,12 @@ func (this *Queue) IsFull() bool {
 
 func main() {
 	queue := NewQueue(5)
-	// 循环3次，每次添加5个元素，再出队三个元素
-	for i:=0; i<3; i++{
-		for j:=0;j<5;j++ {
+
+	for i := 0; i < 3; i++ {
+		for j := 0; j < 5; j++ {
 			queue.EnQueue(j)
 		}
-		for k:=0;k<3;k++ {
+		for k := 0; k < 3; k++ {
 			fmt.Println(queue.DeQueue())
 		}
 	}

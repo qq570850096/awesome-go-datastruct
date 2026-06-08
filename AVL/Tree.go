@@ -1,6 +1,5 @@
 package AVL
 
-// Node 表示 AVL 树节点，记录高度以便计算平衡因子。
 type Node struct {
 	E      int
 	height int
@@ -8,7 +7,6 @@ type Node struct {
 	Right  *Node
 }
 
-// Tree 是简单的整型 AVL 树实现。
 type Tree struct {
 	root *Node
 	size int
@@ -38,7 +36,6 @@ func balanceFactor(n *Node) int {
 	return height(n.Left) - height(n.Right)
 }
 
-// rightRotate 和 leftRotate 负责局部旋转，恢复平衡。
 func rightRotate(y *Node) *Node {
 	x := y.Left
 	t3 := x.Right
@@ -70,14 +67,13 @@ func rebalance(n *Node) *Node {
 	updateHeight(n)
 	bf := balanceFactor(n)
 
-	// 左重
 	if bf > 1 {
 		if balanceFactor(n.Left) < 0 {
 			n.Left = leftRotate(n.Left)
 		}
 		return rightRotate(n)
 	}
-	// 右重
+
 	if bf < -1 {
 		if balanceFactor(n.Right) > 0 {
 			n.Right = rightRotate(n.Right)
@@ -150,7 +146,7 @@ func (t *Tree) remove(node *Node, e int) *Node {
 	} else if e > node.E {
 		node.Right = t.remove(node.Right, e)
 	} else {
-		// 命中节点
+
 		if node.Left == nil {
 			right := node.Right
 			node.Right = nil
@@ -163,7 +159,7 @@ func (t *Tree) remove(node *Node, e int) *Node {
 			t.size--
 			return left
 		}
-		// 用后继替换当前节点值，然后在右子树删除后继
+
 		succ := minimum(node.Right)
 		node.E = succ.E
 		node.Right = t.remove(node.Right, succ.E)

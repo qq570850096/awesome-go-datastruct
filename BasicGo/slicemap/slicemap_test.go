@@ -51,4 +51,3 @@ func TestCountWordsAndSet(t *testing.T) {
 		t.Fatalf("Remove did not delete element")
 	}
 }
-

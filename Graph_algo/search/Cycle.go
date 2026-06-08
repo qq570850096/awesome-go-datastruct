@@ -3,7 +3,7 @@ package search
 import (
 	"algo/Graph_algo/Adj"
 )
-// 验证一个图中是否存在一个环
+
 type Cycle struct {
 	graph    *Adj.Hash
 	visited  []bool
@@ -30,7 +30,6 @@ func (C *Cycle) Init(graph *Adj.Hash) {
 
 }
 
-// 从顶点v开始，判断图中是否有环
 func (C *Cycle) Dfs(v int, parent int) bool {
 	C.visited[v] = true
 	for _, w := range C.graph.LinkedVertex(v) {

@@ -18,75 +18,48 @@ type Refrigerator interface {
 type TCLTV struct {
 }
 
-func (TCLTV) DoSomething ()  {
-	fmt.Println("TCL电视在Do Something")
+func (TCLTV) DoSomething() {
+	fmt.Println("TCL TV is doing something")
 }
 
 type TCLRef struct {
 }
 
-func (TCLRef) DoSomething ()  {
-	fmt.Println("TCL空调在do something")
+func (TCLRef) DoSomething() {
+	fmt.Println("TCL air conditioner is doing something")
 }
 
 type MediaTV struct {
 }
 
-func (MediaTV)DoSomething()  {
-	fmt.Println("美的电视在do something")
+func (MediaTV) DoSomething() {
+	fmt.Println("Midea TV is doing something")
 }
 
 type MediaRef struct{}
 
-func (MediaRef)DoSomething()  {
-	fmt.Println("美的空调在do something")
+func (MediaRef) DoSomething() {
+	fmt.Println("Midea air conditioner is doing something")
 }
 
 type TCLFactory struct {
 }
 
-func (TCLFactory) NewTV () Television {
+func (TCLFactory) NewTV() Television {
 	return TCLTV{}
 }
 
-func (TCLFactory)NewRefrigerator () Refrigerator  {
+func (TCLFactory) NewRefrigerator() Refrigerator {
 	return TCLRef{}
 }
 
 type MediaFactory struct {
 }
 
-func (MediaFactory) NewTV () Television {
+func (MediaFactory) NewTV() Television {
 	return MediaTV{}
 }
 
-func (MediaFactory)NewRefrigerator () Refrigerator  {
+func (MediaFactory) NewRefrigerator() Refrigerator {
 	return MediaRef{}
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

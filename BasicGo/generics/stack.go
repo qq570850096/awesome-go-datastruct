@@ -1,6 +1,5 @@
 package generics
 
-// Stack 展示最常见的泛型容器实现。
 type Stack[T any] struct {
 	data []T
 }
@@ -23,7 +22,6 @@ func (s *Stack[T]) Len() int {
 	return len(s.data)
 }
 
-// MapSlice 展示 type parameter 组合：输入类型 T，输出类型 R。
 func MapSlice[T any, R any](items []T, fn func(T) R) []R {
 	res := make([]R, 0, len(items))
 	for _, item := range items {
@@ -32,7 +30,6 @@ func MapSlice[T any, R any](items []T, fn func(T) R) []R {
 	return res
 }
 
-// FilterSlice 用 comparable 约束示例。
 func FilterSlice[T comparable](items []T, keep func(T) bool) []T {
 	out := items[:0]
 	for _, item := range items {

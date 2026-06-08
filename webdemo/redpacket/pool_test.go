@@ -23,7 +23,7 @@ func TestPoolGrabConcurrent(t *testing.T) {
 			defer wg.Done()
 			amount, err := p.Grab()
 			if err != nil {
-				// 允许极端情况下有并发失败，但不影响总和校验
+
 				return
 			}
 			result[idx] = amount
@@ -150,4 +150,3 @@ func BenchmarkPoolGrabParallel(b *testing.B) {
 		}
 	})
 }
-

@@ -39,14 +39,13 @@ func (this *SJF) InitFromFile(filename string) {
 }
 
 func (this *SJF) FindNextSJF(finish float64) int {
-	// p是已经到达且拥有最短运行时间的进程的下标
-	// q是没有到达的进程中拥有最早到达时间的进程的下标
+
 	var p, q int
 	var minNeedTime, minReachTIme, minTime float64
 	minNeedTime, minReachTIme, minTime = math.MaxInt32, math.MaxInt32, math.MaxInt32
 	for i := 0; i < len(this.process); i++ {
 		if !this.process[i].visited {
-			// 第一种情况
+
 			if this.process[i].submitTime <= finish && this.process[i].runTime <= minNeedTime {
 				p = i
 				minNeedTime = this.process[i].runTime
@@ -65,12 +64,11 @@ func (this *SJF) FindNextSJF(finish float64) int {
 	return q
 }
 
-//短作业优先算法
 func (this *SJF) SJF() {
 	var i int
-	//总的等待时间 //总的周转时间 //总的带权周转时间
+
 	var wrTime, trTime, wtrTime, finish float64
-	finish = math.MaxInt32 //当前完成时间
+	finish = math.MaxInt32
 	for i = 0; i < len(this.process); i++ {
 		finish = func(a, b float64) float64 {
 			if a < b {
@@ -79,16 +77,16 @@ func (this *SJF) SJF() {
 			return b
 		}(finish, this.process[i].submitTime)
 	}
-	fmt.Printf("短作业优先算法: \n")
+	fmt.Printf("shortest job first scheduling: \n")
 	for i = 0; i < len(this.process); i++ {
 		index := this.FindNextSJF(finish)
-		fmt.Printf("第%d个作业", index+1)
-		fmt.Printf("到达时间 %.2f,服务时间%.2f\n",
+		fmt.Printf("job %d", index+1)
+		fmt.Printf("arrival %.2f, service %.2f\n",
 			this.process[index].submitTime,
 			this.process[index].runTime)
-		fmt.Printf("本作业正在运行...........\n")
+		fmt.Printf("job is running...\n")
 		time.Sleep(100 * time.Millisecond)
-		fmt.Printf("运行完毕\n")
+		fmt.Printf("job finished\n")
 		if this.process[index].submitTime <= finish {
 			this.process[index].waitTime = finish - this.process[index].submitTime
 			this.process[index].startTime = finish
@@ -104,8 +102,8 @@ func (this *SJF) SJF() {
 		trTime += this.process[index].trTime
 		wtrTime += this.process[index].wtrTime
 		finish = this.process[index].finishTime
-		fmt.Printf("等待时间: %.2f 周转时间: %.2f 带权周转时间: %0.2f\n", this.process[index].waitTime, this.process[index].trTime, this.process[index].wtrTime)
+		fmt.Printf("wait %.2f turnaround %.2f weighted turnaround %0.2f\n", this.process[index].waitTime, this.process[index].trTime, this.process[index].wtrTime)
 	}
-	fmt.Printf("--------所有作业调度完毕------\n")
-	fmt.Printf("平均等待时间: %.2f 平均周转时间: %.2f 平均带权周转时间: %.2f", wrTime/float64(len(this.process)), trTime/float64(len(this.process)), wtrTime/float64(len(this.process)))
+	fmt.Printf("all jobs scheduled\n")
+	fmt.Printf("average wait %.2f average turnaround %.2f average weighted turnaround %.2f", wrTime/float64(len(this.process)), trTime/float64(len(this.process)), wtrTime/float64(len(this.process)))
 }

@@ -113,7 +113,6 @@ func TestCORSAndRateLimitAndTimeout(t *testing.T) {
 		c.JSON(http.StatusOK, map[string]string{"ok": "true"})
 	})
 
-	// 测试 OPTIONS 预检请求
 	reqOpt := httptest.NewRequest(http.MethodOptions, "/data", nil)
 	wOpt := httptest.NewRecorder()
 	e.ServeHTTP(wOpt, reqOpt)
@@ -124,7 +123,6 @@ func TestCORSAndRateLimitAndTimeout(t *testing.T) {
 		t.Fatalf("CORS headers not set")
 	}
 
-	// 测试限流：qps=1，在同一秒内连续两次请求，第二次应被拒绝
 	req1 := httptest.NewRequest(http.MethodGet, "/data", nil)
 	w1 := httptest.NewRecorder()
 	e.ServeHTTP(w1, req1)
@@ -139,7 +137,6 @@ func TestCORSAndRateLimitAndTimeout(t *testing.T) {
 		t.Fatalf("second request status = %d, want %d", w2.Code, http.StatusTooManyRequests)
 	}
 
-	// 测试超时：使用单独 Engine 注入一个会睡眠的 handler
 	e2 := New()
 	e2.Use(Timeout(10 * time.Millisecond))
 	e2.GET("/slow", func(c *Context) {

@@ -10,13 +10,11 @@ func TestBenzCar_GetName(t *testing.T) {
 		list []ICar
 	)
 	list = []ICar{}
-	list = append(list,&FinanceBenzCar{BenzCar{"迈巴赫",99}})
-	list = append(list,&FinanceBenzCar{BenzCar{"AMG",200}})
-	list = append(list,&FinanceBenzCar{BenzCar{"V",40}})
-	for _,v := range list {
-		fmt.Println("车名:",v.GetName(),"\t价格:",v.GetPrice())
+	list = append(list, &FinanceBenzCar{BenzCar{"Maybach", 99}})
+	list = append(list, &FinanceBenzCar{BenzCar{"AMG", 200}})
+	list = append(list, &FinanceBenzCar{BenzCar{"V", 40}})
+	for _, v := range list {
+		fmt.Println("car:", v.GetName(), "\tprice:", v.GetPrice())
 	}
 
-	// 示例：person := Person{ani:&Rubbit{}}
-	// person.WalkAnimal() // 让示例人物遛动物
 }

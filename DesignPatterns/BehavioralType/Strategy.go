@@ -11,89 +11,89 @@ type QuackBehavior interface {
 }
 
 type Duck struct {
-	fly FlyBehavior
+	fly   FlyBehavior
 	quack QuackBehavior
 }
 
-func (d *Duck)Swim() {
-	fmt.Println("鸭子游泳")
+func (d *Duck) Swim() {
+	fmt.Println("duck swims")
 }
 
-func (d *Duck) Display (behavior FlyBehavior,quackBehavior QuackBehavior) {
+func (d *Duck) Display(behavior FlyBehavior, quackBehavior QuackBehavior) {
 	behavior.Fly()
 	quackBehavior.Quack()
 }
 
-type FlyWithWings struct {}
+type FlyWithWings struct{}
 
-func (f *FlyWithWings) Fly ()  {
-	fmt.Println("鸭子用翅膀飞")
+func (f *FlyWithWings) Fly() {
+	fmt.Println("duck flies with wings")
 }
 
-type FlyNoWay struct {}
+type FlyNoWay struct{}
 
-func (f *FlyNoWay) Fly ()  {
-	fmt.Println("鸭子飞不起来")
+func (f *FlyNoWay) Fly() {
+	fmt.Println("duck cannot fly")
 }
 
-type Quack struct {}
+type Quack struct{}
 
-func (f *Quack) Quack ()  {
-	fmt.Println("鸭子嘎嘎叫")
+func (f *Quack) Quack() {
+	fmt.Println("duck quacks")
 }
 
-type Squeak struct {}
+type Squeak struct{}
 
-func (f *Squeak) Quack ()  {
-	fmt.Println("鸭子咔咔叫")
+func (f *Squeak) Quack() {
+	fmt.Println("duck squeaks")
 }
 
-type Mute struct {}
+type Mute struct{}
 
-func (f *Mute) Quack ()  {
-	fmt.Println("鸭子不能叫")
+func (f *Mute) Quack() {
+	fmt.Println("duck cannot quack")
 }
 
 type ReadHead struct {
 	*Duck
-	fly *FlyWithWings
+	fly   *FlyWithWings
 	quack *Quack
 }
 
-func (r *ReadHead) Display ()  {
+func (r *ReadHead) Display() {
 	r.Swim()
 	r.Duck.Display(r.fly, r.quack)
 }
 
 type Wooden struct {
 	*Duck
-	fly *FlyNoWay
+	fly   *FlyNoWay
 	quack *Mute
 }
 
-func (r *Wooden) Display ()  {
+func (r *Wooden) Display() {
 	r.Swim()
-	r.Duck.Display(r.fly,r.quack)
+	r.Duck.Display(r.fly, r.quack)
 }
 
 type Mallard struct {
 	*Duck
-	fly *FlyWithWings
+	fly   *FlyWithWings
 	quack *Quack
 }
 
-func (m *Mallard) Display ()  {
+func (m *Mallard) Display() {
 	m.Swim()
 	m.Duck.Display(m.fly, m.quack)
 }
 
 type Rubber struct {
 	*Duck
-	fly *FlyNoWay
+	fly   *FlyNoWay
 	quack *Squeak
 }
 
-func (r *Rubber) Display ()  {
+func (r *Rubber) Display() {
 	r.Swim()
 	r.Duck.Display(r.fly, r.quack)
 }

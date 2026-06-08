@@ -2,7 +2,6 @@ package interfacedemo
 
 import "fmt"
 
-// Describe 使用空接口 + type switch 打印值的类型信息。
 func Describe(v any) string {
 	switch x := v.(type) {
 	case nil:
@@ -17,4 +16,3 @@ func Describe(v any) string {
 		return "unknown"
 	}
 }
-

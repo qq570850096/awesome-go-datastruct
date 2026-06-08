@@ -2,7 +2,6 @@ package slicemap
 
 import "strings"
 
-// CountWords 统计字符串中每个单词出现的次数。
 func CountWords(text string) map[string]int {
 	m := make(map[string]int)
 	for _, w := range strings.Fields(text) {
@@ -11,7 +10,6 @@ func CountWords(text string) map[string]int {
 	return m
 }
 
-// Set 是用 map 模拟的字符串集合。
 type Set map[string]struct{}
 
 func NewSet() Set {
@@ -30,4 +28,3 @@ func (s Set) Has(v string) bool {
 func (s Set) Remove(v string) {
 	delete(s, v)
 }
-

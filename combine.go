@@ -18,7 +18,7 @@ func combinationSum3(k int, n int) [][]int {
 		}
 
 		for i := temp[idx-1] + 1; i < 10; i++ {
-			if remain-i  < i {
+			if remain-i < i {
 				return
 			}
 			used[i] = true

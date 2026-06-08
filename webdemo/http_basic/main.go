@@ -8,7 +8,6 @@ import (
 	"time"
 )
 
-// Todo 是一个最小可用的任务模型，用于演示原生 net/http 的 REST 风格接口。
 type Todo struct {
 	ID   int    `json:"id"`
 	Text string `json:"text"`
@@ -94,7 +93,6 @@ func handleCreate(store *todoStore, w http.ResponseWriter, r *http.Request) {
 	_ = json.NewEncoder(w).Encode(todo)
 }
 
-// loggingMiddleware 是最简单的统一拦截器示例：打印方法、路径和耗时。
 func loggingMiddleware(next http.Handler) http.Handler {
 	return http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
 		start := time.Now()
@@ -102,4 +100,3 @@ func loggingMiddleware(next http.Handler) http.Handler {
 		log.Printf("%s %s %v", r.Method, r.URL.Path, time.Since(start))
 	})
 }
-

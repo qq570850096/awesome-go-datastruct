@@ -8,7 +8,6 @@ import (
 	"strings"
 )
 
-// 使用邻接矩阵表示无向图
 type Matrix struct {
 	v   int
 	e   int
@@ -31,7 +30,6 @@ func (matrix *Matrix) SetV(v int) {
 	matrix.v = v
 }
 
-// 从文件中读取并创建一个无向图
 func (matrix *Matrix) ReadFromFile(filename string) (err error) {
 	var (
 		file *os.File
@@ -42,17 +40,16 @@ func (matrix *Matrix) ReadFromFile(filename string) (err error) {
 		return
 	}
 	defer file.Close()
-	// golang按照列读取每行数据的方法
+
 	if _, err = fmt.Fscanln(file, &v, &e); err != nil {
 		return
 	}
 	if v < 0 || e < 0 {
-		return errors.New("图的顶点或边数不能小于0！")
+		return errors.New("vertex or edge count cannot be negative")
 	}
 	matrix.v = v
 	matrix.e = e
 
-	// golang独特的建立二维数组的方法
 	matrix.adj = make([][]int, v)
 	for i := 0; i < v; i++ {
 		matrix.adj[i] = make([]int, v)
@@ -83,7 +80,6 @@ func (matrix *Matrix) ReadFromFile(filename string) (err error) {
 	}
 }
 
-// 验证是否越界
 func (matrix *Matrix) validateVertex(check int) (err error) {
 	if check >= matrix.v || check < 0 {
 		err = errors.New("vertex is invalid")
@@ -91,7 +87,6 @@ func (matrix *Matrix) validateVertex(check int) (err error) {
 	return
 }
 
-// 检测一条边是否联通
 func (matrix *Matrix) HasEdge(v int, e int) bool {
 	if err := matrix.validateVertex(v); err != nil {
 		panic(err)
@@ -102,7 +97,6 @@ func (matrix *Matrix) HasEdge(v int, e int) bool {
 	return matrix.adj[v][e] == 1
 }
 
-// 根据一个顶点返回所有的联通边
 func (matrix *Matrix) LinkedVertex(v int) (edgearr []int) {
 	edgearr = make([]int, 0)
 	for i := 0; i < matrix.v; i++ {
@@ -113,17 +107,16 @@ func (matrix *Matrix) LinkedVertex(v int) (edgearr []int) {
 	return
 }
 
-// 构造打印方法
 func (matrix *Matrix) String() string {
 	var (
 		builder strings.Builder
-		// index int 行号
+
 		value []int
-		// j int 列号
+
 		finalValue int
 	)
 	fmt.Fprintf(&builder, "V = %d, E = %d", matrix.v, matrix.e)
-	// golang独特的遍历二维数组的方法
+
 	for _, value = range matrix.adj {
 		fmt.Fprintf(&builder, "\n")
 		for _, finalValue = range value {
@@ -133,7 +126,6 @@ func (matrix *Matrix) String() string {
 	return builder.String()
 }
 
-// 计算一个节点的度数
 func (matrix *Matrix) Degree(v int) (res int) {
 	return len(matrix.LinkedVertex(v))
 }

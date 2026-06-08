@@ -61,16 +61,16 @@ func (this *FCFS) FCFS() {
 	sort.Sort(this)
 	this.getReady()
 	for i := 0; i < len(this.pending); i++ {
-		fmt.Printf("到达第%d个作业\n", i+1)
-		fmt.Printf("到达时间%f,服务时间%f\n", this.pending[i].submitTime, this.pending[i].runTime)
-		fmt.Printf("本作业正在执行\n")
+		fmt.Printf("job %d arrived\n", i+1)
+		fmt.Printf("arrival %f, service %f\n", this.pending[i].submitTime, this.pending[i].runTime)
+		fmt.Printf("job is executing\n")
 		time.Sleep(100 * time.Millisecond)
-		fmt.Printf("执行成功！\n")
+		fmt.Printf("execution succeeded\n")
 		if i == 0 {
 			this.pending[this.ready[i]].finishTime = this.pending[this.ready[i]].runTime + this.pending[this.ready[i]].submitTime
 			this.pending[this.ready[i]].waitTime = 0
 		} else {
-			//如果上一个作业的完成时间大于下一个作业的到达时间，则下一个作业的开始时间从上一个的完成时间开始
+
 			if this.pending[this.ready[i-1]].finishTime > this.pending[this.ready[i]].submitTime {
 				this.pending[this.ready[i]].finishTime = this.pending[this.ready[i-1]].finishTime + this.pending[this.ready[i]].runTime
 				this.pending[this.ready[i]].waitTime = this.pending[this.ready[i-1]].finishTime - this.pending[this.ready[i]].submitTime
@@ -81,6 +81,6 @@ func (this *FCFS) FCFS() {
 		}
 		this.pending[this.ready[i]].GetColTime()
 		this.pending[this.ready[i]].GetColTimeWithWeight()
-		fmt.Printf("等待时间：%f\t周转时间：%f\t带权周转时间: %0.2f\n", this.pending[this.ready[i]].waitTime, this.pending[this.ready[i]].trTime, this.pending[this.ready[i]].wtrTime)
+		fmt.Printf("wait %f\tturnaround %f\tweighted turnaround: %0.2f\n", this.pending[this.ready[i]].waitTime, this.pending[this.ready[i]].trTime, this.pending[this.ready[i]].wtrTime)
 	}
 }

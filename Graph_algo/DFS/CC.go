@@ -2,7 +2,6 @@ package DFS
 
 import "algo/Graph_algo/Adj"
 
-// 深度优先遍历一张图，并且找到所有连通分量（Connect Component）
 type CC struct {
 	graph   *Adj.Hash
 	visited []int

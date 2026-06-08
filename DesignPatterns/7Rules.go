@@ -3,14 +3,13 @@ package DesignPatterns
 import "fmt"
 
 type ICar interface {
-	// 车名
 	GetName() string
-	// 价格
+
 	GetPrice() int
 }
 
 type BenzCar struct {
-	name string
+	name  string
 	price int
 }
 
@@ -26,9 +25,8 @@ type FinanceBenzCar struct {
 	BenzCar
 }
 
-
 func (b FinanceBenzCar) GetPrice() int {
-	// 获取原价
+
 	selfPrice := b.price
 	var finance int
 	if selfPrice >= 100 {
@@ -42,24 +40,19 @@ func (b FinanceBenzCar) GetPrice() int {
 }
 
 type Girl struct {
-
 }
 
 type GroupLeader struct {
 	girls []Girl
 }
 
-func (g GroupLeader) CountGirls ()  {
+func (g GroupLeader) CountGirls() {
 	fmt.Println("The sum of girls is ", len(g.girls))
 }
 
 type Teacher struct {
-
 }
 
-func (t Teacher) Command(leader GroupLeader)  {
+func (t Teacher) Command(leader GroupLeader) {
 	leader.CountGirls()
 }
-
-
-

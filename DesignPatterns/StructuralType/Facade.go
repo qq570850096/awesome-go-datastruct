@@ -7,23 +7,23 @@ import (
 type GunSystem struct {
 }
 
-func (GunSystem)Fire()  {
-	fmt.Println("开火")
+func (GunSystem) Fire() {
+	fmt.Println("fire")
 }
 
-func (GunSystem)UseBullet()  {
-	fmt.Println("上子弹")
+func (GunSystem) UseBullet() {
+	fmt.Println("load bullet")
 }
 
 type UserSystem struct {
 }
 
-func (UserSystem)AddScore()  {
-	fmt.Println("得分")
+func (UserSystem) AddScore() {
+	fmt.Println("score")
 }
 
-func (UserSystem)LoseBlood()  {
-	fmt.Println("掉血")
+func (UserSystem) LoseBlood() {
+	fmt.Println("lose health")
 }
 
 type Facade struct {
@@ -31,10 +31,9 @@ type Facade struct {
 	user *UserSystem
 }
 
-func (f *Facade) shooting()  {
+func (f *Facade) shooting() {
 	f.fire.Fire()
 	f.fire.UseBullet()
 	f.user.AddScore()
 	f.user.LoseBlood()
 }
-

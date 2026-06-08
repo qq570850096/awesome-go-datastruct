@@ -12,14 +12,14 @@ type Turkey interface {
 	TurkeyFly()
 }
 
-type Adaptee struct {}
+type Adaptee struct{}
 
 func (a Adaptee) Gobble() {
-	fmt.Println("火鸡咕咕叫")
+	fmt.Println("turkey gobbles")
 }
 
 func (a Adaptee) TurkeyFly() {
-	fmt.Println("火鸡起飞")
+	fmt.Println("turkey flies")
 }
 
 type Adapter struct {
@@ -27,11 +27,9 @@ type Adapter struct {
 }
 
 func (a Adapter) Quack() {
-	fmt.Println("鸭子嘎嘎叫")
+	fmt.Println("duck quacks")
 }
 
 func (a Adapter) Fly() {
-	fmt.Println("鸭子嘎嘎叫")
+	fmt.Println("duck quacks")
 }
-
-

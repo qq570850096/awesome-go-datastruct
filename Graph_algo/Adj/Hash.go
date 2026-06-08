@@ -8,7 +8,6 @@ import (
 	"strings"
 )
 
-// 使用哈希存储表示无向图
 type Hash struct {
 	v   int
 	e   int
@@ -31,7 +30,6 @@ func (hash *Hash) SetV(v int) {
 	hash.v = v
 }
 
-// 从文件中读取并创建一个无向图
 func (hash *Hash) ReadFromFile(filename string) (err error) {
 	var (
 		file *os.File
@@ -42,17 +40,16 @@ func (hash *Hash) ReadFromFile(filename string) (err error) {
 		return
 	}
 	defer file.Close()
-	// golang按照列读取每行数据的方法
+
 	if _, err = fmt.Fscanln(file, &v, &e); err != nil {
 		return
 	}
 	if v < 0 || e < 0 {
-		return errors.New("图的顶点或边数不能小于0！")
+		return errors.New("vertex or edge count cannot be negative")
 	}
 	hash.v = v
 	hash.e = e
 
-	// golang独特的建立二维数组的方法
 	hash.adj = make(map[int][]int, v)
 	for i := 0; i < v; i++ {
 		hash.adj[i] = make([]int, 0)
@@ -83,7 +80,6 @@ func (hash *Hash) ReadFromFile(filename string) (err error) {
 	}
 }
 
-// 验证是否越界
 func (hash *Hash) ValidateVertex(check int) (err error) {
 	if check >= hash.v || check < 0 {
 		err = errors.New("vertex is invalid")
@@ -91,7 +87,6 @@ func (hash *Hash) ValidateVertex(check int) (err error) {
 	return
 }
 
-// 检测一条边是否联通
 func (hash *Hash) HasEdge(v int, e int) bool {
 	if err := hash.ValidateVertex(v); err != nil {
 		panic(err)
@@ -105,7 +100,6 @@ func (hash *Hash) HasEdge(v int, e int) bool {
 	return false
 }
 
-// 根据一个顶点返回所有的联通边
 func (hash *Hash) LinkedVertex(v int) (edgeArr []int) {
 	edgeArr = make([]int, 0)
 	if err := hash.ValidateVertex(v); err != nil {
@@ -117,17 +111,16 @@ func (hash *Hash) LinkedVertex(v int) (edgeArr []int) {
 	return
 }
 
-// 构造打印方法
 func (hash *Hash) String() string {
 	var (
 		builder strings.Builder
 		index   int
 		value   []int
-		// j int 临时索引
+
 		finalValue int
 	)
 	fmt.Fprintf(&builder, "V = %d, E = %d", hash.v, hash.e)
-	// golang独特的遍历二维数组的方法
+
 	for index, value = range hash.adj {
 		fmt.Fprintf(&builder, "\n%d : ", index)
 		for _, finalValue = range value {
@@ -137,7 +130,6 @@ func (hash *Hash) String() string {
 	return builder.String()
 }
 
-// 计算一个节点的度数
 func (hash *Hash) Degree(v int) (res int) {
 	return len(hash.LinkedVertex(v))
 }

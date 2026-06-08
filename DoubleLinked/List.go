@@ -6,40 +6,39 @@ import (
 )
 
 type Node struct {
-	key interface{}
-	value interface{}
-	prev,next *Node
+	key        interface{}
+	value      interface{}
+	prev, next *Node
 }
-
 
 func (this Node) String() string {
 	builder := strings.Builder{}
-	fmt.Fprintf(&builder,"{%v : %v}",this.key,this.value)
+	fmt.Fprintf(&builder, "{%v : %v}", this.key, this.value)
 	return builder.String()
 }
 
-func InitNode(key,value interface{}) *Node {
+func InitNode(key, value interface{}) *Node {
 	return &Node{
-		key:key,
-		value:value,
+		key:   key,
+		value: value,
 	}
 }
 
 type List struct {
 	capacity int
-	head *Node
-	tail *Node
-	size int
+	head     *Node
+	tail     *Node
+	size     int
 }
 
 func InitList(capcity int) *List {
 	return &List{
-		capacity:capcity,
-		size:0,
+		capacity: capcity,
+		size:     0,
 	}
 }
 
-func (this *List) addHead (node *Node) *Node {
+func (this *List) addHead(node *Node) *Node {
 	if this.head == nil {
 		this.head = node
 		this.tail = node
@@ -55,7 +54,7 @@ func (this *List) addHead (node *Node) *Node {
 	return node
 }
 
-func (this *List)addTail(node *Node) *Node {
+func (this *List) addTail(node *Node) *Node {
 	if this.tail == nil {
 		this.tail = node
 		this.head = node
@@ -103,8 +102,8 @@ func (this *List) removeHead() *Node {
 	return node
 }
 
-func (this *List)remove(node *Node) *Node {
-	// 如果node==nil,默认删除尾节点
+func (this *List) remove(node *Node) *Node {
+
 	if node == nil {
 		node = this.tail
 	}
@@ -119,31 +118,30 @@ func (this *List)remove(node *Node) *Node {
 	}
 	return node
 }
-// 弹出头结点
-func (this *List)Pop() *Node {
+
+func (this *List) Pop() *Node {
 	return this.removeHead()
 }
 
-// 添加节点,默认添加到尾部
-func (this *List)Append(node *Node) *Node {
+func (this *List) Append(node *Node) *Node {
 	return this.addTail(node)
 }
-func (this *List)AppendToHead(node *Node) *Node {
+func (this *List) AppendToHead(node *Node) *Node {
 	return this.addHead(node)
 }
 
-func (this *List)Remove(node *Node) *Node {
+func (this *List) Remove(node *Node) *Node {
 	return this.remove(node)
 }
 
-func (this *List)String() string {
+func (this *List) String() string {
 	p := this.head
 	builder := strings.Builder{}
 	for p != nil {
-		fmt.Fprintf(&builder,"%s",p)
+		fmt.Fprintf(&builder, "%s", p)
 		p = p.next
 		if p != nil {
-			fmt.Fprintf(&builder,"=>")
+			fmt.Fprintf(&builder, "=>")
 		}
 	}
 	return builder.String()

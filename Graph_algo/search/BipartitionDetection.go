@@ -1,7 +1,7 @@
 package search
 
 import "algo/Graph_algo/Adj"
-// 验证一个图是否是二分图
+
 type BipartitionDetection struct {
 	graph     *Adj.Hash
 	visited   []bool
@@ -33,7 +33,6 @@ func (C *BipartitionDetection) Init(graph *Adj.Hash) {
 
 }
 
-// 从顶点v开始，判断图中是否有环
 func (C *BipartitionDetection) Dfs(v int, color int) bool {
 	C.visited[v] = true
 	C.color[v] = color

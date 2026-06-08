@@ -56,4 +56,3 @@ func TestFuncsAndClosure(t *testing.T) {
 		t.Fatalf("NewCounter not increasing as expected")
 	}
 }
-

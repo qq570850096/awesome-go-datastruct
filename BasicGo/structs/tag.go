@@ -2,7 +2,6 @@ package structdemo
 
 import "encoding/json"
 
-// Account 展示导出字段、json tag 与字段忽略规则。
 type Account struct {
 	ID    int    `json:"id"`
 	Name  string `json:"name,omitempty"`
@@ -18,4 +17,3 @@ func DecodeAccount(data []byte) (Account, error) {
 	err := json.Unmarshal(data, &a)
 	return a, err
 }
-

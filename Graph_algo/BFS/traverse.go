@@ -2,7 +2,6 @@ package BFS
 
 import "algo/Graph_algo/Adj"
 
-// 广度优先遍历取所有节点
 func Traverse(hash *Adj.Hash, start int) (order []int) {
 	visited := make([]bool, hash.V())
 	bfs := func(source int) {

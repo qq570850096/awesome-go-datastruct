@@ -34,10 +34,9 @@ func InitLFUCahe(capacity int) *LFUCache {
 	}
 }
 
-// 更新节点的频率
 func (this *LFUCache) updateFreq(node *LFUNode) {
 	freq := node.freq
-	// 删除
+
 	node.node = this.freq_map[freq].Remove(node.node)
 	if this.freq_map[freq].size == 0 {
 		delete(this.freq_map, freq)
@@ -65,7 +64,7 @@ func findMinNum(fmp map[int]*List) int {
 func (this *LFUCache) Get(key interface{}) interface{} {
 	node, ok := this.find[key]
 	if !ok {
-		fmt.Println("发生了一次缺页中断")
+		fmt.Println("page fault occurred")
 		this.count++
 		return -1
 	}
@@ -77,14 +76,14 @@ func (this *LFUCache) Put(key, value interface{}) {
 	if this.capacity == 0 {
 		return
 	}
-	// 命中缓存
+
 	if _, ok := this.find[key]; ok {
 		node := this.find[key]
 		node.node.value = value
 		this.updateFreq(node)
 	} else {
 		if this.capacity == this.size {
-			// 找到一个最小的频率
+
 			min_freq := findMinNum(this.freq_map)
 			list := this.freq_map[min_freq]
 			evicted := list.Pop()

@@ -32,7 +32,7 @@ func (this *FIFOCache) Get(key interface{}) interface{} {
 		return -1
 	}
 
-	fmt.Println("发生了一次缺页中断")
+	fmt.Println("page fault occurred")
 	this.count++
 	node := InitNode(key, -1)
 	if this.size == this.capacity {

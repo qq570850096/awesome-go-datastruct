@@ -4,15 +4,13 @@ import (
 	"strings"
 )
 
-// node 是路由前缀树上的节点。
 type node struct {
-	pattern  string   // 完整路由，例如 /p/:lang
-	part     string   // 路径片段，例如 :lang
-	children []*node  // 子节点
-	isWild   bool     // 是否模糊匹配，: 或 *
+	pattern  string
+	part     string
+	children []*node
+	isWild   bool
 }
 
-// matchChild 返回第一个匹配的子节点（用于插入）。
 func (n *node) matchChild(part string) *node {
 	for _, child := range n.children {
 		if child.part == part || child.isWild {
@@ -22,7 +20,6 @@ func (n *node) matchChild(part string) *node {
 	return nil
 }
 
-// matchChildren 返回所有匹配的子节点（用于搜索）。
 func (n *node) matchChildren(part string) []*node {
 	nodes := make([]*node, 0)
 	for _, child := range n.children {
@@ -33,7 +30,6 @@ func (n *node) matchChildren(part string) []*node {
 	return nodes
 }
 
-// insert 将一个路由模式插入前缀树。
 func (n *node) insert(pattern string, parts []string, height int) {
 	if len(parts) == height {
 		n.pattern = pattern
@@ -52,7 +48,6 @@ func (n *node) insert(pattern string, parts []string, height int) {
 	child.insert(pattern, parts, height+1)
 }
 
-// search 在前缀树中查找匹配的节点。
 func (n *node) search(parts []string, height int) *node {
 	if len(parts) == height || strings.HasPrefix(n.part, "*") {
 		if n.pattern == "" {
@@ -72,7 +67,6 @@ func (n *node) search(parts []string, height int) *node {
 	return nil
 }
 
-// router 管理不同 HTTP 方法的前缀树以及最终 handler。
 type router struct {
 	roots    map[string]*node
 	handlers map[string]HandlerFunc
@@ -85,7 +79,6 @@ func newRouter() *router {
 	}
 }
 
-// parsePattern 将路由模式按 / 拆分，并处理 * 通配符。
 func parsePattern(pattern string) []string {
 	vs := strings.Split(pattern, "/")
 	parts := make([]string, 0)
@@ -112,7 +105,6 @@ func (r *router) addRoute(method, pattern string, handler HandlerFunc) {
 	r.handlers[key] = handler
 }
 
-// getRoute 匹配路由并提取路径参数。
 func (r *router) getRoute(method, path string) (HandlerFunc, map[string]string) {
 	root, ok := r.roots[method]
 	if !ok {
@@ -139,4 +131,3 @@ func (r *router) getRoute(method, path string) (HandlerFunc, map[string]string) 
 	key := method + "-" + n.pattern
 	return r.handlers[key], params
 }
-

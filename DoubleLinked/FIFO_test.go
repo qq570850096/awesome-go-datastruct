@@ -7,32 +7,32 @@ import (
 	"testing"
 )
 
-func TestFIFO(t *testing.T)  {
+func TestFIFO(t *testing.T) {
 	all := 12.0
 	var (
 		file *os.File
-		err error
+		err  error
 	)
 	if file, err = os.Open("test.txt"); err != nil {
 		return
 	}
 	defer file.Close()
 	Fifo := InitFIFO(4)
-	for i:=0;i<4;i++ {
+	for i := 0; i < 4; i++ {
 		var key int
-		fmt.Fscanf(file,"%d",&key)
-		Fifo.Put(key,rand.Intn(100))
+		fmt.Fscanf(file, "%d", &key)
+		Fifo.Put(key, rand.Intn(100))
 	}
 	t.Log(Fifo)
 	for {
 		var key int
-		if _,err = fmt.Fscanf(file,"%d",&key);err!=nil{
+		if _, err = fmt.Fscanf(file, "%d", &key); err != nil {
 			break
 		} else {
 			Fifo.Get(key)
 		}
 		t.Log(Fifo)
 	}
-	t.Log("程序正常退出,一共发生",Fifo.count,"次缺页中断")
-	t.Logf("缺页中断率为%.2f次缺页中断",float64(Fifo.count)/all)
+	t.Log("program exited normally, page faults: ", Fifo.count, "page faults")
+	t.Logf("page fault rate %.2f", float64(Fifo.count)/all)
 }

@@ -15,7 +15,6 @@ type apiResponse struct {
 	Data interface{} `json:"data,omitempty"`
 }
 
-// appHandler 统一返回数据和错误，由包装器负责写 JSON。
 type appHandler func(r *http.Request) (interface{}, *appError)
 
 type appError struct {
@@ -49,7 +48,7 @@ func poolInitHandler(pool *redpacket.Pool) appHandler {
 			return nil, &appError{Code: http.StatusMethodNotAllowed, Msg: "method not allowed"}
 		}
 		var req struct {
-			TotalAmount int64 `json:"total_amount"` // 单位：分
+			TotalAmount int64 `json:"total_amount"`
 			Count       int   `json:"count"`
 		}
 		if err := json.NewDecoder(r.Body).Decode(&req); err != nil {
@@ -75,7 +74,6 @@ func poolGrabHandler(pool *redpacket.Pool) appHandler {
 	}
 }
 
-// wrap 将业务处理函数统一包装为 JSON 响应，并做 panic 恢复。
 func wrap(h appHandler) http.Handler {
 	return http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
 		defer func() {
@@ -100,7 +98,6 @@ func writeJSON(w http.ResponseWriter, status int, resp apiResponse) {
 	_ = json.NewEncoder(w).Encode(resp)
 }
 
-// loggingMiddleware 作为最外层统一拦截器：记录方法、路径、耗时。
 func loggingMiddleware(next http.Handler) http.Handler {
 	return http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
 		start := time.Now()
@@ -108,4 +105,3 @@ func loggingMiddleware(next http.Handler) http.Handler {
 		log.Printf("%s %s %v", r.Method, r.URL.Path, time.Since(start))
 	})
 }
-

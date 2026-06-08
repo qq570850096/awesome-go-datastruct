@@ -20,7 +20,7 @@ func (this *FP) getReady() {
 }
 
 func (this *FP) Less(i, j int) bool {
-	// 按照优先级进行递增排序
+
 	return this.process[i].priority < this.process[j].priority
 }
 
@@ -60,9 +60,7 @@ func (this *FP) InitFromFile(filename string) {
 }
 
 func (this *FP) FindNextHPF(time float64) int {
-	// 优先值越低 表示优先权越高
-	// p是已经到达且拥有最高优先权的进程的下标
-	// q是没有到达的进程中拥有最早到达时间的进程的下标
+
 	var i, p, q, minPrivilege1 int
 	var minReachTime float64
 	p = 0
@@ -71,10 +69,10 @@ func (this *FP) FindNextHPF(time float64) int {
 	minReachTime = math.MaxInt32
 	for i = 0; i < len(this.process); i++ {
 		if !this.process[i].visited {
-			// 第一情况
+
 			if this.process[i].submitTime <= time && this.process[i].priority <= minPrivilege1 {
 
-				if this.process[i].priority == this.process[p].priority { //如果优先权一致 则按最早抵达时间
+				if this.process[i].priority == this.process[p].priority {
 					if this.process[i].submitTime < this.process[p].submitTime {
 						p = i
 					}
@@ -88,7 +86,7 @@ func (this *FP) FindNextHPF(time float64) int {
 			}
 		}
 	}
-	// p为-1时,代表在time时刻还没进程到达,此时选择下一个最早到达的进程q
+
 	if p != -1 {
 		return p
 	}
@@ -110,16 +108,16 @@ func (this *FP) HPF() {
 		}(finish, this.process[i].submitTime)
 	}
 
-	fmt.Printf("优先权高者优先服务(非抢占式): \n")
+	fmt.Printf("non-preemptive priority scheduling: \n")
 	for i = 0; i < len(this.process); i++ {
 		index := this.FindNextHPF(finish)
-		fmt.Printf("第%d个作业", index+1)
-		fmt.Printf("到达时间 --%.2f,服务时间--%.2f\n",
+		fmt.Printf("job %d", index+1)
+		fmt.Printf("arrival %.2f, service %.2f\n",
 			this.process[index].submitTime,
 			this.process[index].runTime)
-		fmt.Printf("本作业正在运行...........\n")
+		fmt.Printf("job is running...\n")
 		time.Sleep(100 * time.Millisecond)
-		fmt.Printf("运行完毕\n")
+		fmt.Printf("job finished\n")
 		if this.process[index].submitTime <= finish {
 			this.process[index].waitTime = finish - this.process[index].submitTime
 			this.process[index].startTime = finish
@@ -135,8 +133,8 @@ func (this *FP) HPF() {
 		trTime += this.process[index].trTime
 		wtrTime += this.process[index].wtrTime
 		finish = this.process[index].finishTime
-		fmt.Printf("等待时间: %.2f 周转时间: %.2f 带权周转时间: %0.2f\n", this.process[index].waitTime, this.process[index].trTime, this.process[index].wtrTime)
+		fmt.Printf("wait %.2f turnaround %.2f weighted turnaround %0.2f\n", this.process[index].waitTime, this.process[index].trTime, this.process[index].wtrTime)
 	}
-	fmt.Printf("--------所有作业调度完毕------\n")
-	fmt.Printf("平均等待时间: %.2f 平均周转时间: %.2f 平均带权周转时间: %.2f", wrTime/float64(len(this.process)), trTime/float64(len(this.process)), wtrTime/float64(len(this.process)))
+	fmt.Printf("all jobs scheduled\n")
+	fmt.Printf("average wait %.2f average turnaround %.2f average weighted turnaround %.2f", wrTime/float64(len(this.process)), trTime/float64(len(this.process)), wtrTime/float64(len(this.process)))
 }

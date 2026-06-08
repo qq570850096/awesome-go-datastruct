@@ -1,6 +1,6 @@
 package Linked
 
-func (this *List)findMidNode() *Node {
+func (this *List) findMidNode() *Node {
 	if this.Head() == nil || this.Head().Next == nil {
 		return nil
 	}
@@ -33,7 +33,7 @@ func MidReverse(head *Node) *Node {
 	return pre
 }
 
-func (this *List) Reorder ()  {
+func (this *List) Reorder() {
 	if this.Head() == nil || this.Head() == nil {
 		return
 	}
@@ -41,7 +41,7 @@ func (this *List) Reorder ()  {
 	mid := this.findMidNode()
 	cur2 := MidReverse(mid)
 	var temp *Node
-	// 合并链表
+
 	for cur1.Next != nil {
 		temp = cur1.Next
 		cur1.Next = cur2
@@ -52,4 +52,3 @@ func (this *List) Reorder ()  {
 	}
 	cur1.Next = cur2
 }
-

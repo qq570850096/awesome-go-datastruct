@@ -38,10 +38,9 @@ func (this *List) IsEmpty() bool {
 	return this.size == 0
 }
 
-// 在链表的第index索引个元素后插入元素,索引从0开始
 func (this *List) AddIndex(index, e int) {
 	if index > this.size || index < 0 {
-		panic("索引越界，不能插入了")
+		panic("index out of range: cannot insert")
 	}
 	prev := this.dummyHead
 	node := initNode(e)
@@ -55,20 +54,17 @@ func (this *List) AddIndex(index, e int) {
 
 }
 
-// 在链表头添加元素
 func (this *List) AddFirst(e int) {
 	this.AddIndex(0, e)
 }
 
-// 在链表尾部添加节点
 func (this *List) AddLast(e int) {
 	this.AddIndex(this.size, e)
 }
 
-// 在链表中查询第index个元素
 func (this *List) Get(index int) int {
 	if index > this.size || index < 0 {
-		panic("索引越界，不能查询")
+		panic("index out of range: cannot query")
 	}
 	cur := this.dummyHead.Next
 	for i := 0; i < index; i++ {
@@ -83,10 +79,9 @@ func (this *List) GetLast() int {
 	return this.Get(this.size - 1)
 }
 
-// 在链表index个位置中放入元素e
 func (this *List) Set(index, e int) {
 	if index > this.size || index < 0 {
-		panic("索引越界，不能置入")
+		panic("index out of range: cannot set")
 	}
 	cur := this.dummyHead.Next
 	for i := 0; i < index; i++ {
@@ -95,7 +90,6 @@ func (this *List) Set(index, e int) {
 	cur.E = e
 }
 
-// 在链表中查询是否包括元素e
 func (this *List) Contains(e int) bool {
 	cur := this.dummyHead.Next
 	for cur != nil {
@@ -107,10 +101,9 @@ func (this *List) Contains(e int) bool {
 	return false
 }
 
-// 在链表中删除元素
 func (this *List) Remove(index int) int {
 	if index > this.size || index < 0 {
-		panic("索引越界，不能删除")
+		panic("index out of range: cannot delete")
 	}
 	prev := this.dummyHead
 	for i := 0; i < index; i++ {
@@ -128,7 +121,6 @@ func (this *List) RemoveLast() int {
 	return this.Remove(this.size - 1)
 }
 
-// 删除元素E
 func (this *List) RemoveElement(e int) {
 	prev := this.dummyHead
 	for prev.Next != nil {
@@ -146,8 +138,6 @@ func (this *List) RemoveElement(e int) {
 	}
 }
 
-// 在Golang中，如果我们想对自建数据结构自定义在Println的时候打印出什么结果
-// 就可以使用这种方式去自己构建打印的字符串格式
 func (this *List) String() string {
 	var builder strings.Builder
 	cur := this.dummyHead.Next
@@ -160,7 +150,7 @@ func (this *List) String() string {
 }
 
 func (this *List) Sort() {
-	// 链表快速排序
+
 	if this.Head() == nil || this.Head().Next == nil {
 		return
 	}
@@ -168,7 +158,7 @@ func (this *List) Sort() {
 }
 
 func qsortList(head, tail *Node) {
-	// 链表范围是[Low,high)
+
 	if head != tail && head.Next != tail {
 		mid := partitionList(head, tail)
 		qsortList(head, mid)

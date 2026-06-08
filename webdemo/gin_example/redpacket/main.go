@@ -15,7 +15,7 @@ type apiResponse struct {
 }
 
 func main() {
-	r := gin.Default() // 含日志与恢复中间件
+	r := gin.Default()
 	pool := redpacket.NewPool()
 
 	r.POST("/redpacket/init", func(c *gin.Context) {
@@ -43,7 +43,5 @@ func main() {
 		c.JSON(http.StatusOK, apiResponse{Code: 0, Msg: "ok", Data: gin.H{"amount": amount}})
 	})
 
-	// 与自实现版本区分端口。
 	r.Run(":8093")
 }
-

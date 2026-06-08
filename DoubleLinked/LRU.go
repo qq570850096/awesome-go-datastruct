@@ -30,7 +30,7 @@ func (this *LRUCache) Get(key interface{}) interface{} {
 		for i := 0; i < this.k; i++ {
 			node = node.next
 		}
-		fmt.Println("发生了一次缺页中断")
+		fmt.Println("page fault occurred")
 		delete(this.find, node.key)
 		node.key = key
 		this.find[key] = node
@@ -48,7 +48,7 @@ func (this *LRUCache) Put(key, value interface{}) {
 		this.list.AppendToHead(node)
 	} else {
 		node := InitNode(key, value)
-		// 缓存已经满了
+
 		if this.list.size >= this.list.capacity {
 			oldNode := this.list.Remove(nil)
 			delete(this.find, oldNode.key)

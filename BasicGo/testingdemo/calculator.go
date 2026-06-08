@@ -2,7 +2,6 @@ package testingdemo
 
 import "errors"
 
-// Operation 定义为字符串，方便 table-driven 测试扩展。
 type Operation string
 
 const (

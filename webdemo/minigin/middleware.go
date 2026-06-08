@@ -7,7 +7,6 @@ import (
 	"time"
 )
 
-// Logger 是一个简单的日志中间件，记录方法、路径和耗时。
 func Logger() HandlerFunc {
 	return func(c *Context) {
 		start := time.Now()
@@ -16,7 +15,6 @@ func Logger() HandlerFunc {
 	}
 }
 
-// Recovery 捕获下游 panic 并返回 500，防止程序崩溃。
 func Recovery() HandlerFunc {
 	return func(c *Context) {
 		defer func() {
@@ -29,7 +27,6 @@ func Recovery() HandlerFunc {
 	}
 }
 
-// CORS 设置基础跨域响应头，并短路 OPTIONS 预检请求。
 func CORS() HandlerFunc {
 	return func(c *Context) {
 		h := c.Writer.Header()
@@ -44,7 +41,6 @@ func CORS() HandlerFunc {
 	}
 }
 
-// RateLimit 使用简单的每秒计数方式实现限流。
 func RateLimit(qps int) HandlerFunc {
 	if qps <= 0 {
 		qps = 1
@@ -72,7 +68,6 @@ func RateLimit(qps int) HandlerFunc {
 	}
 }
 
-// Timeout 在给定时间内未完成请求则返回超时响应。
 func Timeout(d time.Duration) HandlerFunc {
 	if d <= 0 {
 		return func(c *Context) {
@@ -94,4 +89,3 @@ func Timeout(d time.Duration) HandlerFunc {
 		}
 	}
 }
-

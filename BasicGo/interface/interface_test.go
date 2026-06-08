@@ -17,7 +17,7 @@ func TestShapeInterface(t *testing.T) {
 	}
 	wantRect := 2.0 * 3.0
 	wantCircle := math.Pi * 1.0 * 1.0
-	if diff := math.Abs(area - (wantRect+wantCircle)); diff > 1e-9 {
+	if diff := math.Abs(area - (wantRect + wantCircle)); diff > 1e-9 {
 		t.Fatalf("unexpected area result: got %v, want %v", area, wantRect+wantCircle)
 	}
 }
@@ -51,4 +51,3 @@ func TestErrorInterfaceAndWrapping(t *testing.T) {
 		t.Fatalf("wrapped error should contain ErrTemporary, got %v", err)
 	}
 }
-

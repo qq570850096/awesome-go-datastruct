@@ -8,21 +8,16 @@ const (
 	DIFFICULTY_LEVEL_3 = 3
 )
 
-type HandleMessage func(hand Handler,request IRequest)
-
+type HandleMessage func(hand Handler, request IRequest)
 
 type IRequest interface {
-	// 请求级别
 	GetRequestLevel() int
-	// 获取要请求的内容
+
 	GetRequest() string
 }
 
 type Request struct {
-	// 难度1--初级工程师
-	// 难度2--中级工程师
-	// 难度3--高级工程师
-	level int
+	level   int
 	request string
 }
 
@@ -33,11 +28,11 @@ func InitRequset(level int, request string) *Request {
 	}
 	switch r.level {
 	case 1:
-		r.request = "难度级别1的请求是："+ request
+		r.request = "level 1 request: " + request
 	case 2:
-		r.request = "难度级别2的请求是："+ request
+		r.request = "level 2 request: " + request
 	case 3:
-		r.request = "难度级别3的请求是："+ request
+		r.request = "level 3 request: " + request
 	}
 	return r
 }
@@ -51,18 +46,17 @@ func (r Request) GetRequest() string {
 }
 
 type Handler interface {
-	HandleMessage(request IRequest,handler Handler,message HandleMessage)
+	HandleMessage(request IRequest, handler Handler, message HandleMessage)
 	SetNextHandler(handler Handler)
 	Response(request IRequest)
-	GetLevel()int
+	GetLevel() int
 	GetNext() Handler
 }
 
-// 初级工程师
 type Primary struct {
-	level int
+	level   int
 	request string
-	next Handler
+	next    Handler
 }
 
 func (p *Primary) GetNext() Handler {
@@ -73,8 +67,8 @@ func (p *Primary) GetLevel() int {
 	return p.level
 }
 
-func (p *Primary) HandleMessage(request IRequest,handler Handler,message HandleMessage) {
-	message(p,request)
+func (p *Primary) HandleMessage(request IRequest, handler Handler, message HandleMessage) {
+	message(p, request)
 }
 
 func (p *Primary) SetNextHandler(handler Handler) {
@@ -82,9 +76,9 @@ func (p *Primary) SetNextHandler(handler Handler) {
 }
 
 func (p *Primary) Response(request IRequest) {
-	fmt.Println("---难度级别1的请求---")
+	fmt.Println("---level 1 request---")
 	fmt.Printf(request.GetRequest())
-	fmt.Println("初级工程师已经处理完毕")
+	fmt.Println("junior engineer handled the request")
 }
 
 func InitPrimary() Handler {
@@ -95,25 +89,26 @@ func InitPrimary() Handler {
 }
 
 type Middle struct {
-	level int
+	level   int
 	request string
-	next Handler
+	next    Handler
 }
-func HandleMess (hand Handler,request IRequest)  {
-	// 如果请求级别小于可以处理的级别就直接处理
+
+func HandleMess(hand Handler, request IRequest) {
+
 	if request.GetRequestLevel() <= hand.GetLevel() {
 		hand.Response(request)
 	} else {
 		if hand.GetNext() != nil {
-			HandleMess(hand.GetNext(),request)
+			HandleMess(hand.GetNext(), request)
 		} else {
-			fmt.Println("---难度级别为",request.GetRequestLevel(),"的请求无法处理")
+			fmt.Println("---request level ", request.GetRequestLevel(), "cannot be handled")
 		}
 	}
 }
-func (p *Middle) HandleMessage(request IRequest,handler Handler,message HandleMessage) {
+func (p *Middle) HandleMessage(request IRequest, handler Handler, message HandleMessage) {
 	handler = p
-	message(handler,request)
+	message(handler, request)
 }
 
 func (p *Middle) SetNextHandler(handler Handler) {
@@ -121,9 +116,9 @@ func (p *Middle) SetNextHandler(handler Handler) {
 }
 
 func (p *Middle) Response(request IRequest) {
-	fmt.Println("---难度级别2的请求---")
+	fmt.Println("---level 2 request---")
 	fmt.Printf(request.GetRequest())
-	fmt.Println("中级工程师已经处理完毕")
+	fmt.Println("mid-level engineer handled the request")
 }
 
 func (p *Middle) GetLevel() int {
@@ -135,14 +130,14 @@ func (p *Middle) GetNext() Handler {
 }
 
 type Senior struct {
-	level int
+	level   int
 	request string
-	next Handler
+	next    Handler
 }
 
-func (p *Senior) HandleMessage(request IRequest,handler Handler,message HandleMessage) {
+func (p *Senior) HandleMessage(request IRequest, handler Handler, message HandleMessage) {
 	handler = p
-	message(handler,request)
+	message(handler, request)
 }
 
 func (p *Senior) SetNextHandler(handler Handler) {
@@ -150,9 +145,9 @@ func (p *Senior) SetNextHandler(handler Handler) {
 }
 
 func (p *Senior) Response(request IRequest) {
-	fmt.Println("---难度级别3的请求---")
+	fmt.Println("---level 3 request---")
 	fmt.Printf(request.GetRequest())
-	fmt.Println("高级工程师已经处理完毕")
+	fmt.Println("senior engineer handled the request")
 }
 
 func (p *Senior) GetLevel() int {
@@ -162,11 +157,3 @@ func (p *Senior) GetLevel() int {
 func (p *Senior) GetNext() Handler {
 	return p.next
 }
-
-
-
-
-
-
-
-
