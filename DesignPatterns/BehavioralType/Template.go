@@ -2,6 +2,8 @@ package BehavioralType
 
 import "fmt"
 
+// AbstractWork defines the template-method steps. Getup and Arrive are fixed
+// in AbsClass, while Commute is supplied by concrete work routes.
 type AbstractWork interface {
 	GotoWork(work AbstractWork)
 	Getup()
@@ -9,8 +11,10 @@ type AbstractWork interface {
 	Arrive()
 }
 
+// AbsClass owns the invariant algorithm skeleton.
 type AbsClass struct{}
 
+// GotoWork is the template method: fixed steps wrap the variable commute step.
 func (a AbsClass) GotoWork(work AbstractWork) {
 	a.Getup()
 	work.Commute()

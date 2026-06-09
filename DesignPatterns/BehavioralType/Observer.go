@@ -2,10 +2,12 @@ package BehavioralType
 
 import "fmt"
 
+// IReader is the observer role. It receives updates from the platform.
 type IReader interface {
 	Update(bookName string)
 }
 
+// Reader is a concrete observer.
 type Reader struct {
 	name string
 }
@@ -20,6 +22,7 @@ type IPlatform interface {
 	NotifyObservers(bookName string)
 }
 
+// Platform is the subject role. It stores observers and broadcasts changes.
 type Platform struct {
 	list []IReader
 }
@@ -39,6 +42,7 @@ func (p *Platform) Detach(reader IReader) {
 	}
 }
 
+// NotifyObservers pushes the new book name to every registered reader.
 func (p *Platform) NotifyObservers(bookName string) {
 
 	for _, reader := range p.list {
@@ -46,6 +50,7 @@ func (p *Platform) NotifyObservers(bookName string) {
 	}
 }
 
+// Change is the subject's state-change entrypoint.
 func (p *Platform) Change(bookName string) {
 	p.NotifyObservers(bookName)
 }

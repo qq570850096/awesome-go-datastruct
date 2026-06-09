@@ -1,10 +1,13 @@
 package BehavioralType
 
+// Iterator exposes collection traversal without exposing the collection's
+// backing storage.
 type Iterator interface {
 	Next() interface{}
 	HasNext() bool
 }
 
+// ConcreteIterator tracks traversal position over an Aggregate.
 type ConcreteIterator struct {
 	index int
 	size  int
@@ -31,6 +34,7 @@ type Aggregate interface {
 	Size() int
 }
 
+// ConcreteAggregate stores elements and creates iterators over them.
 type ConcreteAggregate struct {
 	docker []interface{}
 }
@@ -40,6 +44,8 @@ func (c *ConcreteAggregate) Add(obj interface{}) {
 }
 
 func (c *ConcreteAggregate) CreateIterator() Iterator {
+	// Capture the size at iterator creation time so this iterator has a stable
+	// end position even if callers later add more items.
 	return &ConcreteIterator{
 		index: 0,
 		size:  c.Size(),

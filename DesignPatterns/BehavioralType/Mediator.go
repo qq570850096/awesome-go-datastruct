@@ -5,6 +5,8 @@ import (
 	"reflect"
 )
 
+// MeditorCompany is the mediator interface. Colleagues talk to the mediator
+// instead of calling each other directly.
 type MeditorCompany interface {
 	GetSeller() Colleaguer
 	SetSeller(seller ColleagueSeller)
@@ -15,6 +17,7 @@ type MeditorCompany interface {
 	Publish(message string, colleaguer Colleaguer)
 }
 
+// Meditor coordinates buyer and seller message delivery.
 type Meditor struct {
 	name   string
 	buyer  *ColleagueBuyer
@@ -29,6 +32,7 @@ func (m *Meditor) SetBuyer(b ColleagueBuyer) {
 	m.buyer = &b
 }
 
+// Publish routes a message from one colleague to the opposite colleague.
 func (m *Meditor) Publish(message string, colleaguer Colleaguer) {
 
 	if reflect.DeepEqual(colleaguer, m.seller) {
@@ -60,6 +64,7 @@ type Colleaguer interface {
 	Accept(string)
 }
 
+// ColleagueSeller sends and receives messages through a mediator.
 type ColleagueSeller struct {
 	meditor MeditorCompany
 }

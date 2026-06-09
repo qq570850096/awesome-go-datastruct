@@ -2,11 +2,15 @@ package DesignPatterns
 
 import "fmt"
 
+// QuackAble combines duck behavior with observer registration. The compound
+// example layers adapter, decorator, factory, composite, and observer patterns
+// around this interface.
 type QuackAble interface {
 	quack()
 	QuackObservable
 }
 
+// MallardDuck is a concrete quacking object.
 type MallardDuck struct {
 	observable QuackObservable
 }
@@ -27,6 +31,7 @@ func (m *MallardDuck) quack() {
 	fmt.Println("mallardDuck")
 }
 
+// RedheadDuck is another concrete quacking object.
 type RedheadDuck struct {
 	observable QuackObservable
 }
@@ -47,6 +52,7 @@ func (r *RedheadDuck) quack() {
 	fmt.Println("RedheadDuck")
 }
 
+// DuckCall is a concrete quacking object that represents a caller device.
 type DuckCall struct {
 	observable QuackObservable
 }
@@ -67,6 +73,7 @@ func (d *DuckCall) quack() {
 	fmt.Println("DuckCall")
 }
 
+// RubberDuck is a concrete quacking object with the same observable contract.
 type RubberDuck struct {
 	observable QuackObservable
 }
@@ -87,11 +94,13 @@ func (r *RubberDuck) quack() {
 	fmt.Println("RubberDuck")
 }
 
+// Creak is the incompatible goose interface that will be adapted to QuackAble.
 type Creak interface {
 	Creak()
 	QuackObservable
 }
 
+// Goose is the adaptee in the adapter portion of the compound example.
 type Goose struct {
 	observable QuackObservable
 }
@@ -112,14 +121,17 @@ func (g *Goose) NotifyObservers() {
 	g.observable.NotifyObservers()
 }
 
+// GooseAdapter adapts a goose so it can be used where QuackAble is expected.
 type GooseAdapter struct {
 	Creak
 }
 
+// quack adapts a goose creak to the QuackAble interface.
 func (g *GooseAdapter) quack() {
 	g.Creak.Creak()
 }
 
+// QuackCounter is a decorator that counts quacks while preserving QuackAble.
 type QuackCounter struct {
 	q              QuackAble
 	numberOfQuacks int
@@ -143,6 +155,7 @@ func (q *QuackCounter) quack() {
 	fmt.Println("duck quack #", q.numberOfQuacks, "time")
 }
 
+// AbsDuckFactory is the abstract factory role for creating observable ducks.
 type AbsDuckFactory interface {
 	CreateMallardDuck() QuackAble
 	CreateRedheadDuck() QuackAble
@@ -150,6 +163,7 @@ type AbsDuckFactory interface {
 	CreateRubber() QuackAble
 }
 
+// DuckFactory centralizes creation and wraps ducks with QuackCounter.
 type DuckFactory struct {
 }
 
@@ -190,11 +204,13 @@ func (q *DuckFactory) CreateRubber() QuackAble {
 	}
 }
 
+// FlockDuck is the collection-management interface for composite flocks.
 type FlockDuck interface {
 	Add(q QuackAble)
 	Remove(q QuackAble)
 }
 
+// Flock is the composite role. It treats a group of ducks as one QuackAble.
 type Flock struct {
 	qs []QuackAble
 }
@@ -236,16 +252,19 @@ func (f *Flock) Remove(q QuackAble) {
 	}
 }
 
+// Observer receives notifications from observable quacking objects.
 type Observer interface {
 	Update(observable QuackObservable)
 }
 
+// QuackObservable is the subject interface for observer registration.
 type QuackObservable interface {
 	RegisterObserver(observer Observer)
 	RemoveObserver(observer Observer)
 	NotifyObservers()
 }
 
+// DuckDoctor is a concrete observer.
 type DuckDoctor struct {
 }
 
@@ -253,6 +272,7 @@ func (d DuckDoctor) Update(observable QuackObservable) {
 	fmt.Printf("DuckDoctor observed duck object %T\n", observable)
 }
 
+// ObservableAssist centralizes observer-list management for concrete quackers.
 type ObservableAssist struct {
 	list            []Observer
 	quackObservable QuackObservable

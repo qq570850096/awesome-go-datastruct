@@ -2,6 +2,7 @@ package StructuralType
 
 import "fmt"
 
+// MenuComponent is the component interface shared by leaves and composites.
 type MenuComponent interface {
 	Add(menuComponent MenuComponent)
 	Remove(menuComponent MenuComponent)
@@ -14,6 +15,8 @@ type MenuComponent interface {
 	Display(depth int)
 }
 
+// Leaf is a terminal menu item. Child-management operations panic because a
+// leaf cannot contain other menu components.
 type Leaf struct {
 	name        string
 	vegetarian  bool
@@ -65,6 +68,7 @@ func (l *Leaf) SetName(name string) {
 	l.name = name
 }
 
+// Composite groups menu components and forwards tree operations to children.
 type Composite struct {
 	name        string
 	description string

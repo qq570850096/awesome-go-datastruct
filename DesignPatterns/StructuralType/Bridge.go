@@ -2,16 +2,20 @@ package StructuralType
 
 import "fmt"
 
+// MobilePhone is the abstraction side of the bridge. It keeps a reference to a
+// software implementor so phone brands and software can vary independently.
 type MobilePhone struct {
 	Impl SoftImplementor
 }
 
 func (MobilePhone) Run() {}
 
+// SoftImplementor is the implementation side of the bridge.
 type SoftImplementor interface {
 	RawRun()
 }
 
+// GameSoft and ChatSoft are concrete software implementors.
 type GameSoft struct {
 	SoftImplementor
 }
@@ -31,6 +35,7 @@ type HuaWei struct {
 	MobilePhone
 }
 
+// Run delegates to the bridged software implementation.
 func (h *HuaWei) Run() {
 	h.Impl.RawRun()
 }

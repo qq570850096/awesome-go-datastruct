@@ -1,5 +1,7 @@
 package BehavioralType
 
+// Memento stores an originator snapshot without exposing the originator's
+// internal state management.
 type Memento struct {
 	state string
 }
@@ -28,6 +30,7 @@ func (o *Originator) CreateMemento() *Memento {
 	return &Memento{state: o.state}
 }
 
+// Caretaker holds a memento but does not inspect or modify the saved state.
 type Caretaker struct {
 	memento *Memento
 }

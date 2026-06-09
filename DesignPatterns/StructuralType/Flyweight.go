@@ -2,10 +2,14 @@ package StructuralType
 
 import "fmt"
 
+// Flyweight is the shared-object interface. In this example, ExamInfo instances
+// are shared by subject.
 type Flyweight interface {
 	operate()
 }
 
+// ExamInfo stores intrinsic state in subject and extrinsic state in user. A
+// stricter flyweight would keep user outside the shared object entirely.
 type ExamInfo struct {
 	user string
 
@@ -38,10 +42,13 @@ func (e *ExamInfo) String() string {
 		"subject = " + e.subject + "\n" + "}"
 }
 
+// ExamInfoFactory owns the flyweight pool and returns shared ExamInfo values by
+// subject.
 type ExamInfoFactory struct {
 	pool map[string]*ExamInfo
 }
 
+// GetExamInfo reuses an existing subject object or creates and caches a new one.
 func (e *ExamInfoFactory) GetExamInfo(subject string) (Ex *ExamInfo) {
 	if e.pool == nil {
 		e.pool = make(map[string]*ExamInfo)

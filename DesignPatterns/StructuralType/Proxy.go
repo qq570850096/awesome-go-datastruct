@@ -2,11 +2,14 @@ package StructuralType
 
 import "fmt"
 
+// IBuyer is the subject interface shared by the real buyer and the proxy.
 type IBuyer interface {
 	Login(username, password string)
 	BuyTicket()
 }
 
+// BuyerProxy controls access to Buyer by adding behavior before and after the
+// real ticket purchase.
 type BuyerProxy struct {
 	b *Buyer
 }
@@ -28,6 +31,7 @@ func after() {
 	fmt.Println("ticket acquired, notify user by SMS")
 }
 
+// Buyer is the real subject that performs login and ticket purchasing.
 type Buyer struct {
 	name string
 }

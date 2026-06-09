@@ -2,14 +2,17 @@ package BehavioralType
 
 import "fmt"
 
+// FlyBehavior is the strategy interface for flying.
 type FlyBehavior interface {
 	Fly()
 }
 
+// QuackBehavior is the strategy interface for making sounds.
 type QuackBehavior interface {
 	Quack()
 }
 
+// Duck is the context that delegates variable behavior to strategy objects.
 type Duck struct {
 	fly   FlyBehavior
 	quack QuackBehavior
@@ -24,6 +27,7 @@ func (d *Duck) Display(behavior FlyBehavior, quackBehavior QuackBehavior) {
 	quackBehavior.Quack()
 }
 
+// FlyWithWings is a concrete flying strategy.
 type FlyWithWings struct{}
 
 func (f *FlyWithWings) Fly() {
@@ -60,6 +64,7 @@ type ReadHead struct {
 	quack *Quack
 }
 
+// Display combines fixed duck behavior with the readhead duck strategies.
 func (r *ReadHead) Display() {
 	r.Swim()
 	r.Duck.Display(r.fly, r.quack)

@@ -2,6 +2,7 @@ package CreativeType
 
 import "fmt"
 
+// Product is the complex object assembled by the builder steps.
 type Product struct {
 	ground string
 	cement string
@@ -39,6 +40,8 @@ type Builder interface {
 	BuildProduct() *Product
 }
 
+// ConcreteBuilder stores the product under construction and implements each
+// construction step in the Builder interface.
 type ConcreteBuilder struct {
 	p *Product
 }
@@ -66,6 +69,8 @@ type Director struct {
 	builder Builder
 }
 
+// Construst coordinates the build order. The misspelled name is kept so the
+// existing tests and examples remain stable.
 func (this *Director) Construst() Product {
 	this.builder.BuildGround()
 	this.builder.BuildCement()

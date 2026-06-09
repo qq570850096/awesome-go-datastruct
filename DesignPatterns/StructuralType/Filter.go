@@ -1,5 +1,6 @@
 package StructuralType
 
+// Rubbish is the domain object filtered by reusable criteria.
 type Rubbish struct {
 	name       string
 	isHarm     bool
@@ -8,10 +9,13 @@ type Rubbish struct {
 	isWet      bool
 }
 
+// Criteria is the filter interface. Each implementation keeps one category of
+// rubbish and returns a new result slice.
 type Criteria interface {
 	RubbishFilter(rubbishs []Rubbish) []Rubbish
 }
 
+// DryRubbishCriteria keeps dry rubbish.
 type DryRubbishCriteria struct{}
 
 func (DryRubbishCriteria) RubbishFilter(rubbishs []Rubbish) []Rubbish {

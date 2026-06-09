@@ -2,6 +2,8 @@ package BehavioralType
 
 import "fmt"
 
+// TVState is the state role. Each state decides how remote-control operations
+// behave and when to transition the machine to another state.
 type TVState interface {
 	PowerOn(r *RemoteControlMachine)
 
@@ -12,6 +14,7 @@ type TVState interface {
 	Standby(r *RemoteControlMachine)
 }
 
+// StandByState handles operations while the TV is powered on but idle.
 type StandByState struct {
 	r *RemoteControlMachine
 }
@@ -93,6 +96,7 @@ type RemoteControlMachine struct {
 	currentSate TVState
 }
 
+// PowerOn delegates behavior to the current state object.
 func (r *RemoteControlMachine) PowerOn() {
 	r.currentSate.PowerOn(r)
 }

@@ -4,6 +4,7 @@ import (
 	"fmt"
 )
 
+// GunSystem is one subsystem hidden behind Facade.
 type GunSystem struct {
 }
 
@@ -31,6 +32,7 @@ type Facade struct {
 	user *UserSystem
 }
 
+// shooting is the simple entrypoint that coordinates multiple subsystem calls.
 func (f *Facade) shooting() {
 	f.fire.Fire()
 	f.fire.UseBullet()

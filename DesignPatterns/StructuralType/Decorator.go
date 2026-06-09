@@ -5,6 +5,8 @@ import (
 	"time"
 )
 
+// MediaPlayer is the component interface shared by the base object and
+// decorators.
 type MediaPlayer interface {
 	GetMediaName() string
 	GetMediaSeconds() int
@@ -12,6 +14,7 @@ type MediaPlayer interface {
 	play()
 }
 
+// VideoPlay is the concrete component being decorated.
 type VideoPlay struct {
 	MediaPlayer
 	videoContent string
@@ -39,10 +42,14 @@ func (m *VideoPlay) play() {
 	}
 }
 
+// BarrageVideoPlay is the decorator base. It embeds a MediaPlayer so concrete
+// decorators can forward unchanged behavior.
 type BarrageVideoPlay struct {
 	MediaPlayer
 }
 
+// BarrageRedVideoPlay is a concrete decorator that adds bullet-comment text to
+// the media name and content.
 type BarrageRedVideoPlay struct {
 	BarrageVideoPlay
 }
